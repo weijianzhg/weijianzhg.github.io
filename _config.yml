@@ -119,8 +119,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: AI Notebook Adventures # blog_name will be displayed in your blog page
+blog_description: Explore, experiment, and share interesting AI and machine learning topics through Jupyter notebooks.
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -155,7 +155,7 @@ disqus_shortname: # put your disqus shortname
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
   - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+    rss_url: https://medium.com/feed/@weijianzhg
 
 # -----------------------------------------------------------------------------
 # Collections

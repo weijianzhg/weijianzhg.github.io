@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Machine Learning Engineer
+subtitle: VP, Machine Learning Engineer
 
 profile:
   align: right
