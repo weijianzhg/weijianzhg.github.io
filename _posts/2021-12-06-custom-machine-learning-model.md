@@ -3,7 +3,7 @@ layout: post
 title: Building Custom Machine Learning Models
 date: 2021-12-06
 description: Building Custom Machine Learning Models
-tags: machine-learning, custom
+tags: machine-learning, custom-model
 categories: machine-learning-engineering
 giscus_comments: false
 related_posts: false
@@ -38,9 +38,7 @@ class MLModel():
 
 ## A Simple Custom Machine Learning Model For Classifying Iris Species
 
-!["iris"](../assets/img/iris.jpeg)
-
-{% include figure.liquid path="assets/img/iris.jpeg" class="img-fluid rounded z-depth-1" zoomable=false %}
+{% include figure.liquid path="assets/img/iris.jpeg" class="rounded float-left width: 10%" zoomable=false %}
 
 Let's consider the classic [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris) as an example.
 The dataset consists of samples from three Iris species (Iris setosa, Iris virginica, Iris versicolor)

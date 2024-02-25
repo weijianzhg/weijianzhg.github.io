@@ -7,6 +7,7 @@ tags: feature-engineering, pipeline, scikit-learn
 categories: machine-learning-engineering
 giscus_comments: false
 related_posts: false
+thumbnail: assets/img/feature-engineering-one.png
 ---
 
 1. TOC
