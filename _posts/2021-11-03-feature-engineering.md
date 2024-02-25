@@ -8,10 +8,9 @@ categories: machine-learning-engineering
 giscus_comments: false
 related_posts: false
 thumbnail: assets/img/feature-engineering-one.png
+toc:
+  beginning: true
 ---
-
-1. TOC
-   {:toc}
 
 ## Introduction
 

@@ -8,10 +8,9 @@ categories: machine-learning-engineering
 giscus_comments: false
 related_posts: false
 thumbnail: assets/img/iris.jpeg
+toc:
+  beginning: true
 ---
-
-1. TOC
-   {:toc}
 
 Sometimes, in order to meet a specific business need it is best to create a custom machine learning model. In this article we discuss how to create such models. We show how use the custom machine learning models within the scikit-learn ecosystem. For example, we can apply scikit-learn's `GridSearchCV` on our custom machine learning models to find the best hyperparameters.
 
