@@ -10,10 +10,8 @@ related_posts: false
 thumbnail: assets/img/iris.jpeg
 ---
 
-
 1. TOC
-{:toc}
-
+   {:toc}
 
 Sometimes, in order to meet a specific business need it is best to create a custom machine learning model. In this article we discuss how to create such models. We show how use the custom machine learning models within the scikit-learn ecosystem. For example, we can apply scikit-learn's `GridSearchCV` on our custom machine learning models to find the best hyperparameters.
 
@@ -21,7 +19,6 @@ Sometimes, in order to meet a specific business need it is best to create a cust
 
 A (supervised) machine learning model has two main components: `fit` and `predict`.
 We use the `fit` method to learn from data and use `predict` to make predictions on new data.
-
 
 ```python
 class MLModel():
@@ -44,20 +41,15 @@ Let's consider the classic [Iris dataset](https://archive.ics.uci.edu/ml/dataset
 The dataset consists of samples from three Iris species (Iris setosa, Iris virginica, Iris versicolor)
 with four features (sepal length, sepal width, petal length, petal width). We can load it from `sklearn.datasets`.
 
-
 ```python
 from sklearn.datasets import load_iris
 
 X, y = load_iris(return_X_y=True, as_frame=True)
 ```
 
-
 ```python
 X
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -72,6 +64,7 @@ X
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -166,15 +159,9 @@ X
 <p>150 rows × 4 columns</p>
 </div>
 
-
-
-
 ```python
 X.describe()
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -189,6 +176,7 @@ X.describe()
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -261,13 +249,10 @@ X.describe()
 </table>
 </div>
 
-
-
 It's clear that sepal length, sepal width, petal length, and petal width should be positive numbers.
 
 Let's create a simple custom machine learning model: train the model using Support Vector Classification (SVC) but only
 make predictions if all the features are positive, return `unknown` otherwise.
-
 
 ```python
 import pandas as pd
@@ -301,13 +286,11 @@ model = MLModel()
 
 We can now train the model on the Iris dataset.
 
-
 ```python
 model.fit(X, y)
 ```
 
 To try our trained model we create three test samples. Note that the second sample has `0.0` sepal length and the third sample has sepal width equal to `-1.0`.
-
 
 ```python
 X_new = pd.DataFrame({
@@ -318,9 +301,6 @@ X_new = pd.DataFrame({
 })
 X_new
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -335,6 +315,7 @@ X_new
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -372,35 +353,25 @@ X_new
 </table>
 </div>
 
-
-
 As expected our model only returns a prediction for first sample and returns `unknown` for the second and the third samples.
-
 
 ```python
 model.predict(X_new)
 ```
 
-
-
-
     [0, 'unknown', 'unknown']
-
-
 
 ## Using Custom Machine Learning Models within the Scikit-learn Ecosystem
 
-
 In order to use our custom machine learning model within the scikit-learn ecosystem, we need to provide a few other methods:
 
-* `get_params`: returns a dict of parameters of the machine learning model.
-* `set_params`: takes a dictionary of parameters as input and sets the parameter of the machine learning model.
-* `score`: provides a default evaluation criterion for the problem they are designed to solve.
+- `get_params`: returns a dict of parameters of the machine learning model.
+- `set_params`: takes a dictionary of parameters as input and sets the parameter of the machine learning model.
+- `score`: provides a default evaluation criterion for the problem they are designed to solve.
 
 We can either implement these methods ourselves or just inherit these methods from `sklearn.base.BaseEstimator` and `sklearn.base.ClassifierMixin`.
 
-`BaseEstimator` provides the implementation of the  `get_params` and `set_params` methods. `ClassifierMixin` provides the implementation of the `score` method as the mean accuracy.
-
+`BaseEstimator` provides the implementation of the `get_params` and `set_params` methods. `ClassifierMixin` provides the implementation of the `score` method as the mean accuracy.
 
 ```python
 from sklearn.base import BaseEstimator, ClassifierMixin
@@ -435,18 +406,11 @@ model = MLModel()
 
 Since we've defined `MLModel` as a subclass of `BaseEstimator` and `ClassifierMixin`, we can use `get_params` to retrieve all the parameters and use `score` to compute the mean accuracy on the test dataset.
 
-
 ```python
 model.get_params()
 ```
 
-
-
-
     {'C': 1.0, 'kernel': 'linear'}
-
-
-
 
 ```python
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)
@@ -455,15 +419,9 @@ model.fit(X_train, y_train)
 model.score(X_test, y_test)
 ```
 
-
-
-
     1.0
 
-
-
 Our custom machine learning model also works fine with scikit-learn's `GridSearchCV`.
-
 
 ```python
 from sklearn.model_selection import GridSearchCV
@@ -475,24 +433,13 @@ clf = GridSearchCV(model, parameters)
 clf.fit(X, y)
 ```
 
-
-
-
     GridSearchCV(estimator=MLModel(),
                  param_grid={'C': [1, 10], 'kernel': ('linear', 'rbf')})
-
-
-
 
 ```python
 clf.best_params_
 ```
 
-
-
-
     {'C': 1, 'kernel': 'linear'}
-
-
 
 Note that for regression problems we need to use `RegressorMixin` instead of `ClassifierMixin`, which implements the coefficient of determination of the prediction as the `score` method. See [here](https://scikit-learn.org/stable/modules/generated/sklearn.base.RegressorMixin.html) for more details.

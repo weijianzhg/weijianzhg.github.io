@@ -11,8 +11,7 @@ thumbnail: assets/img/feature-engineering-one.png
 ---
 
 1. TOC
-{:toc}
-
+   {:toc}
 
 ## Introduction
 
@@ -24,14 +23,13 @@ training and prediction we may duplicate the same work and it's harder to mainta
 {% include figure.liquid loading="eager" path="assets/img/feature-engineering-separate.png" class="img-fluid rounded z-depth-1" width="360px" zoomable=true %}
 
 One common practice in producitionzing machine learning models is to write a transformation
-*pipeline* so that we can use the same data transformation code for both training and prediction.
+_pipeline_ so that we can use the same data transformation code for both training and prediction.
 
 {% include figure.liquid loading="eager" path="assets/img/feature-engineering-one.png" class="img-fluid rounded z-depth-1" width="360px" zoomable=true %}
 
 In this article, we discuss how we can use [scikit-learn](https://scikit-learn.org/stable/) to build a feature engineering pipeline. Let's first have a look at a few common transformations for numeric features and categorical features.
 
 ## Transforming Numerical Features
-
 
 One thing I really like about scikit-learn is that I can use the same ''fit'' and ''predict''
 pattern for data preprocessing. For a preprocessor, the two methods are called `fit` and `transform`.
@@ -41,7 +39,6 @@ pattern for data preprocessing. For a preprocessor, the two methods are called `
 We can use `SimpleImputer` to complete missing values and `StandardScaler` to standardize values by
 removing the mean and scaling to unit variance.
 
-
 ```python
 import pandas as pd
 from sklearn.impute import SimpleImputer
@@ -49,7 +46,6 @@ from sklearn.preprocessing import StandardScaler
 ```
 
 Let's create a simple example.
-
 
 ```python
 data = {'n1': [20, 300, 400, None, 100],
@@ -60,13 +56,9 @@ data = {'n1': [20, 300, 400, None, 100],
 df = pd.DataFrame(data)
 ```
 
-
 ```python
 df
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -81,6 +73,7 @@ df
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -126,27 +119,18 @@ df
 </table>
 </div>
 
-
-
 We can have a look the mean of each column using the `.mean()` method.
-
 
 ```python
 df.mean()
 ```
-
-
-
 
     n1    205.0
     n2      0.4
     n3    -15.0
     dtype: float64
 
-
-
 Here we create a `SimpleImputer` object with `strategy="mean"`. This means we fill the missing value using the mean along each column.
-
 
 ```python
 num_imputer = SimpleImputer(strategy="mean")
@@ -154,47 +138,30 @@ num_imputer = SimpleImputer(strategy="mean")
 
 We first fit our imputer `num_imputer` on our simple dataset.
 
-
 ```python
 num_imputer.fit(df)
 ```
 
-
-
-
     SimpleImputer()
 
-
-
-After fitting the model, the statistic, i.e., the fill value for each column, is *stored* within the imputer `num_imputer`.
-
+After fitting the model, the statistic, i.e., the fill value for each column, is _stored_ within the imputer `num_imputer`.
 
 ```python
 num_imputer.statistics_
 ```
 
-
-
-
     array([205. ,   0.4, -15. ])
-
-
 
 Now we can fill the missing values in our original dataset with the `transform` method.
 By the way, we can also apply fit and transform in one go with the `fit_transform` method.
-
 
 ```python
 imputed_features = num_imputer.transform(df)
 ```
 
-
 ```python
 imputed_features
 ```
-
-
-
 
     array([[ 2.00e+01,  1.00e-01, -2.00e+01],
            [ 3.00e+02,  4.00e-01, -1.00e+01],
@@ -202,35 +169,22 @@ imputed_features
            [ 2.05e+02,  6.00e-01, -3.00e+01],
            [ 1.00e+02,  4.00e-01, -1.50e+01]])
 
-
-
-
 ```python
 type(imputed_features)
 ```
 
-
-
-
     numpy.ndarray
 
-
-
 The transformed features are stored as `numpy.ndarray`. We can convert it back to `pandas.DataFrame` with
-
 
 ```python
 imputed_df = pd.DataFrame(imputed_features,
     index=df.index, columns=df.columns)
 ```
 
-
 ```python
 imputed_df
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -245,6 +199,7 @@ imputed_df
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -290,10 +245,7 @@ imputed_df
 </table>
 </div>
 
-
-
 The cool thing is that now we can use the same statistic saved in `num_imputer` to transform other datasets. For example here we create a new dataset with only one row.
-
 
 ```python
 # New data
@@ -306,13 +258,9 @@ data_new = {'n1': [None],
 df_new = pd.DataFrame(data_new)
 ```
 
-
 ```python
 df_new
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -327,6 +275,7 @@ df_new
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -348,18 +297,12 @@ df_new
 </table>
 </div>
 
-
-
 We can apply `num_imputer.transform` on this new dataset to fill the missing values.
-
 
 ```python
 pd.DataFrame(num_imputer.transform(df_new),
     index=df_new.index, columns=df_new.columns)
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -374,6 +317,7 @@ pd.DataFrame(num_imputer.transform(df_new),
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -395,35 +339,22 @@ pd.DataFrame(num_imputer.transform(df_new),
 </table>
 </div>
 
-
-
 `StandardScaler` works in a similar way. Here we scale the dataset after the imputer step.
-
 
 ```python
 num_scaler = StandardScaler()
 ```
 
-
 ```python
 num_scaler.fit(imputed_df)
 ```
 
-
-
-
     StandardScaler()
-
-
-
 
 ```python
 pd.DataFrame(num_scaler.transform(imputed_df),
     index=df.index, columns=df.columns)
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -438,6 +369,7 @@ pd.DataFrame(num_scaler.transform(imputed_df),
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -483,16 +415,10 @@ pd.DataFrame(num_scaler.transform(imputed_df),
 </table>
 </div>
 
-
-
 ## Transforming Categorical Features
-
-
-
 
 `OneHotEncoder` is commonly used to transform categorical features. Essentially, for each unique value in the original categorical column, a new column is created to represent this value. Each column is filled up with zeros (the value exists)
 and ones (the value doesn't exist).
-
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -509,9 +435,6 @@ df = pd.DataFrame(data)
 df
 ```
 
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -525,6 +448,7 @@ df
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -564,47 +488,29 @@ df
 </table>
 </div>
 
-
-
 Let's first `fit` a one hot encoder to a dataset.
-
 
 ```python
 cat_encoder.fit(df)
 ```
 
-
-
-
     OneHotEncoder(handle_unknown='ignore')
 
-
-
 Note that the categories of each column is stored in attribute `.categories_`.
-
 
 ```python
 cat_encoder.categories_
 ```
 
-
-
-
     [array(['Female', 'Male'], dtype=object),
      array(['Apple', 'Banana', 'Orange', 'Pear'], dtype=object)]
 
-
-
 Here is the encoded dataset.
-
 
 ```python
 pd.DataFrame(cat_encoder.transform(df).toarray(),
     index=df.index, columns=cat_encoder.get_feature_names_out())
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -619,6 +525,7 @@ pd.DataFrame(cat_encoder.transform(df).toarray(),
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -682,10 +589,7 @@ pd.DataFrame(cat_encoder.transform(df).toarray(),
 </table>
 </div>
 
-
-
 We can now use `cat_encoder` to `transform` new dataset.
-
 
 ```python
 data_new = {'c1': ['Female'], 'c2': ['Orange']}
@@ -694,9 +598,6 @@ df_new = pd.DataFrame(data_new)
 
 df_new
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -711,6 +612,7 @@ df_new
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -730,16 +632,10 @@ df_new
 </table>
 </div>
 
-
-
-
 ```python
 pd.DataFrame(cat_encoder.transform(df_new).toarray(),
     index=df_new.index, columns=cat_encoder.get_feature_names_out())
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -754,6 +650,7 @@ pd.DataFrame(cat_encoder.transform(df_new).toarray(),
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -781,17 +678,13 @@ pd.DataFrame(cat_encoder.transform(df_new).toarray(),
 </table>
 </div>
 
-
-
 ## Building a Feature Engineering Pipeline
-
 
 ### Make a Pipeline
 
 For numerical features, we can make a `pipeline` to first fill the missing values with median and then apply standard scaler;
 for categorical features, we can make a `pipeline` to first fill the missing values with the word "missing" and
 then apply one hot encoder.
-
 
 ```python
 from sklearn.pipeline import make_pipeline
@@ -807,7 +700,6 @@ categorical_transformer = make_pipeline(
 
 The transformer pipelines can be used the same way as the individual transformers, i.e., we can `fit` a pipeline with some data and use this pipeline to `transform` new data. For example,
 
-
 ```python
 data = {'n1': [20, 300, 400, None, 100],
       'n2': [0.1, None, 0.5, 0.6, None],
@@ -817,9 +709,6 @@ data = {'n1': [20, 300, 400, None, 100],
 df = pd.DataFrame(data)
 df
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -834,6 +723,7 @@ df
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -879,30 +769,18 @@ df
 </table>
 </div>
 
-
-
-
 ```python
 numeric_transformer.fit(df)
 ```
 
-
-
-
     Pipeline(steps=[('simpleimputer', SimpleImputer(strategy='median')),
                     ('standardscaler', StandardScaler())])
 
-
-
 Notice that the result is exactly the same as the example we give before (apply imputer and then scaler seperately).
-
 
 ```python
 pd.DataFrame(numeric_transformer.transform(df), index=df.index, columns=df.columns)
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -917,6 +795,7 @@ pd.DataFrame(numeric_transformer.transform(df), index=df.index, columns=df.colum
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -962,8 +841,6 @@ pd.DataFrame(numeric_transformer.transform(df), index=df.index, columns=df.colum
 </table>
 </div>
 
-
-
 ### Compose a Column Transformer
 
 For a real life dataset we may have both numeric features and categorical features. It would be nice to selectively
@@ -973,7 +850,6 @@ We can accomplish this goal by composing a `ColumnTransformer`.
 {% include figure.liquid loading="eager" path="assets/img/feature-engineering-selector.png" class="img-fluid rounded z-depth-1" width="660px" zoomable=true %}
 
 The example below has columns with numeric values (`'n1'`, `'n2'`, `'n3'`) and categorical values (`'c1'`, `'c2'`).
-
 
 ```python
 data = {'n1': [20, 300, 400, None, 100],
@@ -988,9 +864,6 @@ df = pd.DataFrame(data)
 df
 ```
 
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1004,6 +877,7 @@ df
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1061,11 +935,8 @@ df
 </table>
 </div>
 
-
-
 A `ColumnTransformer` stores a list of (name, transformer, columns) tuples as `transformers`, which allows
 different columns to be transformed separately.
-
 
 ```python
 from sklearn.compose import ColumnTransformer
@@ -1080,13 +951,9 @@ preprocessor = ColumnTransformer(
 
 We `fit` all transformers on dataset `df`, transform dataset `df`, and concatenate the results with method `fit_transform`.
 
-
 ```python
 preprocessor.fit_transform(df)
 ```
-
-
-
 
     array([[-1.35411306, -1.95003374, -0.5       ,  0.        ,  1.        ,
              0.        ,  1.        ,  0.        ,  0.        ,  0.        ],
@@ -1099,10 +966,7 @@ preprocessor.fit_transform(df)
            [-0.76536825,  0.3441236 ,  0.        ,  1.        ,  0.        ,
              0.        ,  0.        ,  0.        ,  0.        ,  1.        ]])
 
-
-
 After fitting the transformers, we can use `preprocessor` on new dataset.
-
 
 ```python
 data_new = {'n1': [10],
@@ -1117,9 +981,6 @@ df_new
 
 ```
 
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1133,6 +994,7 @@ df_new
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1158,29 +1020,18 @@ df_new
 </table>
 </div>
 
-
-
-
 ```python
 preprocessor.transform(df_new)
 ```
 
-
-
-
     array([[-1.42770616,  0.3441236 ,  0.5       ,  0.        ,  1.        ,
              0.        ,  0.        ,  0.        ,  0.        ,  0.        ]])
-
-
-
-
 
 ## Design Your Own Transformers
 
 We can design custom transformers by defining a subclass of `BaseEstimator` and `TransformerMixin`. There are three methods we need to implement: `__init__` , `fit`, and `transform`.
 
 In the example below, we design a simple transformer to first fill missing values with zeros and divide the values by 10.
-
 
 ```python
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -1202,11 +1053,9 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
 
 Once the custom transformer is initialized, it can be used the same way as any other transformers we discussed before. Here we use the custom transformer on column `"n3"`.
 
-
 ```python
 custom_tansformer = CustomTransformer()
 ```
-
 
 ```python
 preprocessor_custom = ColumnTransformer(
@@ -1218,13 +1067,9 @@ preprocessor_custom = ColumnTransformer(
         )
 ```
 
-
 ```python
 preprocessor_custom.fit_transform(df)
 ```
-
-
-
 
     array([[-1.35411306, -1.95003374, -2.        ,  0.        ,  1.        ,
              0.        ,  1.        ,  0.        ,  0.        ,  0.        ],
@@ -1237,9 +1082,6 @@ preprocessor_custom.fit_transform(df)
            [-0.76536825,  0.3441236 ,  0.        ,  1.        ,  0.        ,
              0.        ,  0.        ,  0.        ,  0.        ,  1.        ]])
 
-
-
 ## Conclusion
-
 
 In summary, we discussed how data transformation can be constructed as a pipeline. We can fit a data transformation pipeline on our training dataset and use the same pipeline to transform new dataset.

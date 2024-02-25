@@ -16,7 +16,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-
 I'm a Machine Learning (ML) Engineer at Marex, focusing on building large language model (LLM) solutions in finance.
 
 Before Marex, I led the development of a client knowledge graph for IG Group. I single-handedly created Marshmallow Insurance's in-hourse ML platform, the first of its kind in the insurance sector.
