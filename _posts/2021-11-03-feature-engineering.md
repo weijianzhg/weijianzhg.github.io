@@ -2,7 +2,7 @@
 layout: post
 title: Feature Engineering in a Pipeline
 date: 2021-11-03
-description: Feature Engineering in a Pipeline
+description: Build a pipeline to do feature engineering with Scikit-learn.
 tags: feature-engineering, pipeline, scikit-learn
 categories: machine-learning-engineering
 giscus_comments: false
@@ -21,12 +21,12 @@ for the machine learning model to interpret. If we have different transformation
 training and prediction we may duplicate the same work and it's harder to maintain
 (make some changes in one pipeline means we have to update the other pipeline as well).
 
-{% include figure.liquid loading="eager" path="assets/img/feature-engineering-separate.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.liquid loading="eager" path="assets/img/feature-engineering-separate.png" class="img-fluid rounded z-depth-1" width="360px" zoomable=true %}
 
 One common practice in producitionzing machine learning models is to write a transformation
 *pipeline* so that we can use the same data transformation code for both training and prediction.
 
-{% include figure.liquid loading="eager" path="assets/img/feature-engineering-one.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.liquid loading="eager" path="assets/img/feature-engineering-one.png" class="img-fluid rounded z-depth-1" width="360px" zoomable=true %}
 
 In this article, we discuss how we can use [scikit-learn](https://scikit-learn.org/stable/) to build a feature engineering pipeline. Let's first have a look at a few common transformations for numeric features and categorical features.
 
@@ -36,7 +36,7 @@ In this article, we discuss how we can use [scikit-learn](https://scikit-learn.o
 One thing I really like about scikit-learn is that I can use the same ''fit'' and ''predict''
 pattern for data preprocessing. For a preprocessor, the two methods are called `fit` and `transform`.
 
-{% include figure.liquid loading="eager" path="assets/img/feature-engineering-preprocessor.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.liquid loading="eager" path="assets/img/feature-engineering-preprocessor.png" class="img-fluid rounded z-depth-1" width="360px" zoomable=true %}
 
 We can use `SimpleImputer` to complete missing values and `StandardScaler` to standardize values by
 removing the mean and scaling to unit variance.
@@ -970,7 +970,7 @@ For a real life dataset we may have both numeric features and categorical featur
 apply numeric transformation on the numeric features and categorical transformation on the categorical features.
 We can accomplish this goal by composing a `ColumnTransformer`.
 
-{% include figure.liquid loading="eager" path="assets/img/feature-engineering-selector.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.liquid loading="eager" path="assets/img/feature-engineering-selector.png" class="img-fluid rounded z-depth-1" width="660px" zoomable=true %}
 
 The example below has columns with numeric values (`'n1'`, `'n2'`, `'n3'`) and categorical values (`'c1'`, `'c2'`).
 
@@ -1177,7 +1177,7 @@ preprocessor.transform(df_new)
 
 ## Design Your Own Transformers
 
-One may want to design his or her custom transformers. We do this by defining a subclass of `BaseEstimator` and `TransformerMixin`. There are three methods we need to implement: `__init__` , `fit`, and `transform`.
+We can design custom transformers by defining a subclass of `BaseEstimator` and `TransformerMixin`. There are three methods we need to implement: `__init__` , `fit`, and `transform`.
 
 In the example below, we design a simple transformer to first fill missing values with zeros and divide the values by 10.
 
