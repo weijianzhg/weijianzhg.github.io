@@ -21,12 +21,12 @@ for the machine learning model to interpret. If we have different transformation
 training and prediction we may duplicate the same work and it's harder to maintain
 (make some changes in one pipeline means we have to update the other pipeline as well).
 
-!["separate"](assets/img/feature-engineering-separate.png)
+{% include figure.liquid loading="eager" path="assets/img/feature-engineering-separate.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 One common practice in producitionzing machine learning models is to write a transformation
 *pipeline* so that we can use the same data transformation code for both training and prediction.
 
-!["one"](assets/img/feature-engineering-one.png)
+{% include figure.liquid loading="eager" path="assets/img/feature-engineering-one.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 In this article, we discuss how we can use [scikit-learn](https://scikit-learn.org/stable/) to build a feature engineering pipeline. Let's first have a look at a few common transformations for numeric features and categorical features.
 
@@ -36,7 +36,7 @@ In this article, we discuss how we can use [scikit-learn](https://scikit-learn.o
 One thing I really like about scikit-learn is that I can use the same ''fit'' and ''predict''
 pattern for data preprocessing. For a preprocessor, the two methods are called `fit` and `transform`.
 
-!["preprocessor"](assets/img/feature-engineering-preprocessor.png)
+{% include figure.liquid loading="eager" path="assets/img/feature-engineering-preprocessor.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 We can use `SimpleImputer` to complete missing values and `StandardScaler` to standardize values by
 removing the mean and scaling to unit variance.
@@ -970,7 +970,7 @@ For a real life dataset we may have both numeric features and categorical featur
 apply numeric transformation on the numeric features and categorical transformation on the categorical features.
 We can accomplish this goal by composing a `ColumnTransformer`.
 
-!["selector"](assets/img/feature-engineering-selector.png)
+{% include figure.liquid loading="eager" path="assets/img/feature-engineering-selector.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 The example below has columns with numeric values (`'n1'`, `'n2'`, `'n3'`) and categorical values (`'c1'`, `'c2'`).
 
