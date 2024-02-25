@@ -38,7 +38,7 @@ class MLModel():
 
 ## A Simple Custom Machine Learning Model For Classifying Iris Species
 
-{% include figure.liquid path="assets/img/iris.jpeg" class="rounded float-left width: 10%" zoomable=false %}
+{% include figure.liquid path="assets/img/iris.jpeg" class="rounded z-depth-1" width="120px" zoomable=false %}
 
 Let's consider the classic [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris) as an example.
 The dataset consists of samples from three Iris species (Iris setosa, Iris virginica, Iris versicolor)
