@@ -2,8 +2,8 @@
 layout: post
 title: Building Custom Machine Learning Models
 date: 2021-12-06
-description: Building Custom Machine Learning Models
-tags: machine-learning, custom-model
+description: Building a custom machine learning model with Scikit-learn base classes and use it within the scikit-learning ecosystem.
+tags: machine-learning, custom-model, scikit-learn
 categories: machine-learning-engineering
 giscus_comments: false
 related_posts: false
@@ -15,11 +15,11 @@ thumbnail: assets/img/iris.jpeg
 {:toc}
 
 
-Sometimes in order to meet a specific business goal it's best to create a custom machine learning model. In this article we discuss how to create such models. We also show how use our custom machine learning models within the scikit-learn ecosystem. For example, we can apply scikit-learn's `GridSearchCV` on our custom machine learning models to find the best hyperparameters.
+Sometimes, in order to meet a specific business need it is best to create a custom machine learning model. In this article we discuss how to create such models. We show how use the custom machine learning models within the scikit-learn ecosystem. For example, we can apply scikit-learn's `GridSearchCV` on our custom machine learning models to find the best hyperparameters.
 
 ## Basic Components of a Machine Learning Model
 
-In general, a (supervised) machine learning model has two main components: `fit` and `predict`.
+A (supervised) machine learning model has two main components: `fit` and `predict`.
 We use the `fit` method to learn from data and use `predict` to make predictions on new data.
 
 
@@ -40,7 +40,7 @@ class MLModel():
 
 {% include figure.liquid path="assets/img/iris.jpeg" class="rounded z-depth-1" width="120px" zoomable=false %}
 
-Let's consider the classic [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris) as an example.
+Let's consider the classic [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris).
 The dataset consists of samples from three Iris species (Iris setosa, Iris virginica, Iris versicolor)
 with four features (sepal length, sepal width, petal length, petal width). We can load it from `sklearn.datasets`.
 
@@ -265,7 +265,7 @@ X.describe()
 
 It's clear that sepal length, sepal width, petal length, and petal width should be positive numbers.
 
-Here we create a simple custom machine learning model which train the model using Support Vector Classification (SVC) but only
+Let's create a simple custom machine learning model: train the model using Support Vector Classification (SVC) but only
 make predictions if all the features are positive, return `unknown` otherwise.
 
 
@@ -299,7 +299,7 @@ class MLModel():
 model = MLModel()
 ```
 
-Let's first train the model on the Iris dataset.
+We can now train the model on the Iris dataset.
 
 
 ```python
