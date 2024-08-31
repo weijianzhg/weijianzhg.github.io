@@ -22,3 +22,7 @@ Before Marex, I led the development of a client knowledge graph for IG Group. I 
 I also led the development of the ML based credit risk assessment system for Steadypay, a fintech startup in London.
 
 I did my PhD in applied mathematics at the University of Manchester, supervised by Prof. Nick Higham, and was a visiting researcher at MIT Computer Science & Artificial Intelligence Laboratory. My research area was numerical linear algebra and time-dependent networks.
+
+## Newsletter
+
+I've recently started a newsletter on Substack called "The Latticework of Mental Models". This newsletter explores various mental models and their applications in decision-making, problem-solving, and understanding complex systems. If you're interested in expanding your thinking toolkit and gaining new perspectives, I invite you to [subscribe here](https://latticeworkofmodels.substack.com/).
