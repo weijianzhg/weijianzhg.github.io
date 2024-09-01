@@ -25,4 +25,4 @@ I did my PhD in applied mathematics at the University of Manchester, supervised 
 
 ## Newsletter
 
-I've recently started a newsletter on Substack called "The Latticework of Mental Models". This newsletter explores various mental models and their applications in decision-making, problem-solving, and understanding complex systems. If you're interested in expanding your thinking toolkit and gaining new perspectives, I invite you to [subscribe here](https://latticeworkofmodels.substack.com/).
+I've recently started a newsletter on Substack called "Latticework of Mental Models". This newsletter explores various mental models and their applications in decision-making, problem-solving, and understanding complex systems. If you're interested in expanding your thinking toolkit and gaining new perspectives, I invite you to [subscribe here](https://latticeworkofmodels.substack.com/).
