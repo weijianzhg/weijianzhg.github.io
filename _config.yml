@@ -119,8 +119,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: AI Notebook Adventures # blog_name will be displayed in your blog page
-blog_description: Explore, experiment, and share interesting AI and machine learning topics through Jupyter notebooks.
+blog_name: AI Notebooks # blog_name will be displayed in your blog page
+blog_description:
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -271,7 +271,7 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["machine-learning", "feature-engineering", "scikit-learn"] # these tags will be displayed on the front page of your blog
+display_tags: [] # these tags will be displayed on the front page of your blog
 display_categories: ["machine-learning-engineering"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
