@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://weijianzhg.github.io/sitemap.xml
+Sitemap: https://weijianzhg.com/sitemap.xml
