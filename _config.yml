@@ -112,7 +112,7 @@ google_analytics: G-B53R73TEBD
 cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: UIZ66Z3Vv0JzUZR1B68ZBjVz3aXIplcxvvduu_p6l80
+google_site_verification: kp4P4tJw65b8X5XCYGJE0i_FTq13wO6HlEv8-CAtQpg
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
