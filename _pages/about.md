@@ -22,6 +22,8 @@ Previously, I led the development of a client knowledge graph at IG Group. At Ma
 
 I hold a PhD in Applied Mathematics from the University of Manchester, where I was supervised by Prof. Nick Higham. I also spent time as a visiting researcher at MIT's Computer Science & Artificial Intelligence Laboratory, focusing on numerical linear algebra and time-dependent networks. Prior to university, I studied fine arts at the affiliated high school of the China Central Academy of Fine Arts.
 
-## Newsletter
+## Newsletter and Other Writings
 
-I've recently started a newsletter on Substack called "Latticework of Mental Models". This newsletter explores various mental models and their applications in decision-making, problem-solving, and understanding complex systems. If you're interested in expanding your thinking toolkit and gaining new perspectives, I invite you to [subscribe here](https://latticeworkofmodels.substack.com/).
+I write a Substack newsletter called "Latticework of Mental Models" about mental models for decision-making and problem-solving. [Subscribe here](https://latticeworkofmodels.substack.com/).
+
+I also write random thoughts on [X](https://x.com/weijianzhg).
