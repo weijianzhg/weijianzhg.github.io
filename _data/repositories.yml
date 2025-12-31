@@ -1,0 +1,10 @@
+# Repository information
+# Add GitHub users and repositories to display on your site
+# See CUSTOMIZE.md for more information
+
+github_users:
+  # - username
+
+github_repos:
+  # - repo
+

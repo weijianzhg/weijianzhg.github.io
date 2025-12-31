@@ -23,6 +23,7 @@ The site will auto-reload when you make changes.
 If you prefer running without Docker:
 
 1. **Install dependencies:**
+
    ```bash
    # macOS
    brew install ruby imagemagick
@@ -32,11 +33,13 @@ If you prefer running without Docker:
    ```
 
 2. **Install gems:**
+
    ```bash
    bundle install
    ```
 
 3. **Run the site:**
+
    ```bash
    bundle exec jekyll serve --livereload
    ```
