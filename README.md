@@ -2,7 +2,7 @@
 
 Personal website and blog built with Jekyll, based on the [al-folio](https://github.com/alshedivat/al-folio) theme.
 
-🌐 **Live site:** [weijianzhg.com](https://weijianzhg.com)
+🌐 **Live site:** [weijian.ai](https://weijian.ai)
 
 ## Local Development
 
