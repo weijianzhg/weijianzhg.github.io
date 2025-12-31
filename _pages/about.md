@@ -26,4 +26,4 @@ I hold a PhD in Applied Mathematics from the University of Manchester, supervise
 
 I write a Substack newsletter called "Latticework of Mental Models" about mental models for decision-making and problem-solving. [Subscribe here](https://latticeworkofmodels.substack.com/).
 
-I also write random thoughts on [X](https://twitter.com/weijianzhg).
+I also write random thoughts on [X](https://twitter.com/weijian_ai).
