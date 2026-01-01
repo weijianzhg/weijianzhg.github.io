@@ -3,7 +3,7 @@ name: Update Feed Cache
 on:
   schedule:
     # Run every 6 hours
-    - cron: '0 */6 * * *'
+    - cron: "0 */6 * * *"
   workflow_dispatch: # Allow manual trigger
 
 permissions:
@@ -72,4 +72,3 @@ jobs:
             git push
             echo "✅ Cache updated and pushed to repo"
           fi
-

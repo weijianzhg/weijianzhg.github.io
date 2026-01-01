@@ -24,4 +24,3 @@ Or trigger the GitHub Action manually from the Actions tab.
 ## Files
 
 - `substack.com_feed.xml` - Cached RSS feed from Notes From Zero Substack
-
