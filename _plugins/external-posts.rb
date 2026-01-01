@@ -11,7 +11,23 @@ module ExternalPosts
       if site.config['external_sources'] != nil
         site.config['external_sources'].each do |src|
           p "Fetching external posts from #{src['name']}:"
-          xml = HTTParty.get(src['rss_url'], headers: {'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}).body
+
+          # Use cached feed if available, otherwise fetch from URL
+          cache_file = File.join(site.source, '_cache', "#{src['name']}_feed.xml")
+
+          if File.exist?(cache_file)
+            p "...using cached feed"
+            xml = File.read(cache_file)
+          else
+            p "...fetching from URL"
+            xml = HTTParty.get(src['rss_url'], headers: {'User-Agent' => 'Mozilla/5.0'}).body
+
+            # Save to cache
+            FileUtils.mkdir_p(File.dirname(cache_file))
+            File.write(cache_file, xml)
+            p "...cached for future builds"
+          end
+
           feed = Feedjira.parse(xml)
           feed.entries.each do |e|
             p "...fetching #{e.url}"
