@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Script to manually update the external feed cache
+# Run this locally whenever you want to refresh the cached feeds
+
+set -e
+
+CACHE_DIR="_cache"
+FEED_URL="https://notesfromzero.substack.com/feed"
+TEMP_FILE="${CACHE_DIR}/substack.com_feed.xml.tmp"
+CACHE_FILE="${CACHE_DIR}/substack.com_feed.xml"
+
+echo "🔄 Updating feed cache..."
+
+# Create cache directory if it doesn't exist
+mkdir -p "$CACHE_DIR"
+
+# Try to fetch the feed (with retries)
+for i in {1..3}; do
+  echo "Attempt $i/3: Fetching feed from Substack..."
+
+  if curl -f -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+          --connect-timeout 10 \
+          --max-time 30 \
+          -o "$TEMP_FILE" \
+          "$FEED_URL"; then
+
+    # Check if it's valid XML (contains <rss or <feed)
+    if grep -q -E '<(rss|feed)' "$TEMP_FILE"; then
+      mv "$TEMP_FILE" "$CACHE_FILE"
+      echo "✅ Feed fetched and cached successfully"
+      echo "📁 Cache file: $CACHE_FILE"
+      exit 0
+    else
+      echo "⚠️  Response is not valid XML, attempt $i/3"
+      rm -f "$TEMP_FILE"
+    fi
+  else
+    echo "⚠️  Fetch failed, attempt $i/3"
+    rm -f "$TEMP_FILE"
+  fi
+
+  if [ $i -lt 3 ]; then
+    sleep 5
+  fi
+done
+
+# If we get here, all retries failed
+if [ -f "$CACHE_FILE" ]; then
+  echo "⚠️  Failed to fetch new feed, but old cache exists at $CACHE_FILE"
+  echo "   You can continue using the existing cache."
+  exit 0
+else
+  echo "❌ Failed to fetch feed and no cache exists"
+  echo "   Please check your internet connection and try again."
+  exit 1
+fi
+

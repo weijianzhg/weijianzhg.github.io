@@ -4,22 +4,37 @@ This directory contains cached RSS/Atom feeds from external sources to ensure re
 
 ## How It Works
 
-1. The `update-feed-cache.yml` GitHub Action runs every 6 hours to fetch fresh feeds
-2. The cached feeds are committed to the repository
-3. During site builds, the `external-posts.rb` plugin uses the cached feed instead of fetching from the URL
-4. This prevents build failures when external services (like Substack) block or rate-limit GitHub Actions
+1. The cached feeds are manually updated and committed to the repository
+2. During site builds, the `external-posts.rb` plugin uses the cached feed instead of fetching from the URL
+3. This prevents build failures when external services (like Substack) block or rate-limit requests
 
 ## Manual Update
 
-To manually update the cache locally:
+To manually update the cache locally, run:
 
 ```bash
+./bin/update-feed-cache
+```
+
+Or manually with curl:
+
+```bash
+mkdir -p _cache
 curl -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+     --connect-timeout 10 \
+     --max-time 30 \
+     -f \
      -o _cache/substack.com_feed.xml \
      https://notesfromzero.substack.com/feed
 ```
 
-Or trigger the GitHub Action manually from the Actions tab.
+After updating, commit the changes:
+
+```bash
+git add _cache/substack.com_feed.xml
+git commit -m "chore: update external feed cache"
+git push
+```
 
 ## Files
 

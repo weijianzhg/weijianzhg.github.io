@@ -22,4 +22,4 @@ Previously, I leaded the development of a client knowledge graph at IG Group. At
 
 I hold a PhD in Applied Mathematics from the University of Manchester, supervised by Prof. Nick Higham, and spent time as a visiting researcher at MIT's Computer Science & Artificial Intelligence Laboratory, specializing in numerical linear algebra and time-dependent networks. Before all that, I studied fine arts at the affiliated high school of the China Central Academy of Fine Arts.
 
-I also write random thoughts on [X](https://twitter.com/weijian_ai).
+I also write random thoughts on [X](https://twitter.com/weijianzhang_).
