@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: AI Engineering Manager
+subtitle: AI Engineering Manager · Applied Math PhD · Builder of Real-World LLM Systems
 
 profile:
   align: right
@@ -16,10 +16,28 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm the AI Engineering Manager at Marex, where I lead the AI team in building cutting-edge machine learning solutions for the finance industry, with a focus on large language models (LLMs).
+I'm an AI Engineering Manager at Marex, where I lead the AI team building enterprise-grade AI systems for financial markets, with a strong focus on LLMs, applied research, and real-world deployment.
 
-Previously, I leaded the development of a client knowledge graph at IG Group. At Marshmallow Insurance, I pioneered the company's in-house ML platform — the first of its kind in the insurance sector. Earlier, I led the creation of an ML-powered credit risk assessment system for Steadypay, a London-based fintech startup.
+**Previously:**
 
-I hold a PhD in Applied Mathematics from the University of Manchester, supervised by Prof. Nick Higham, and spent time as a visiting researcher at MIT's Computer Science & Artificial Intelligence Laboratory, specializing in numerical linear algebra and time-dependent networks. Before all that, I studied fine arts at the affiliated high school of the China Central Academy of Fine Arts.
+- Led development of a client knowledge graph at IG Group
+- Built Marshmallow Insurance's first in-house machine learning platform, powering core underwriting decisions
+- Designed a machine learning-powered credit risk system at Steadypay, a London fintech startup
 
-I also write random thoughts on [X](https://twitter.com/weijianzhang_).
+My background blends deep theory and hands-on systems work.
+I hold a PhD in Applied Mathematics from the University of Manchester (supervised by Prof. Nick Higham), with research time at MIT CSAIL focused on numerical linear algebra and time-dependent networks.
+
+Before engineering, I trained in fine arts at the affiliated high school of the China Central Academy of Fine Arts, which still shapes how I think about abstraction, structure, and taste in systems design.
+
+### What I Write About
+
+I share clear, opinionated thoughts on:
+
+- Building LLM systems that actually work in production
+- Managing and scaling AI teams
+- Bridging research, engineering, and business reality
+- Mistakes, tradeoffs, and lessons from deploying AI in finance
+
+I write regularly on [X](https://twitter.com/weijianzhang_), and go deeper on [Substack](https://notesfromzero.substack.com).
+
+👉 Subscribe if you care about practical AI, not hype.
