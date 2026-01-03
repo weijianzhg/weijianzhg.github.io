@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: AI Engineering Manager
+subtitle: AI Engineering Manager · Applied Math PhD · Builder of Real-World LLM Systems
 
 profile:
   align: right
@@ -16,10 +16,21 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm the AI Engineering Manager at Marex, where I lead the AI team in building cutting-edge machine learning solutions for the finance industry, with a focus on large language models (LLMs).
+## About
 
-Previously, I leaded the development of a client knowledge graph at IG Group. At Marshmallow Insurance, I pioneered the company's in-house ML platform — the first of its kind in the insurance sector. Earlier, I led the creation of an ML-powered credit risk assessment system for Steadypay, a London-based fintech startup.
+I'm an AI Engineering Manager at Marex, building production machine learning and LLM systems for financial markets.
 
-I hold a PhD in Applied Mathematics from the University of Manchester, supervised by Prof. Nick Higham, and spent time as a visiting researcher at MIT's Computer Science & Artificial Intelligence Laboratory, specializing in numerical linear algebra and time-dependent networks. Before all that, I studied fine arts at the affiliated high school of the China Central Academy of Fine Arts.
+Previously, I led a client knowledge graph at IG Group, built Marshmallow Insurance's first in-house ML platform, and designed an ML-powered credit risk system at Steadypay.
 
-I also write random thoughts on [X](https://twitter.com/weijianzhang_).
+I hold a PhD in Applied Mathematics from the University of Manchester (supervised by Prof. Nick Higham) and spent time as a visiting researcher at MIT CSAIL, working on numerical linear algebra and time-dependent networks. Before engineering, I trained in fine arts at the China Central Academy of Fine Arts.
+
+## Writing
+
+I write clear, opinionated notes on:
+
+- Shipping LLM systems in production
+- Applied ML tradeoffs that actually matter
+- Managing AI teams under real constraints
+
+Short thoughts on [X](https://twitter.com/weijianzhang_).
+Deeper, original writing on [Substack](https://notesfromzero.substack.com). If you care about practical AI over hype, you’ll probably enjoy it.
