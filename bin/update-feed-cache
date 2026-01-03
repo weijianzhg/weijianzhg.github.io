@@ -6,53 +6,79 @@
 set -e
 
 CACHE_DIR="_cache"
-FEED_URL="https://notesfromzero.substack.com/feed"
-TEMP_FILE="${CACHE_DIR}/substack.com_feed.xml.tmp"
-CACHE_FILE="${CACHE_DIR}/substack.com_feed.xml"
+
+# Define feeds: name|url pairs
+FEEDS=(
+  "notesfromzero.substack.com|https://notesfromzero.substack.com/feed"
+  "latticeworkofmodels.substack.com|https://latticeworkofmodels.substack.com/feed"
+)
 
 echo "🔄 Updating feed cache..."
 
 # Create cache directory if it doesn't exist
 mkdir -p "$CACHE_DIR"
 
-# Try to fetch the feed (with retries)
-for i in {1..3}; do
-  echo "Attempt $i/3: Fetching feed from Substack..."
+# Track overall success
+all_success=true
 
-  if curl -f -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-          --connect-timeout 10 \
-          --max-time 30 \
-          -o "$TEMP_FILE" \
-          "$FEED_URL"; then
+for feed_entry in "${FEEDS[@]}"; do
+  # Parse feed name and URL
+  IFS='|' read -r feed_name feed_url <<< "$feed_entry"
 
-    # Check if it's valid XML (contains <rss or <feed)
-    if grep -q -E '<(rss|feed)' "$TEMP_FILE"; then
-      mv "$TEMP_FILE" "$CACHE_FILE"
-      echo "✅ Feed fetched and cached successfully"
-      echo "📁 Cache file: $CACHE_FILE"
-      exit 0
+  TEMP_FILE="${CACHE_DIR}/${feed_name}_feed.xml.tmp"
+  CACHE_FILE="${CACHE_DIR}/${feed_name}_feed.xml"
+
+  echo ""
+  echo "📰 Processing: $feed_name"
+
+  # Try to fetch the feed (with retries)
+  success=false
+  for i in {1..3}; do
+    echo "  Attempt $i/3: Fetching feed..."
+
+    if curl -f -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+            --connect-timeout 10 \
+            --max-time 30 \
+            -o "$TEMP_FILE" \
+            "$feed_url" 2>/dev/null; then
+
+      # Check if it's valid XML (contains <rss or <feed)
+      if grep -q -E '<(rss|feed)' "$TEMP_FILE"; then
+        mv "$TEMP_FILE" "$CACHE_FILE"
+        echo "  ✅ Feed fetched and cached successfully"
+        echo "  📁 Cache file: $CACHE_FILE"
+        success=true
+        break
+      else
+        echo "  ⚠️  Response is not valid XML, attempt $i/3"
+        rm -f "$TEMP_FILE"
+      fi
     else
-      echo "⚠️  Response is not valid XML, attempt $i/3"
+      echo "  ⚠️  Fetch failed, attempt $i/3"
       rm -f "$TEMP_FILE"
     fi
-  else
-    echo "⚠️  Fetch failed, attempt $i/3"
-    rm -f "$TEMP_FILE"
-  fi
 
-  if [ $i -lt 3 ]; then
-    sleep 5
+    if [ $i -lt 3 ]; then
+      sleep 5
+    fi
+  done
+
+  # Handle failure for this feed
+  if [ "$success" = false ]; then
+    if [ -f "$CACHE_FILE" ]; then
+      echo "  ⚠️  Failed to fetch new feed, but old cache exists"
+    else
+      echo "  ❌ Failed to fetch feed and no cache exists"
+      all_success=false
+    fi
   fi
 done
 
-# If we get here, all retries failed
-if [ -f "$CACHE_FILE" ]; then
-  echo "⚠️  Failed to fetch new feed, but old cache exists at $CACHE_FILE"
-  echo "   You can continue using the existing cache."
+echo ""
+if [ "$all_success" = true ]; then
+  echo "✅ All feeds updated successfully!"
   exit 0
 else
-  echo "❌ Failed to fetch feed and no cache exists"
-  echo "   Please check your internet connection and try again."
+  echo "⚠️  Some feeds failed to update. Check output above."
   exit 1
 fi
-
