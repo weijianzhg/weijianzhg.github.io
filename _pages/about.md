@@ -16,28 +16,21 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm an AI Engineering Manager at Marex, where I lead the AI team building enterprise-grade AI systems for financial markets, with a strong focus on LLMs, applied research, and real-world deployment.
+## About
 
-**Previously:**
+I'm an AI Engineering Manager at Marex, building production machine learning and LLM systems for financial markets.
 
-- Led development of a client knowledge graph at IG Group
-- Built Marshmallow Insurance's first in-house machine learning platform, powering core underwriting decisions
-- Designed a machine learning-powered credit risk system at Steadypay, a London fintech startup
+Previously, I led a client knowledge graph at IG Group, built Marshmallow Insurance's first in-house ML platform, and designed an ML-powered credit risk system at Steadypay.
 
-My background blends deep theory and hands-on systems work.
-I hold a PhD in Applied Mathematics from the University of Manchester (supervised by Prof. Nick Higham), with research time at MIT CSAIL focused on numerical linear algebra and time-dependent networks.
+I hold a PhD in Applied Mathematics from the University of Manchester (supervised by Prof. Nick Higham) and spent time as a visiting researcher at MIT CSAIL, working on numerical linear algebra and time-dependent networks. Before engineering, I trained in fine arts at the China Central Academy of Fine Arts.
 
-Before engineering, I trained in fine arts at the affiliated high school of the China Central Academy of Fine Arts, which still shapes how I think about abstraction, structure, and taste in systems design.
+## Writing
 
-### What I Write About
+I write clear, opinionated notes on:
 
-I share clear, opinionated thoughts on:
+- Shipping LLM systems in production
+- Applied ML tradeoffs that actually matter
+- Managing AI teams under real constraints
 
-- Building LLM systems that actually work in production
-- Managing and scaling AI teams
-- Bridging research, engineering, and business reality
-- Mistakes, tradeoffs, and lessons from deploying AI in finance
-
-I write regularly on [X](https://twitter.com/weijianzhang_), and go deeper on [Substack](https://notesfromzero.substack.com).
-
-👉 Subscribe if you care about practical AI, not hype.
+Short thoughts on [X](https://twitter.com/weijianzhang_).
+Deeper, original writing on [Substack](https://notesfromzero.substack.com). If you care about practical AI over hype, you’ll probably enjoy it.
