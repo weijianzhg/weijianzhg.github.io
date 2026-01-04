@@ -20,8 +20,6 @@ social: true # includes social icons at the bottom of the page
 
 I'm an AI Engineering Manager at Marex, building production machine learning and LLM systems for financial markets.
 
-Previously, I led a client knowledge graph at IG Group, built Marshmallow Insurance's first in-house ML platform, and designed an ML-powered credit risk system at Steadypay.
-
 I hold a PhD in Applied Mathematics from the University of Manchester (supervised by Prof. Nick Higham) and spent time as a visiting researcher at MIT CSAIL, working on numerical linear algebra and time-dependent networks. Before engineering, I trained in fine arts at the China Central Academy of Fine Arts.
 
 ## Writing
