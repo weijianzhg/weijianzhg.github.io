@@ -29,8 +29,10 @@ I hold a PhD in Applied Mathematics from the University of Manchester (supervise
 I write clear, opinionated notes on:
 
 - Shipping LLM systems in production
-- Applied ML tradeoffs that actually matter
 - Managing AI teams under real constraints
+- [Mental models](https://latticeworkofmodels.substack.com) for clearer thinking across economics, psychology, mathematics, and logic
 
 Short thoughts on [X](https://twitter.com/weijianzhang_).
 Deeper, original writing on [Substack](https://notesfromzero.substack.com). If you care about practical AI over hype, you’ll probably enjoy it.
+
+You can also explore an [interactive knowledge graph](/lattice-graph.html) showing how these mental models connect.
