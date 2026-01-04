@@ -33,4 +33,6 @@ I write clear, opinionated notes on:
 - Managing AI teams under real constraints
 
 Short thoughts on [X](https://twitter.com/weijianzhang_).
-Deeper, original writing on [Substack](https://notesfromzero.substack.com). If you care about practical AI over hype, you’ll probably enjoy it.
+Deeper, original writing on [Substack](https://notesfromzero.substack.com). If you care about practical AI over hype, you'll probably enjoy it.
+
+I also write about [mental models](https://latticeworkofmodels.substack.com) — frameworks for clearer thinking across economics, psychology, mathematics, and logic. Explore the [interactive knowledge graph](/lattice-graph.html) to see how these models connect.
