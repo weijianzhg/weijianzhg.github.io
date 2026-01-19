@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 
 I'm an AI Engineering Manager at Marex, building production machine learning and LLM systems for financial markets.
 
-I hold a PhD in Applied Mathematics from the University of Manchester (supervised by Prof. Nick Higham) and spent time as a visiting researcher at MIT CSAIL, working on numerical linear algebra and time-dependent networks.
+I hold a PhD in Applied Mathematics from the University of Manchester (supervised by [Prof. Nicholas Higham](https://en.wikipedia.org/wiki/Nicholas_Higham)) and spent time as a visiting researcher at MIT CSAIL, working on numerical linear algebra and time-dependent networks.
 
 ## Writing
 
