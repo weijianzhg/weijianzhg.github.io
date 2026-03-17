@@ -2,13 +2,9 @@
 layout: about
 title: about
 permalink: /
-subtitle: AI Engineering Manager · Applied Math PhD · Builder of Real-World LLM Systems
+subtitle: Building real-world AI systems that work beyond demos
 
-profile:
-  align: right
-  image: 1767195570.png
-  image_circular: false # crops the image to make it circular
-  more_info: >
+profile: false
 
 news: false # includes a list of news items
 latest_posts: true # includes a list of the newest posts
@@ -16,21 +12,16 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
+I write about production AI, model behaviour, and decision-making under real-world constraints — for builders, technical leaders, and curious operators who care about substance over hype.
+
+[Subscribe on Substack →](https://notesfromzero.substack.com)
+
+---
+
 ## About
 
-I'm an AI Engineering Manager at Marex, building production machine learning and LLM systems for financial markets.
+I’m Weijian Zhang — an AI Engineering Manager, Applied Mathematics PhD, and builder of practical AI systems.
 
-I hold a PhD in Applied Mathematics from the University of Manchester (supervised by [Prof. Nicholas Higham](https://en.wikipedia.org/wiki/Nicholas_Higham)) and spent time as a visiting researcher at MIT CSAIL, working on numerical linear algebra and time-dependent networks.
+My work sits at the intersection of production LLM systems, model evaluation and fine-tuning, AI product design, and the mental models needed to think clearly in fast-moving technical environments.
 
-## Writing
-
-I write clear, opinionated notes on:
-
-- Shipping LLM systems in production
-- Managing AI teams under real constraints
-- [Mental models](https://latticeworkofmodels.substack.com) for clearer thinking across economics, psychology, mathematics, and logic
-
-Short thoughts on [X](https://twitter.com/weijianzhang_).
-Deeper, original writing on [Substack](https://notesfromzero.substack.com). If you care about practical AI over hype, you’ll probably enjoy it.
-
-You can also explore an [interactive knowledge graph](/lattice-graph.html) showing how these mental models connect.
+This site is where I collect what I’m learning, building, and testing in public.
