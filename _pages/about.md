@@ -18,10 +18,6 @@ I write about production AI, model behaviour, and decision-making under real-wor
 
 ---
 
-## About
-
-I’m Weijian Zhang — an AI Engineering Manager, Applied Mathematics PhD, and builder of practical AI systems.
-
 My work sits at the intersection of production LLM systems, model evaluation and fine-tuning, AI product design, and the mental models needed to think clearly in fast-moving technical environments.
 
 This site is where I collect what I’m learning, building, and testing in public.
