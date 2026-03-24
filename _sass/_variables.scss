@@ -1,39 +1,67 @@
 /*******************************************************************************
- * Variables used throughout the theme.
- * To adjust anything, simply edit the variables below and rebuild the theme.
+ * Variables — Weijian brand tokens
  ******************************************************************************/
 
-// Colors
-$red-color: #ff3636 !default;
-$red-color-dark: #b71c1c !default;
-$orange-color: #f29105 !default;
-$blue-color: #0076df !default;
-$blue-color-dark: #00369f !default;
-$cyan-color: #2698ba !default;
-$light-cyan-color: lighten($cyan-color, 25%);
-$green-color: #00ab37 !default;
+// Brand neutrals
+$bg-0: #0B0D10;
+$bg-1: #11151A;
+$bg-2: #171C22;
+$bg-3: #1E242C;
+$border-color: #27303A;
+$border-subtle: #1E242C;
+$text-1: #F3F5F7;
+$text-2: #A8B3C2;
+$text-3: #6B7A8D;
+
+// Brand accent (indigo)
+$accent-50: #EEF2FF;
+$accent-100: #E0E7FF;
+$accent-200: #C7D2FE;
+$accent-300: #A5B4FC;
+$accent-400: #818CF8;
+$accent-500: #6366F1;
+$accent-600: #4F46E5;
+$accent-700: #4338CA;
+$accent-800: #3730A3;
+$accent-900: #312E81;
+$accent-950: #1E1B4B;
+
+// Semantic
+$success: #34D399;
+$warning: #FBBF24;
+$error: #F87171;
+$info: #60A5FA;
+
+// Legacy aliases (consumed by al-folio internals)
+$red-color: $error !default;
+$red-color-dark: #7F1D1D !default;
+$orange-color: $warning !default;
+$blue-color: $info !default;
+$blue-color-dark: #1E3A5F !default;
+$cyan-color: $accent-400 !default;
+$light-cyan-color: $accent-300;
+$green-color: $success !default;
 $green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
+$green-color-dark: #064E3B !default;
 $green-color-light: #ddffdd !default;
 $green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
-$light-purple-color: lighten($purple-color, 25%);
+$purple-color: $accent-600 !default;
+$light-purple-color: $accent-300;
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
-$yellow-color: #efcc00 !default;
+$yellow-color: $warning !default;
 
-$grey-color: #828282 !default;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: #1c1c1d;
-$grey-900: #212529;
+$grey-color: $text-3 !default;
+$grey-color-light: $text-2;
+$grey-color-dark: $bg-0;
+$grey-900: $bg-1;
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$white-color: $text-1 !default;
+$black-color: $bg-0 !default;
 
 // Theme colors
-
-$code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-light: rgba($accent-600, 0.05);
+$code-bg-color-dark: $bg-2 !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

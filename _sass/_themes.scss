@@ -1,31 +1,31 @@
 /*******************************************************************************
- * Themes
+ * Themes — Weijian brand (dark-first)
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #{$white-color};
+  --global-bg-color: #F8F9FB;
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
-  --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
-  --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{$white-color};
+  --global-text-color: #{$bg-0};
+  --global-text-color-light: #{$text-3};
+  --global-theme-color: #{$accent-600};
+  --global-hover-color: #{$accent-700};
+  --global-hover-text-color: #ffffff;
+  --global-footer-bg-color: #F0F1F4;
+  --global-footer-text-color: #{$text-3};
+  --global-footer-link-color: #{$bg-0};
+  --global-distill-app-color: #{$text-3};
+  --global-divider-color: rgba(0, 0, 0, 0.08);
+  --global-card-bg-color: #ffffff;
 
-  --global-tip-block: #42b983;
+  --global-tip-block: #{$success};
   --global-tip-block-bg: #e2f5ec;
   --global-tip-block-text: #215d42;
   --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
+  --global-warning-block: #{$warning};
   --global-warning-block-bg: #fff8d8;
   --global-warning-block-text: #6b5900;
   --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
+  --global-danger-block: #{$error};
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
@@ -48,32 +48,32 @@
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #{$grey-color-dark};
+  --global-bg-color: #{$bg-0};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color-light};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
-  --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
+  --global-text-color: #{$text-1};
+  --global-text-color-light: #{$text-2};
+  --global-theme-color: #{$accent-400};
+  --global-hover-color: #{$accent-300};
+  --global-hover-text-color: #{$bg-0};
+  --global-footer-bg-color: #{$bg-1};
+  --global-footer-text-color: #{$text-2};
+  --global-footer-link-color: #{$text-1};
+  --global-distill-app-color: #{$text-2};
+  --global-divider-color: #{$border-color};
+  --global-card-bg-color: #{$bg-1};
 
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #e2f5ec;
-  --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #fff8d8;
-  --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #ffe0e0;
-  --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
+  --global-tip-block: #{$success};
+  --global-tip-block-bg: #064E3B;
+  --global-tip-block-text: #{$success};
+  --global-tip-block-title: #{$success};
+  --global-warning-block: #{$warning};
+  --global-warning-block-bg: #78350F;
+  --global-warning-block-text: #{$warning};
+  --global-warning-block-title: #{$warning};
+  --global-danger-block: #{$error};
+  --global-danger-block-bg: #7F1D1D;
+  --global-danger-block-text: #{$error};
+  --global-danger-block-title: #{$error};
 
   .fa-sun {
     padding-left: 10px;
