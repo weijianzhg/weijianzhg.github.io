@@ -3,14 +3,14 @@
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #F8F9FB;
+  --global-bg-color: #f8f9fb;
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$bg-0};
   --global-text-color-light: #{$text-3};
   --global-theme-color: #{$accent-600};
   --global-hover-color: #{$accent-700};
   --global-hover-text-color: #ffffff;
-  --global-footer-bg-color: #F0F1F4;
+  --global-footer-bg-color: #f0f1f4;
   --global-footer-text-color: #{$text-3};
   --global-footer-link-color: #{$bg-0};
   --global-distill-app-color: #{$text-3};
@@ -63,15 +63,15 @@ html[data-theme="dark"] {
   --global-card-bg-color: #{$bg-1};
 
   --global-tip-block: #{$success};
-  --global-tip-block-bg: #064E3B;
+  --global-tip-block-bg: #064e3b;
   --global-tip-block-text: #{$success};
   --global-tip-block-title: #{$success};
   --global-warning-block: #{$warning};
-  --global-warning-block-bg: #78350F;
+  --global-warning-block-bg: #78350f;
   --global-warning-block-text: #{$warning};
   --global-warning-block-title: #{$warning};
   --global-danger-block: #{$error};
-  --global-danger-block-bg: #7F1D1D;
+  --global-danger-block-bg: #7f1d1d;
   --global-danger-block-text: #{$error};
   --global-danger-block-title: #{$error};
 

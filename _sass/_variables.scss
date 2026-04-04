@@ -3,46 +3,46 @@
  ******************************************************************************/
 
 // Brand neutrals
-$bg-0: #0B0D10;
-$bg-1: #11151A;
-$bg-2: #171C22;
-$bg-3: #1E242C;
-$border-color: #27303A;
-$border-subtle: #1E242C;
-$text-1: #F3F5F7;
-$text-2: #A8B3C2;
-$text-3: #6B7A8D;
+$bg-0: #0b0d10;
+$bg-1: #11151a;
+$bg-2: #171c22;
+$bg-3: #1e242c;
+$border-color: #27303a;
+$border-subtle: #1e242c;
+$text-1: #f3f5f7;
+$text-2: #a8b3c2;
+$text-3: #6b7a8d;
 
 // Brand accent (indigo)
-$accent-50: #EEF2FF;
-$accent-100: #E0E7FF;
-$accent-200: #C7D2FE;
-$accent-300: #A5B4FC;
-$accent-400: #818CF8;
-$accent-500: #6366F1;
-$accent-600: #4F46E5;
-$accent-700: #4338CA;
-$accent-800: #3730A3;
-$accent-900: #312E81;
-$accent-950: #1E1B4B;
+$accent-50: #eef2ff;
+$accent-100: #e0e7ff;
+$accent-200: #c7d2fe;
+$accent-300: #a5b4fc;
+$accent-400: #818cf8;
+$accent-500: #6366f1;
+$accent-600: #4f46e5;
+$accent-700: #4338ca;
+$accent-800: #3730a3;
+$accent-900: #312e81;
+$accent-950: #1e1b4b;
 
 // Semantic
-$success: #34D399;
-$warning: #FBBF24;
-$error: #F87171;
-$info: #60A5FA;
+$success: #34d399;
+$warning: #fbbf24;
+$error: #f87171;
+$info: #60a5fa;
 
 // Legacy aliases (consumed by al-folio internals)
 $red-color: $error !default;
-$red-color-dark: #7F1D1D !default;
+$red-color-dark: #7f1d1d !default;
 $orange-color: $warning !default;
 $blue-color: $info !default;
-$blue-color-dark: #1E3A5F !default;
+$blue-color-dark: #1e3a5f !default;
 $cyan-color: $accent-400 !default;
 $light-cyan-color: $accent-300;
 $green-color: $success !default;
 $green-color-lime: #b7d12a !default;
-$green-color-dark: #064E3B !default;
+$green-color-dark: #064e3b !default;
 $green-color-light: #ddffdd !default;
 $green-color-bright: #11d68b !default;
 $purple-color: $accent-600 !default;
