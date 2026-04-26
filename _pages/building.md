@@ -22,6 +22,12 @@ An AI-guided system for mapping real-world risks to prediction-market hedges.
 
 ---
 
+### [Deeper Level](https://deeperlevel.xyz/)
+
+A discovery-driven text adventure where each run hides three rules, and the player learns the world well enough to escape.
+
+---
+
 ### [Mental Model Graph](/lattice-graph.html)
 
 An interactive knowledge graph connecting mental models across economics, psychology, mathematics, and logic.
