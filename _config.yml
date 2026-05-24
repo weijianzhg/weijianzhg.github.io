@@ -8,9 +8,9 @@ middle_name:
 last_name: Zhang
 email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Weijian Zhang's personal website and personal blog
+  Weijian Zhang's personal website and writing on production AI, model behaviour, prediction markets, and decision-making.
 footer_text: >
-keywords: weijian zhang, blog, AI, machine learning, finance # add your own keywords or leave empty
+keywords: weijian zhang, AI, LLM evaluation, fine-tuning, prediction markets, model behaviour, decision-making # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -281,8 +281,8 @@ display_categories: [] # these categories will be displayed on the front page of
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Zhang]
+  first_name: [Weijian]
 
   style: apa
   locale: en

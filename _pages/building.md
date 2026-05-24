@@ -12,19 +12,19 @@ nav_order: 2
 
 ### [Tuned Tensor](https://www.tunedtensor.com)
 
-A behaviour-first fine-tuning workflow for shaping model behaviour, evaluating outputs, and iterating faster.
+Behaviour control infrastructure for specifying model behaviour, fine-tuning open-weight models, evaluating regressions, and feeding results into the next run.
 
 ---
 
 ### [Hedge Layer](https://hedgelayer.ai)
 
-An AI-guided system for mapping real-world risks to prediction-market hedges.
+Prediction-market intelligence that uses AI to research live events, discover what markets are pricing, and synthesize structured views for thesis-driven speculation.
 
 ---
 
 ### [Deeper Level](https://deeperlevel.xyz/)
 
-A discovery-driven text adventure where each run hides three rules, and the player learns the world well enough to escape.
+A chess cognition lab where you play against a model, inspect its candidate moves, threats, inferred plan, and critique, and compare faster replies against deeper analysis.
 
 ---
 
@@ -36,4 +36,4 @@ An interactive knowledge graph connecting mental models across economics, psycho
 
 ### [Still Here](https://still-here-delta.vercel.app/)
 
-A gentle reminder that time is real, strange, and easy to waste, helping you count your days and reflect on the ones that matter.
+A reflective web app for counting days and writing about the ones that matter.

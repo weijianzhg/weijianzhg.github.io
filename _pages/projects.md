@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Projects and experiments across AI systems, prediction markets, model behaviour, and reflective tools.
 nav: false
 nav_order: 2
 display_categories: [work, fun]

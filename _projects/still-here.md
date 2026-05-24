@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Still Here
-description: A gentle reminder that time is real, strange, and easy to waste.
+description: A reflective web app for counting days and writing about the ones that matter.
 importance: 1
 category: work
 redirect: https://still-here-delta.vercel.app/
 ---
 
-Still Here is a reflective web experience for counting days and writing about the ones that matter.
+Still Here is a reflective web app for counting days and writing about the ones that matter.
