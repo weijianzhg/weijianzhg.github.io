@@ -1,13 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256">
-  <!-- B: filled dark square, lowercase w in white, indigo accent dot -->
   <rect width="64" height="64" rx="12" fill="#0B0D10"/>
   <rect x="0.5" y="0.5" width="63" height="63" rx="11.5" fill="none" stroke="#27303A" stroke-width="1"/>
-  <text x="29" y="46"
-        font-family="Inter, -apple-system, sans-serif"
-        font-size="40"
-        font-weight="500"
-        letter-spacing="-1.5"
-        text-anchor="middle"
-        fill="#F3F5F7">w</text>
-  <circle cx="46" cy="44" r="3" fill="#6366F1"/>
+  <g stroke="#6366F1" stroke-width="2" stroke-linecap="round" fill="none">
+    <rect x="20" y="20" width="24" height="24" rx="2.5"/>
+    <line x1="24" y1="12" x2="24" y2="20"/>
+    <line x1="32" y1="12" x2="32" y2="20"/>
+    <line x1="40" y1="12" x2="40" y2="20"/>
+    <line x1="24" y1="44" x2="24" y2="52"/>
+    <line x1="32" y1="44" x2="32" y2="52"/>
+    <line x1="40" y1="44" x2="40" y2="52"/>
+    <line x1="12" y1="24" x2="20" y2="24"/>
+    <line x1="12" y1="32" x2="20" y2="32"/>
+    <line x1="12" y1="40" x2="20" y2="40"/>
+    <line x1="44" y1="24" x2="52" y2="24"/>
+    <line x1="44" y1="32" x2="52" y2="32"/>
+    <line x1="44" y1="40" x2="52" y2="40"/>
+  </g>
+  <rect x="28" y="28" width="8" height="8" rx="1" fill="#6366F1"/>
 </svg>
