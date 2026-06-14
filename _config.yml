@@ -101,6 +101,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
+  For collaboration, feedback, or thoughtful disagreement, reach out on LinkedIn or X.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -120,7 +121,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: writing # blog_name will be displayed in your blog page
-blog_description:
+blog_description: Essays on production AI, model behaviour, prediction markets, and decision-making.
 permalink: /writing/:year/:title/
 
 # Pagination

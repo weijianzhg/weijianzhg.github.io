@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
-subtitle: Building AI systems, evaluation loops, and small tools that make model behaviour easier to understand
+subtitle: Building AI systems and evaluation loops for understanding and steering model behaviour
 
 profile: false
 
@@ -12,9 +12,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I write about production AI, model behaviour, prediction markets, and decision-making under real-world constraints - for builders, technical leaders, and curious operators who care about substance over hype.
+I build AI systems and evaluation loops for understanding and steering model behaviour.
 
-[Subscribe on Substack →](https://notesfromzero.substack.com)
+Currently building Tuned Tensor and Hedge Layer. I write about production AI, prediction markets, and decision-making under real-world constraints - for builders, technical leaders, and curious operators who care about substance over hype.
+
+[Work](/building/) · [Writing](/writing/) · [Subscribe](https://notesfromzero.substack.com)
 
 ---
 
