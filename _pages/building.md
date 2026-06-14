@@ -16,12 +16,6 @@ Founder. Building behaviour control infrastructure for specifying model behaviou
 
 ---
 
-### [Hedge Layer](https://hedgelayer.ai)
-
-Founder. Building prediction-market intelligence that uses AI to research live events, discover what markets are pricing, and synthesize structured views for thesis-driven speculation.
-
----
-
 ### [Deeper Level](https://deeperlevel.xyz/)
 
 Experiment. A chess cognition lab where you play against a model, inspect its candidate moves, threats, inferred plan, and critique, and compare faster replies against deeper analysis.

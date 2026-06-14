@@ -8,9 +8,9 @@ middle_name:
 last_name: Zhang
 email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Weijian Zhang's personal website and writing on production AI, model behaviour, prediction markets, and decision-making.
+  Weijian Zhang's personal website and writing on production AI, model behaviour, AI product design, and decision-making.
 footer_text: >
-keywords: weijian zhang, AI, LLM evaluation, fine-tuning, prediction markets, model behaviour, decision-making # add your own keywords or leave empty
+keywords: weijian zhang, AI, LLM evaluation, fine-tuning, model behaviour, AI product design, decision-making # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -121,7 +121,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: writing # blog_name will be displayed in your blog page
-blog_description: Essays on production AI, model behaviour, prediction markets, and decision-making.
+blog_description: Essays on production AI, model behaviour, AI product design, and decision-making.
 permalink: /writing/:year/:title/
 
 # Pagination

@@ -14,12 +14,12 @@ social: true # includes social icons at the bottom of the page
 
 I build AI systems and evaluation loops for understanding and steering model behaviour.
 
-Currently building Tuned Tensor and Hedge Layer. I write about production AI, prediction markets, and decision-making under real-world constraints - for builders, technical leaders, and curious operators who care about substance over hype.
+Currently building Tuned Tensor and small tools for understanding model behaviour. I write about production AI, AI product design, and decision-making under real-world constraints - for builders, technical leaders, and curious operators who care about substance over hype.
 
 [Work](/building/) · [Writing](/writing/) · [Subscribe](https://notesfromzero.substack.com)
 
 ---
 
-My work sits at the intersection of production LLM systems, model evaluation and fine-tuning, AI product design, prediction-market intelligence, and the mental models needed to think clearly in fast-moving technical environments.
+My work sits at the intersection of production LLM systems, model evaluation and fine-tuning, AI product design, and the mental models needed to think clearly in fast-moving technical environments.
 
 This site is where I collect what I’m learning, building, and testing in public.
