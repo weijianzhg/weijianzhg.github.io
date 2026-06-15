@@ -12,8 +12,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I build AI systems and evaluation loops for understanding and steering model behaviour.
-
 Currently building Tuned Tensor and small tools for understanding model behaviour. I write about production AI, AI product design, and decision-making under real-world constraints - for builders, technical leaders, and curious operators who care about substance over hype.
 
 [Work](/building/) · [Writing](/writing/) · [Subscribe](https://notesfromzero.substack.com)
