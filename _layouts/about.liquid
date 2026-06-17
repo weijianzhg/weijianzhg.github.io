@@ -56,14 +56,6 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
-    <!-- Worth reading -->
-    {% if page.worth_reading and site.worth_reading.enabled %}
-      <h2>
-        <a href="{{ '/writing/' | relative_url }}" style="color: inherit">worth reading</a>
-      </h2>
-      {% include worth_reading.liquid %}
-    {% endif %}
-
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>

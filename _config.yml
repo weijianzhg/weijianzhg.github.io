@@ -184,19 +184,6 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 6 # leave blank to include all the blog posts
 
-worth_reading:
-  enabled: true
-  posts:
-    - title: Building Software for Agents
-      url: https://notesfromzero.substack.com/p/building-software-for-agents
-      description: "The core frame: software is increasingly operated by agents, so context, tools, specs, and validation become first-class design materials."
-    - title: Auto Research for Classic Machine Learning
-      url: https://notesfromzero.substack.com/p/auto-research-for-classic-machine
-      description: "A small-model example of the bigger point: use bounded, inspectable systems when they solve the problem better than another large model."
-    - title: Paper Fluff Cutter
-      url: https://notesfromzero.substack.com/p/paper-fluff-cutter
-      description: "A practical tool for compressing research into claims, evidence, and useful explanations."
-
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
