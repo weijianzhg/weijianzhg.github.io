@@ -145,6 +145,31 @@ button:focus-visible {
   font-weight: 600;
 }
 
+.news {
+  .table {
+    margin-bottom: 0.5rem;
+
+    th {
+      width: auto !important;
+      padding-right: 1rem;
+      white-space: nowrap;
+    }
+  }
+
+  .all-writing-link {
+    margin-bottom: 1.5rem;
+    text-align: right;
+  }
+
+  .all-writing-link span {
+    color: inherit;
+  }
+}
+
+.writing-start a span {
+  color: inherit;
+}
+
 @media (max-width: 575.98px) {
   .writing-start li {
     grid-template-columns: 1fr;
