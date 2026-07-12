@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: Building open model systems you can inspect, steer, and improve
+subtitle: I build tools for open-weight models and software that agents can use
 
 profile: false
 
@@ -12,14 +12,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I build open model systems: tools and evaluation loops that make model behaviour inspectable, steerable, and useful in real workflows.
+Right now I’m building [Tuned Tensor](https://www.tunedtensor.com), a feedback loop for defining model behaviour, fine-tuning open-weight models, catching regressions, and turning failures into the next dataset.
 
-Currently building Tuned Tensor and small tools for understanding model behaviour. I write about open models, agent-ready software, evaluation, and decision-making under real-world constraints - for builders, technical leaders, and curious operators who care about substance over hype.
+Recent experiments include [a local 2B email-triage model](https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk), [an autonomous loop for prompt-injection classifiers](https://github.com/weijianzhg/autoresearch-classifier), and [Deeper Level](https://deeperlevel.xyz/), a chess interface that shows the model’s candidate moves and critique.
 
-[Work](/building/) · [Writing](/writing/) · [Subscribe](https://notesfromzero.substack.com)
-
----
-
-My work sits at the intersection of production LLM systems, open-weight model evaluation and fine-tuning, agent-ready tools, and the mental models needed to think clearly in fast-moving technical environments.
-
-This site is where I collect what I’m learning, building, and testing in public.
+[Work](/building/) · [Writing](/writing/) · [GitHub](https://github.com/weijianzhg) · [Subscribe](https://notesfromzero.substack.com)
