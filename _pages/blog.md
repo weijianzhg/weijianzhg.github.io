@@ -25,9 +25,33 @@ pagination:
 
   <div class="header-bar">
     <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
+    <p class="blog-description">{{ site.blog_description }}</p>
   </div>
   {% endif %}
+
+  <section class="writing-start" aria-labelledby="writing-start-title">
+    <h2 id="writing-start-title">Start here</h2>
+    <ul>
+      <li>
+        <span>Small models</span>
+        <a href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noopener noreferrer">
+          A local 2B email-triage model <span aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <span>Agent software</span>
+        <a href="https://notesfromzero.substack.com/p/building-software-for-agents" target="_blank" rel="noopener noreferrer">
+          Building Software for Agents <span aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <span>Decision tools</span>
+        <a href="https://latticeworkofmodels.substack.com/p/game-theory-figure-out-what-game" target="_blank" rel="noopener noreferrer">
+          Figure Out What Game You’re Playing <span aria-hidden="true">↗</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
 {% if site.display_tags.size > 0 or site.display_categories.size > 0 %}
 
@@ -101,6 +125,7 @@ pagination:
 
 {% endif %}
 
+  <h2 class="writing-archive-title">All writing</h2>
   <ul class="post-list">
 
     {% if page.pagination.enabled %}
