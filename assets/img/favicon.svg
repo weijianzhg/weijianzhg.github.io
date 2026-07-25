@@ -1,14 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <title>Weijian Zhang — rooted W</title>
-  <rect width="512" height="512" fill="#0b0d10"/>
-  <g
-    transform="scale(16)"
+  <title>Weijian Zhang</title>
+  <rect width="512" height="512" rx="96" fill="#0b0d10"/>
+  <path
+    d="M96 150 L181 362 L256 220 L331 362 L416 150"
     fill="none"
     stroke="#f3f5f7"
-    stroke-width="3"
+    stroke-width="52"
     stroke-linecap="round"
     stroke-linejoin="round"
-  >
-    <path d="M4.5 10.5 10 25l6-9 6 9 5.5-14.5M16 16V5.5M16 11l6.5-3.5"/>
-  </g>
+  />
 </svg>

@@ -45,18 +45,6 @@ button:focus-visible {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  gap: 0.5rem;
-
-  .brand-mark {
-    width: 1.5rem;
-    height: 1.5rem;
-    flex: 0 0 auto;
-    fill: none;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3;
-  }
 }
 
 .navbar-toggler,

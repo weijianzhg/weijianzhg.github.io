@@ -2,7 +2,7 @@
 layout: page
 title: work
 permalink: /building/
-description: Current projects, experiments, and the public work behind them.
+description: Current projects and experiments.
 nav: true
 nav_order: 2
 ---
