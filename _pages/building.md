@@ -13,7 +13,7 @@ nav_order: 2
 
 A feedback loop for open-weight models: define the target behaviour, fine-tune, check for regressions, and turn failures into the next dataset.
 
-[Website](https://www.tunedtensor.com) · [Email-triage case study](https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk) · [Dataset](https://huggingface.co/datasets/tunedtensor/email-triage-v1) · [Model](https://huggingface.co/tunedtensor/email-triage-v1-gguf) · [CLI](https://pypi.org/project/email-triage/)
+[Website](https://tunedtensor.com) · [Email-triage case study](https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk) · [Dataset](https://huggingface.co/datasets/tunedtensor/email-triage-v1) · [Model](https://huggingface.co/tunedtensor/email-triage-v1-gguf) · [CLI](https://pypi.org/project/email-triage/)
 
 ## Selected experiments
 
