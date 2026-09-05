@@ -48,5 +48,6 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          # removed md files that include liquid tags
-          args: --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --verbose --no-progress './**/*.md' './**/*.html'
+          # Liquid-generated URLs are checked after rendering by the site workflow.
+          # LinkedIn returns a bot-blocking 999 for the verified public profile.
+          args: --exclude 'file://.*%7B%7B.*%7D%7D' --exclude '^https://www.linkedin.com/in/weijianzhg/?$' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --verbose --no-progress './**/*.md' './**/*.html'
