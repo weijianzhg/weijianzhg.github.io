@@ -8,9 +8,9 @@ middle_name:
 last_name: Zhang
 email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Weijian Zhang's personal site — building tools for open-weight models, and writing about the process.
+  Weijian Zhang builds reliable AI systems for enterprise use, with work on model evaluation, fine tuning, and agent infrastructure.
 footer_text: >
-keywords: weijian zhang, open-weight models, fine-tuning, model evaluation, decision-making # add your own keywords or leave empty
+keywords: weijian zhang, AI engineering, enterprise AI, reliable AI systems, model evaluation # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 

@@ -42,8 +42,18 @@ for feed_entry in "${FEEDS[@]}"; do
             -o "$TEMP_FILE" \
             "$feed_url" 2>/dev/null; then
 
-      # Check if it's valid XML (contains <rss or <feed)
-      if grep -q -E '<(rss|feed)' "$TEMP_FILE"; then
+      # Validate the complete RSS before replacing the last known feed
+      if python3 - "$TEMP_FILE" <<'PYXML'
+import sys
+import xml.etree.ElementTree as ET
+try:
+    root = ET.parse(sys.argv[1]).getroot()
+    assert root.tag == "rss" and root.find("channel/item/title") is not None
+except (ET.ParseError, AssertionError, OSError) as error:
+    print(f"Invalid RSS: {error}", file=sys.stderr)
+    sys.exit(1)
+PYXML
+      then
         mv "$TEMP_FILE" "$CACHE_FILE"
         echo "  ✅ Feed fetched and cached successfully"
         echo "  📁 Cache file: $CACHE_FILE"

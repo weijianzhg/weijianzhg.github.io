@@ -1,3 +1,15 @@
+## Personal homepage and publishing
+
+The homepage uses the approved editorial design: standalone HTML and CSS, with locally hosted fonts. It has no client framework or JavaScript requirement. The existing Jekyll build still generates the writing archive and preserves its URLs.
+
+Pushes to `main` publish through `.github/workflows/deploy.yml` to the `gh-pages` branch. GitHub Pages serves that branch at **https://weijian.ai**. `CNAME` preserves the domain. Pull requests and manual builds on other branches validate without publishing.
+
+The same workflow runs at minute 17 of each hour to refresh the public blog feeds and rebuild the static site. GitHub may delay scheduled runs. If a feed request fails or returns invalid XML, the last successful GitHub Actions feed cache is retained, with the committed cache as a fallback. Two featured essays remain curated; the three latest posts come from Notes from Zero and exclude those highlights. No server or runtime RSS proxy is used on GitHub Pages.
+
+Homepage source: `_pages/about.html`. Styles and fonts: `assets/editorial/`. Build verification: `python3 bin/check-editorial-build.py` after `bundle exec jekyll build`.
+
+---
+
 # Weijian Zhang's Personal Website
 
 Personal website and blog built with Jekyll, based on the [al-folio](https://github.com/alshedivat/al-folio) theme.

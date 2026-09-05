@@ -8,6 +8,8 @@ on:
     paths:
       - "assets/**"
       - "_cache/**"
+      - "bin/**"
+      - "CNAME"
       - "**.html"
       - "**.js"
       - "**.liquid"
@@ -33,6 +35,8 @@ on:
     paths:
       - "assets/**"
       - "_cache/**"
+      - "bin/**"
+      - "CNAME"
       - "**.html"
       - "**.js"
       - "**.liquid"
@@ -51,10 +55,16 @@ on:
       - "!FAQ.md"
       - "!INSTALL.md"
       - "!README.md"
+  schedule:
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -63,6 +73,14 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v5
+      - name: Restore last successful feeds
+        uses: actions/cache@v6.1.0
+        with:
+          path: _cache
+          key: blog-feeds-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: blog-feeds-
+      - name: Refresh blog feeds
+        run: ./bin/update-feed-cache
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -88,8 +106,10 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Verify static homepage
+        run: python3 bin/check-editorial-build.py
       - name: Deploy 🚀
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
