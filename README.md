@@ -1,6 +1,6 @@
 # Weijian Zhang
 
-Source for [weijian.ai](https://weijian.ai), my personal website about AI engineering and building reliable systems.
+Source for [weijian.ai](https://weijian.ai), my personal website about AI architecture and building reliable systems.
 
 The homepage is static HTML and CSS with local fonts and no JavaScript. Jekyll builds the site, including the writing archive and existing project pages.
 
