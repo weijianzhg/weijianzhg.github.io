@@ -1,41 +1,10 @@
-# External Feed Cache
+# Feed cache
 
-This directory contains cached RSS/Atom feeds from external sources to ensure reliable builds even when external services are unavailable.
+These RSS snapshots let the site build when Substack is unavailable:
 
-## How It Works
+- `notesfromzero.substack.com_feed.xml`
+- `latticeworkofmodels.substack.com_feed.xml`
 
-1. The cached feeds are manually updated and committed to the repository
-2. During site builds, the `external-posts.rb` plugin uses the cached feed instead of fetching from the URL
-3. This prevents build failures when external services (like Substack) block or rate-limit requests
+The deploy workflow refreshes them on each build and on an hourly schedule. GitHub Actions retains successful snapshots between runs; the committed files are the fallback. Invalid responses never replace a valid cache.
 
-## Manual Update
-
-To manually update the cache locally, run:
-
-```bash
-./bin/update-feed-cache
-```
-
-Or manually with curl:
-
-```bash
-mkdir -p _cache
-curl -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-     --connect-timeout 10 \
-     --max-time 30 \
-     -f \
-     -o _cache/substack.com_feed.xml \
-     https://notesfromzero.substack.com/feed
-```
-
-After updating, commit the changes:
-
-```bash
-git add _cache/substack.com_feed.xml
-git commit -m "chore: update external feed cache"
-git push
-```
-
-## Files
-
-- `substack.com_feed.xml` - Cached RSS feed from Notes From Zero Substack
+`_plugins/external-posts.rb` reads these files during the Jekyll build. To refresh them locally, run `./bin/update-feed-cache` from the repository root. See the [README](../README.md) for publishing instructions.

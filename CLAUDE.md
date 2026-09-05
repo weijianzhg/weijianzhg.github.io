@@ -1,15 +1,11 @@
-# Project Notes
+# Project notes
 
-Jekyll site (al-folio theme) deployed to GitHub Pages.
+Personal site at https://weijian.ai. The homepage is standalone HTML and CSS; Jekyll builds the site and writing archive.
 
-## Common Tasks
+- Edit the homepage in `_pages/about.html` and its styles in `assets/editorial/`.
+- Keep the existing `/writing/`, `/building/` and `/lattice-graph.html` URLs working.
+- Run `bundle exec jekyll build --lsi`, then `python3 bin/check-editorial-build.py` to check the generated site. Run `npx prettier . --check` for formatting.
+- `main` is the source branch. GitHub Actions publishes to `gh-pages` and refreshes feeds hourly.
+- `./bin/update-feed-cache` refreshes local RSS snapshots. `./bin/publish-feeds` also commits and pushes them; use it when publishing feed updates is requested.
 
-- **Update and publish feeds**: Run `./bin/publish-feeds`. This fetches RSS feeds from Substack, commits any cache changes, and pushes to trigger a deploy. No research needed — just run the script.
-- **Update feeds only (no push)**: Run `./bin/update-feed-cache`.
-
-## Feed System
-
-- External RSS sources are defined in `_config.yml` under `external_sources`.
-- Cached feed XML lives in `_cache/`.
-- `_plugins/external-posts.rb` reads the cache during Jekyll build to create blog posts.
-- The deploy workflow (`.github/workflows/deploy.yml`) auto-rebuilds when `_cache/**` changes.
+See README.md for setup and editing instructions.

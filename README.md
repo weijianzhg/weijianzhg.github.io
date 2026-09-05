@@ -1,93 +1,47 @@
-## Personal homepage and publishing
+# Weijian Zhang
 
-The homepage uses the approved editorial design: standalone HTML and CSS, with locally hosted fonts. It has no client framework or JavaScript requirement. The existing Jekyll build still generates the writing archive and preserves its URLs.
+Source for [weijian.ai](https://weijian.ai), my personal website about AI engineering and building reliable systems.
 
-Pushes to `main` publish through `.github/workflows/deploy.yml` to the `gh-pages` branch. GitHub Pages serves that branch at **https://weijian.ai**. `CNAME` preserves the domain. Pull requests and manual builds on other branches validate without publishing.
+The homepage is static HTML and CSS with local fonts and no JavaScript. Jekyll builds the site, including the writing archive and existing project pages.
 
-The same workflow runs at minute 17 of each hour to refresh the public blog feeds and rebuild the static site. GitHub may delay scheduled runs. If a feed request fails or returns invalid XML, the last successful GitHub Actions feed cache is retained, with the committed cache as a fallback. Two featured essays remain curated; the three latest posts come from Notes from Zero and exclude those highlights. No server or runtime RSS proxy is used on GitHub Pages.
+## Editing
 
-Homepage source: `_pages/about.html`. Styles and fonts: `assets/editorial/`. Build verification: `python3 bin/check-editorial-build.py` after `bundle exec jekyll build`.
+- `_pages/about.html`: homepage copy, selected projects and featured essays.
+- `assets/editorial/`: homepage styles, icons and fonts.
+- `_pages/blog.md` and `_pages/building.md`: writing archive and work page.
+- `lattice-graph.html`: interactive mental model graph.
+- `_config.yml`: site settings and external writing sources.
 
----
+The archive uses the layouts, includes and styles inherited from [al-folio](https://github.com/alshedivat/al-folio).
 
-# Weijian Zhang's Personal Website
+## Run locally
 
-Personal website and blog built with Jekyll, based on the [al-folio](https://github.com/alshedivat/al-folio) theme.
+Use Ruby with Bundler (CI uses Ruby 3.2.2), ImageMagick and Python 3. Node.js is only needed for formatting.
 
-🌐 **Live site:** [weijian.ai](https://weijian.ai)
-
-## Local Development
-
-### Option 1: Docker (Recommended)
-
-The easiest way to run the site locally:
-
-```bash
-docker compose up
+```sh
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
-Then open [http://localhost:8080](http://localhost:8080) in your browser.
+Open [localhost:4000](http://localhost:4000). The committed feed cache lets you build without fetching new posts.
 
-The site will auto-reload when you make changes.
+Before pushing:
 
-### Option 2: Native Ruby/Jekyll
-
-If you prefer running without Docker:
-
-1. **Install dependencies:**
-
-   ```bash
-   # macOS
-   brew install ruby imagemagick
-
-   # Add Ruby to PATH (add to ~/.zshrc)
-   export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-   ```
-
-2. **Install gems:**
-
-   ```bash
-   bundle install
-   ```
-
-3. **Run the site:**
-
-   ```bash
-   bundle exec jekyll serve --livereload
-   ```
-
-   Then open [http://localhost:4000](http://localhost:4000)
-
-## Project Structure
-
-```
-├── _pages/           # Site pages (about, blog, 404)
-├── _posts/           # Blog posts
-├── _config.yml       # Site configuration
-├── assets/
-│   ├── img/          # Images
-│   ├── css/          # Stylesheets
-│   └── js/           # JavaScript
-└── _sass/            # SCSS source files
+```sh
+JEKYLL_ENV=production bundle exec jekyll build --lsi
+python3 bin/check-editorial-build.py
+npm ci
+npx prettier . --check
 ```
 
-## Writing Blog Posts
+## Publishing and writing updates
 
-Create a new file in `_posts/` with the format `YYYY-MM-DD-title.md`:
+Push to `main` to publish. [GitHub Actions](.github/workflows/deploy.yml) builds and checks the site, then updates `gh-pages`. GitHub Pages serves it at **weijian.ai**, configured by `CNAME`. Pull requests build without publishing.
 
-```markdown
----
-layout: post
-title: Your Post Title
-date: 2024-01-15
-description: A short description
-tags: tag1, tag2
-categories: category-name
----
+The workflow also runs hourly to refresh both Substack feeds. The homepage shows three recent Notes from Zero posts alongside two curated essays, without duplicates. If a feed is unavailable or invalid, the build keeps the last successful cache. GitHub may delay scheduled runs.
 
-Your content here...
-```
+To refresh feeds locally, run `./bin/update-feed-cache` from the repository root. To refresh, commit and push the cache in one step, run `./bin/publish-feeds`.
 
 ## License
 
-Content © Weijian Zhang. Theme based on [al-folio](https://github.com/alshedivat/al-folio) (MIT License).
+Content © Weijian Zhang. The original al-folio theme is covered by [LICENSE](LICENSE). Font licenses are included in `assets/editorial/fonts/`.

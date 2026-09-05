@@ -205,14 +205,10 @@ kramdown:
 include: ["_pages"]
 exclude:
   - bin
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
-  - docker-compose.yml
-  - Dockerfile
-  - FAQ.md
+  - CLAUDE.md
+  - node_modules
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
   - package.json
   - package-lock.json
