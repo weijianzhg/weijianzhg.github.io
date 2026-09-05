@@ -196,8 +196,10 @@ a:hover .arrow {
 .arrow {
   display: inline-block;
   transition: transform 180ms ease;
-  font-family: var(--font-sans-face), Arial, sans-serif;
-  font-weight: 400;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
 }
 h1,
 h2,

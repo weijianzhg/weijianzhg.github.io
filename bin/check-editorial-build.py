@@ -74,6 +74,7 @@ def main():
     assert not set(page.latest) & FEATURED, "Latest writing must not repeat the highlights"
     text = " ".join(page.text)
     assert "I build AI systems" in text and "rely on." in text
+    assert "↗" not in text, "Use SVG link arrows so phones cannot render them as emoji"
     assert "wz." not in text and "Three directions" not in text
     assert "/_next/" not in html and "{{" not in html and "{%" not in html
     for href in page.links:
