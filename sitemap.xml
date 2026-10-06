@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <url> <loc>https://weijian.ai/</loc> </url> <url> <loc>https://weijian.ai/building/</loc> </url> <url> <loc>https://weijian.ai/writing/2026/</loc> </url> <url> <loc>https://weijian.ai/writing/2025/</loc> </url> <url> <loc>https://weijian.ai/writing/2024/</loc> </url> <url> <loc>https://weijian.ai/writing/</loc> </url> <url> <loc>https://weijian.ai/writing/page/2/</loc> </url> <url> <loc>https://weijian.ai/writing/page/3/</loc> </url> <url> <loc>https://weijian.ai/writing/page/4/</loc> </url> <url> <loc>https://weijian.ai/writing/page/5/</loc> </url> <url> <loc>https://weijian.ai/lattice-graph.html</loc> <lastmod>2026-10-06T09:44:32+00:00</lastmod> </url> </urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://weijian.ai/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/building/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/writing/2026/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/writing/2025/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/writing/2024/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/writing/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/writing/page/2/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/writing/page/3/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/writing/page/4/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/writing/page/5/</loc>
+</url>
+<url>
+<loc>https://weijian.ai/lattice-graph.html</loc>
+<lastmod>2026-10-06T09:51:00+00:00</lastmod>
+</url>
+</urlset>
