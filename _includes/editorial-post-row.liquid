@@ -1,0 +1,12 @@
+{%- assign post = include.post -%}
+{%- assign source = site.external_sources | where: 'name', post.external_source | first -%}
+<a class="latest-post" href="{{ post.redirect | escape }}" target="_blank" rel="noreferrer">
+  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%e %b %Y' }}</time>
+  <span>
+    <h4>{{ post.title | escape }}</h4>
+    {%- if source.title -%}
+      <span class="post-source">{{ source.title }}</span>
+    {%- endif %}
+  </span>
+  {% include editorial-arrow.liquid %}
+</a>

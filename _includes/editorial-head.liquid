@@ -1,0 +1,23 @@
+{%- if page.url == '/' -%}
+  {%- assign page_title = 'Weijian Zhang | AI builder' -%}
+{%- else -%}
+  {%- assign page_title = page.title | append: ' | Weijian Zhang' -%}
+{%- endif -%}
+{%- assign page_description = page.description | default: site.description | strip_newlines | strip -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title | escape }}</title>
+<meta name="description" content="{{ page_description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{%- if site.google_site_verification %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+{%- endif %}
+<link rel="alternate" type="application/rss+xml" title="Notes from Zero" href="https://notesfromzero.substack.com/feed">
+<link rel="icon" type="image/svg+xml" href="/assets/editorial/favicon.svg">
+<link rel="preload" as="font" type="font/woff2" href="/assets/editorial/fonts/geist-98bbbccb.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/editorial/fonts/libre-caslon-display-98df7e80.woff2" crossorigin>
+<link rel="stylesheet" href="/assets/editorial/editorial.css">

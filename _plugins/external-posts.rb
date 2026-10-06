@@ -42,6 +42,7 @@ module ExternalPosts
             doc.data['description'] = e.summary;
             doc.data['date'] = e.published;
             doc.data['redirect'] = e.url;
+            doc.data['sitemap'] = false;
             site.collections['posts'].docs << doc
           end
         end

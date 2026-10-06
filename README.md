@@ -1,22 +1,21 @@
 # Weijian Zhang
 
-Source for [weijian.ai](https://weijian.ai), my personal website about AI architecture and building reliable systems.
+Source for [weijian.ai](https://weijian.ai), my personal website about building reliable AI systems for finance.
 
-The homepage is static HTML and CSS with local fonts and no JavaScript. Jekyll builds the site, including the writing archive and existing project pages.
+Every page is static HTML and CSS with local fonts and no JavaScript. Jekyll builds the site, including the writing archive and work page.
 
 ## Editing
 
 - `_pages/about.html`: homepage copy, selected projects and featured essays.
-- `assets/editorial/`: homepage styles, icons and fonts.
-- `_pages/blog.md` and `_pages/building.md`: writing archive and work page.
+- `_pages/building.html` and `_pages/writing.html`: work page and writing archive.
+- `_layouts/editorial.liquid` and `_includes/editorial-*.liquid`: shared page shell, header, footer and post rows.
+- `assets/editorial/`: styles, icons and fonts for every page.
 - `lattice-graph.html`: interactive mental model graph.
 - `_config.yml`: site settings and external writing sources.
 
-The archive uses the layouts, includes and styles inherited from [al-folio](https://github.com/alshedivat/al-folio).
-
 ## Run locally
 
-Use Ruby with Bundler (CI uses Ruby 3.2.2), ImageMagick and Python 3. Node.js is only needed for formatting.
+Use Ruby with Bundler (CI uses Ruby 3.3.6 and the committed `Gemfile.lock`), ImageMagick and Python 3. Node.js is only needed for formatting.
 
 ```sh
 bundle install

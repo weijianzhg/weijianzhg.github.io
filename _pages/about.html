@@ -1,86 +1,65 @@
 ---
 layout: null
-title: home
+title: Home
 permalink: /
+description: "I build reliable AI systems for finance: local models, training data, and financial infrastructure with AI built in."
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Weijian Zhang | AI architect</title>
-    <meta
-      name="description"
-      content="I build reliable AI systems for enterprise use. Work on model evaluation, fine tuning, and the infrastructure around AI agents."
-    />
-    <link rel="canonical" href="https://weijian.ai/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Weijian Zhang | AI architect" />
-    <meta
-      property="og:description"
-      content="I build reliable AI systems for enterprise use. Work on model evaluation, fine tuning, and the infrastructure around AI agents."
-    />
-    <meta property="og:url" content="https://weijian.ai/" />
-    <link rel="alternate" type="application/rss+xml" title="Notes from Zero" href="https://notesfromzero.substack.com/feed" />
-    <link rel="icon" type="image/svg+xml" href="/assets/editorial/favicon.svg" />
-    <link rel="preload" as="font" type="font/woff2" href="/assets/editorial/fonts/geist-98bbbccb.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="/assets/editorial/fonts/libre-caslon-display-98df7e80.woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/editorial/editorial.css" />
+    {% include editorial-head.liquid %}
   </head>
   <body>
     <div class="page editorial" id="top">
       <a class="skip-link" href="#main">Skip to content</a>
       <div class="page-wrap">
-        <header class="site-header">
-          <a class="identity" href="#top">Weijian Zhang</a>
-          <nav aria-label="Main navigation">
-            <a href="#work">Work</a><a href="#writing">Writing</a
-            ><a href="https://www.linkedin.com/in/weijianzhg" target="_blank" rel="noreferrer">Contact {% include editorial-arrow.liquid %}</a>
-          </nav>
-        </header>
+        {% include editorial-header.liquid home=true %}
         <main id="main">
           <section class="editorial-hero">
             <div>
-              <p class="eyebrow"><span class="accent-dot"></span> AI architect · Enterprise systems</p>
-              <h1>I build AI systems<br />people can<br /><em>rely on.</em></h1>
+              <p class="eyebrow"><span class="accent-dot"></span> AI builder · Finance</p>
+              <h1>I build AI systems<br />finance can<br /><em>rely on.</em></h1>
             </div>
             <div class="hero-aside">
               <div class="margin-mark" aria-hidden="true">↳</div>
-              <p>I’m Weijian. I work on the models, evaluation and infrastructure that make AI useful in an enterprise.</p>
-              <p class="secondary-copy">Clear behaviour. Careful testing. Systems that are understandable when something goes wrong.</p>
-              <a href="#work" class="text-link">Explore my work <span aria-hidden="true">↓</span></a>
+              <p>I’m Weijian. I build AI systems for financial work, where mistakes are expensive and every decision has to be checked.</p>
+              <a href="#work" class="text-link">See my work <span aria-hidden="true">↓</span></a>
             </div>
           </section>
           <section class="editorial-work" id="work">
             <div class="section-heading">
               <h2>Selected work</h2>
-              <a class="text-link" href="https://github.com/weijianzhg" target="_blank" rel="noreferrer"
-                >On GitHub {% include editorial-arrow.liquid %}</a
-              >
+              <a class="text-link" href="/building/">All work <span aria-hidden="true">→</span></a>
             </div>
             <div class="project-rows">
               <a class="project-row" href="https://tunedtensor.com" target="_blank" rel="noreferrer"
                 ><span class="row-index">01</span>
                 <div>
                   <h3>Tuned Tensor</h3>
-                  <p>Define the behaviour. Fine tune the model. Compare results and check for regressions.</p>
+                  <p>
+                    Train and fine tune small local models for focused tasks. One spec file drives training, evaluation and serving on your own GPU.
+                  </p>
                 </div>
-                <span class="project-category">Model behaviour</span>{% include editorial-arrow.liquid %}</a
-              ><a class="project-row" href="https://github.com/weijianzhg/bedrock-agent-blueprint" target="_blank" rel="noreferrer"
+                <span class="project-category">Local models</span>{% include editorial-arrow.liquid %}</a
+              >
+              <a class="project-row" href="https://hedgelayer.ai" target="_blank" rel="noreferrer"
                 ><span class="row-index">02</span>
                 <div>
-                  <h3>Bedrock Agent Blueprint</h3>
-                  <p>A repeatable way to deploy AI agents on AWS, with infrastructure defined in code.</p>
+                  <h3>Hedge Layer</h3>
+                  <p>
+                    Financial infrastructure with AI built in. Agent H researches prediction markets and replies with live prices, cited evidence and
+                    a probability range you can check.
+                  </p>
                 </div>
-                <span class="project-category">Agent infrastructure</span>{% include editorial-arrow.liquid %}</a
-              ><a class="project-row" href="https://github.com/weijianzhg/autoresearch-classifier" target="_blank" rel="noreferrer"
+                <span class="project-category">Financial infrastructure</span>{% include editorial-arrow.liquid %}</a
+              ><a class="project-row" href="https://deeperlevel.xyz" target="_blank" rel="noreferrer"
                 ><span class="row-index">03</span>
                 <div>
-                  <h3>Autoresearch Classifier</h3>
-                  <p>An automated experiment loop for improving prompt injection classifiers.</p>
+                  <h3>Deeper Level</h3>
+                  <p>Play strategy games against AI models. Each game becomes reinforcement learning data for training better local models.</p>
                 </div>
-                <span class="project-category">Evaluation</span>{% include editorial-arrow.liquid %}</a
+                <span class="project-category">Training data</span>{% include editorial-arrow.liquid %}</a
               >
             </div>
           </section>
@@ -88,11 +67,9 @@ permalink: /
             <div class="section-heading">
               <div>
                 <span class="eyebrow">Notes from Zero</span>
-                <h2>Thinking in public.</h2>
+                <h2>Writing</h2>
               </div>
-              <a class="text-link" href="https://notesfromzero.substack.com" target="_blank" rel="noreferrer"
-                >All writing {% include editorial-arrow.liquid %}</a
-              >
+              <a class="text-link" href="/writing/">All writing <span aria-hidden="true">→</span></a>
             </div>
             <div class="essay-grid">
               <a class="essay" href="https://notesfromzero.substack.com/p/building-software-for-agents" target="_blank" rel="noreferrer"
@@ -122,14 +99,7 @@ permalink: /
             </div>
           </section>
         </main>
-        <footer class="site-footer">
-          <p>Weijian Zhang <span>AI architect</span></p>
-          <nav aria-label="Social profiles">
-            <a href="https://github.com/weijianzhg" target="_blank" rel="noreferrer">GitHub {% include editorial-arrow.liquid %}</a
-            ><a href="https://www.linkedin.com/in/weijianzhg" target="_blank" rel="noreferrer">LinkedIn {% include editorial-arrow.liquid %}</a
-            ><a href="https://x.com/Weijian" target="_blank" rel="noreferrer">X {% include editorial-arrow.liquid %}</a>
-          </nav>
-        </footer>
+        {% include editorial-footer.liquid %}
       </div>
     </div>
   </body>
