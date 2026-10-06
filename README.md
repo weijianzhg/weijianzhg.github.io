@@ -15,7 +15,7 @@ Every page is static HTML and CSS with local fonts and no JavaScript. Jekyll bui
 
 ## Run locally
 
-Use Ruby with Bundler (CI uses Ruby 3.3.6 and the committed `Gemfile.lock`), ImageMagick and Python 3. Node.js is only needed for formatting.
+Use Ruby with Bundler (CI uses Ruby 3.3.6 and the committed `Gemfile.lock`) and Python 3. Node.js is only needed for formatting.
 
 ```sh
 bundle install
@@ -27,7 +27,7 @@ Open [localhost:4000](http://localhost:4000). The committed feed cache lets you 
 Before pushing:
 
 ```sh
-JEKYLL_ENV=production bundle exec jekyll build --lsi
+JEKYLL_ENV=production bundle exec jekyll build
 python3 bin/check-editorial-build.py
 npm ci
 npx prettier . --check
