@@ -306,12 +306,6 @@ a {
   line-height: 1.65;
   letter-spacing: -0.02em;
 }
-.hero-aside .secondary-copy {
-  color: #69716e;
-  font-size: 16px;
-  margin-top: 18px;
-  line-height: 1.7;
-}
 .text-link {
   font-size: 14px;
   font-weight: 500;
@@ -349,7 +343,7 @@ a {
   border-bottom: 1px solid var(--border);
   transition: color 180ms;
 }
-.project-row:hover {
+a.project-row:hover {
   color: var(--primary);
 }
 .row-index {
@@ -473,9 +467,6 @@ a {
   .hero-aside p {
     font-size: 16px;
   }
-  .hero-aside .secondary-copy {
-    font-size: 16px;
-  }
   .project-category {
     display: none;
   }
@@ -528,9 +519,6 @@ a {
   }
   .hero-aside p {
     font-size: 17px;
-  }
-  .hero-aside .secondary-copy {
-    font-size: 16px;
   }
   .hero-aside .text-link {
     margin-top: 16px;
