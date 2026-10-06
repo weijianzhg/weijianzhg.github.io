@@ -343,7 +343,7 @@ a {
   border-bottom: 1px solid var(--border);
   transition: color 180ms;
 }
-a.project-row:hover {
+.project-row:hover {
   color: var(--primary);
 }
 .row-index {
