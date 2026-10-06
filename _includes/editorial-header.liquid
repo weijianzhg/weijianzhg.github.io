@@ -1,0 +1,23 @@
+<header class="site-header">
+  <a class="identity" href="{% if include.home %}#top{% else %}/{% endif %}">Weijian Zhang</a>
+  <nav aria-label="Main navigation">
+    {%- if include.home -%}
+      <a href="#work">Work</a><a href="#writing">Writing</a>
+    {%- else -%}
+      <a
+        href="/building/"
+        {% if page.url == '/building/' %}
+          aria-current="page"
+        {% endif %}
+        >Work</a
+      ><a
+        href="/writing/"
+        {% if page.url contains '/writing/' %}
+          aria-current="page"
+        {% endif %}
+        >Writing</a
+      >
+    {%- endif -%}
+    <a href="https://www.linkedin.com/in/weijianzhg" target="_blank" rel="noreferrer">Contact {% include editorial-arrow.liquid %}</a>
+  </nav>
+</header>

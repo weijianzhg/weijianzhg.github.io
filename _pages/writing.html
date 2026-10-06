@@ -1,0 +1,56 @@
+---
+layout: editorial
+permalink: /writing/
+title: Writing
+description: Notes from building with AI models and agents. What I tried, what failed, and what changed.
+pagination:
+  enabled: true
+  collection: posts
+  permalink: /page/:num/
+  per_page: 5
+  sort_field: date
+  sort_reverse: true
+---
+
+<header class="page-intro">
+  <p class="eyebrow"><span class="accent-dot"></span> Notes from Zero · Latticework of Models</p>
+  <h1>Writing</h1>
+  <p>Notes from building with AI models and agents. What I tried, what failed, and what changed.</p>
+</header>
+
+{% if paginator.page == 1 %}
+<section class="page-section" aria-labelledby="start-here">
+  <div class="section-heading"><h2 id="start-here">Start here</h2></div>
+  <div class="essay-grid essay-grid-3">
+    <a class="essay" href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noreferrer"
+      ><span class="essay-meta">Small models</span>
+      <h3>A local 2B email triage model {% include editorial-arrow.liquid %}</h3></a
+    ><a class="essay" href="https://notesfromzero.substack.com/p/building-software-for-agents" target="_blank" rel="noreferrer"
+      ><span class="essay-meta">Agent software</span>
+      <h3>Building Software for Agents {% include editorial-arrow.liquid %}</h3></a
+    ><a class="essay" href="https://latticeworkofmodels.substack.com/p/game-theory-figure-out-what-game" target="_blank" rel="noreferrer"
+      ><span class="essay-meta">Decision making</span>
+      <h3>Figure Out What Game You’re Playing {% include editorial-arrow.liquid %}</h3></a
+    >
+  </div>
+</section>
+{% endif %}
+
+<section class="page-section" aria-labelledby="all-writing">
+  <div class="section-heading">
+    <h2 id="all-writing">All writing</h2>
+    {% if paginator.total_pages > 1 %}<span class="eyebrow">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>{% endif %}
+  </div>
+  <div class="latest-posts">{% for post in paginator.posts %} {% include editorial-post-row.liquid post=post source=true %} {% endfor %}</div>
+  {% if paginator.total_pages > 1 %}
+  <nav class="pager" aria-label="Pagination">
+    {% if paginator.previous_page_path %}
+    <a class="text-link" href="{{ paginator.previous_page_path | relative_url }}"><span aria-hidden="true">←</span> Newer</a>
+    {% else %}
+    <span></span>
+    {% endif %} {% if paginator.next_page_path %}
+    <a class="text-link" href="{{ paginator.next_page_path | relative_url }}">Older <span aria-hidden="true">→</span></a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</section>
