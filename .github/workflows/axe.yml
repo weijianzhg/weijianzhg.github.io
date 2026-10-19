@@ -21,8 +21,8 @@ env:
 
 jobs:
   check:
-    # available images: https://github.com/actions/runner-images#available-images
-    runs-on: ubuntu-latest
+    # Ruby 3.3.6 is available on Ubuntu 24.04; avoid ubuntu-latest image changes.
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v5
