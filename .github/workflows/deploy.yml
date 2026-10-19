@@ -3,7 +3,6 @@ name: Deploy site
 on:
   push:
     branches:
-      - master
       - main
     paths:
       - "assets/**"
@@ -21,28 +20,6 @@ on:
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/prettier.yml"
       - "!README.md"
-  pull_request:
-    branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "_cache/**"
-      - "bin/**"
-      - "CNAME"
-      - "Gemfile*"
-      - "_plugins/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!README.md"
-  schedule:
-    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -54,8 +31,8 @@ concurrency:
 
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
-    runs-on: ubuntu-latest
+    # Ruby 3.3.6 is available on Ubuntu 24.04; avoid ubuntu-latest image changes.
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v5
@@ -79,7 +56,7 @@ jobs:
       - name: Verify static homepage
         run: python3 bin/check-editorial-build.py
       - name: Deploy 🚀
-        if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        if: github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site

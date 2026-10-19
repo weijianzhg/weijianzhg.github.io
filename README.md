@@ -35,9 +35,9 @@ npx prettier . --check
 
 ## Publishing and writing updates
 
-Push to `main` to publish. [GitHub Actions](.github/workflows/deploy.yml) builds and checks the site, then updates `gh-pages`. GitHub Pages serves it at **weijian.ai**, configured by `CNAME`. Pull requests build without publishing.
+Push site changes to `main` (including merged pull requests), or manually run **Deploy site** on `main` in [GitHub Actions](.github/workflows/deploy.yml), to publish. The workflow builds and checks the site, then updates `gh-pages`. GitHub Pages serves it at **weijian.ai**, configured by `CNAME`. Pull requests do not trigger the deployment workflow.
 
-The workflow also runs hourly to refresh both Substack feeds. The homepage shows three recent Notes from Zero posts alongside two curated essays, without duplicates. If a feed is unavailable or invalid, the build keeps the last successful cache. GitHub may delay scheduled runs.
+Each deployment run refreshes both Substack feeds; there are no scheduled deployments or feed refreshes. The homepage shows three recent Notes from Zero posts alongside two curated essays, without duplicates. If a feed is unavailable or invalid, the build keeps the last successful cache.
 
 To refresh feeds locally, run `./bin/update-feed-cache` from the repository root. To refresh, commit and push the cache in one step, run `./bin/publish-feeds`.
 
