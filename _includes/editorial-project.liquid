@@ -1,0 +1,54 @@
+{%- comment -%}
+  A product card with a screenshot. Pass project (from _data/projects.yml), index, and full=true on the work page
+  to show every link and the alternative work-page screenshot.
+{%- endcomment -%}
+{%- assign project = include.project -%}
+{%- assign image = project.image -%}
+{%- assign alt = project.alt -%}
+{%- assign wide = 1600 -%}
+{%- if include.full and project.work_image -%}
+  {%- assign image = project.work_image -%}
+  {%- assign alt = project.work_alt -%}
+  {%- assign wide = project.work_image_wide | default: 1600 -%}
+{%- endif -%}
+<article class="project-card">
+  <a class="shot" href="{{ project.url }}" target="_blank" rel="noreferrer">
+    <span class="shot-bar" aria-hidden="true"><span class="shot-dots"></span>{{ project.domain }}</span>
+    <img
+      src="/assets/editorial/work/{{ image }}-800.webp"
+      srcset="/assets/editorial/work/{{ image }}-800.webp 800w, /assets/editorial/work/{{ image }}-{{ wide }}.webp {{ wide }}w"
+      sizes="(max-width: 900px) calc(100vw - 46px), 700px"
+      width="1600"
+      height="1000"
+      loading="lazy"
+      decoding="async"
+      alt="{{ alt | escape }}"
+    >
+  </a>
+  <div class="project-body">
+    <p class="project-meta">
+      <span class="row-index">{{ include.index }}</span><span class="project-status">{{ project.status }}</span
+      ><span class="project-category">{{ project.category }}</span>
+    </p>
+    <h3>
+      <a href="{{ project.url }}" target="_blank" rel="noreferrer">{{ project.name }}</a>
+    </h3>
+    <p class="project-summary">{{ project.summary | escape }}</p>
+    <p class="project-description">{{ project.description | escape }}</p>
+    <ul class="project-highlights">
+      {%- for item in project.highlights %}
+        <li>{{ item | escape }}</li>
+      {%- endfor %}
+    </ul>
+    <p class="work-links">
+      {%- for link in project.links -%}
+        {%- if include.full or link.more != true -%}
+          <a href="{{ link.url }}" target="_blank" rel="noreferrer">
+            {{- link.label }}
+            {% include editorial-arrow.liquid -%}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </p>
+  </div>
+</article>

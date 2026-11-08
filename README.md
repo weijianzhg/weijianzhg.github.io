@@ -2,11 +2,13 @@
 
 Source for [weijian.ai](https://weijian.ai), my personal website about building reliable AI systems for finance.
 
-Every page is static HTML and CSS with local fonts and no JavaScript. Jekyll builds the site, including the writing archive and work page.
+Every page is static HTML and CSS with local fonts, product screenshots and no JavaScript. Jekyll builds the site, including the writing archive and work page.
 
 ## Editing
 
-- `_pages/about.html`: homepage copy, selected projects and featured essays.
+- `_pages/about.html`: homepage copy and featured essays.
+- `_data/projects.yml`: the three products shown on the homepage and work page, with copy and links.
+- `assets/editorial/work/`: product screenshots as 16:10 WebP, at 800px and 1600px wide (`<name>-800.webp`, `<name>-1600.webp`).
 - `_pages/building.html` and `_pages/writing.html`: work page and writing archive.
 - `_layouts/editorial.liquid` and `_includes/editorial-*.liquid`: shared page shell, header, footer and post rows.
 - `assets/editorial/`: styles, icons and fonts for every page.
