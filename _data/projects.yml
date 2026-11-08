@@ -1,0 +1,85 @@
+# Products shown on the homepage and the work page.
+# Screenshots live in assets/editorial/work/ as <image>-800.webp and <image>-1600.webp (16:10).
+- name: Tuned Tensor
+  url: https://tunedtensor.com
+  domain: tunedtensor.com
+  status: Open-source CLI
+  category: Local models
+  image: tuned-tensor
+  alt: Tuned Tensor website showing the tt command-line agent with the local GPU, CPU and memory it found.
+  summary: Spec-driven fine-tuning for small open models.
+  description: >-
+    One file describes the model: its base model, rules, examples and how it is scored. The tt agent proposes each change as a diff you
+    approve, then trains, evaluates and serves the model on your own GPU or AWS account.
+  highlights:
+    - Local training, evaluation and serving need no account
+    - Base and tuned models are scored on the same test cases
+    - "Email triage case study: 61.5% → 89.0% pass rate with a 2B model"
+  links:
+    - label: Website
+      url: https://tunedtensor.com
+    - label: CLI on GitHub
+      url: https://github.com/tunedtensor/tuned-tensor-cli
+    - label: Email triage case study
+      url: https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk
+      more: true
+    - label: Dataset
+      url: https://huggingface.co/datasets/tunedtensor/email-triage-v1
+      more: true
+    - label: Model
+      url: https://huggingface.co/tunedtensor/email-triage-v1-gguf
+      more: true
+    - label: Email triage CLI
+      url: https://pypi.org/project/email-triage/
+      more: true
+
+- name: Hedge Layer
+  url: https://hedgelayer.ai
+  domain: hedgelayer.ai
+  status: Public beta
+  category: Trading workflows
+  image: hedge-layer
+  alt: Hedge Layer website with an example WhatsApp chat that runs a morning funding check and drafts a journal entry.
+  work_image: hedge-layer-desktop
+  work_image_wide: 1360
+  work_alt: Hedge Layer desktop app charting Bitcoin's daily closes from Hyperliquid, with a short written summary.
+  summary: Run your trading routines from WhatsApp.
+  description: >-
+    Traders describe their own rules in plain words, run them on request or on a schedule with live data, and keep a journal of decisions to
+    review later. It is read-only: it never trades and never tells you what to buy.
+  highlights:
+    - WhatsApp, plus a desktop app for Windows, macOS and Linux
+    - Data from Polymarket, Hyperliquid, SEC EDGAR, World Bank and ECB
+    - MCP server and HTTP API for your own agents and scripts
+  links:
+    - label: Website
+      url: https://hedgelayer.ai
+    - label: Docs
+      url: https://hedgelayer.ai/docs
+    - label: Desktop app
+      url: https://hedgelayer.ai/docs/desktop
+      more: true
+
+- name: Deeper Level
+  url: https://deeperlevel.xyz
+  domain: deeperlevel.xyz
+  status: Live
+  category: Games for AI
+  image: deeper-level
+  alt: Deeper Level's Fortune game, an isometric colony map where you choose three AI models as rival settlers.
+  summary: Play strategy games against AI models.
+  description: >-
+    Play chess, or Fortune, a small economy of land, production and sealed auctions, against ChatGPT, Claude, Gemini or Grok, and read each
+    model's reasoning as you play. Next, games that players choose to share will become reinforcement learning data for training smaller models.
+  highlights:
+    - "Chess: see the move, the alternatives it rejected and what it expects next"
+    - "Fortune: you against three AI settlers over six or eight rounds"
+    - Sharing games for research is off by default
+  links:
+    - label: Play Fortune
+      url: https://deeperlevel.xyz/fortune
+    - label: Play chess
+      url: https://deeperlevel.xyz/chess
+    - label: Website
+      url: https://deeperlevel.xyz
+      more: true
