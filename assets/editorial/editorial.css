@@ -159,12 +159,19 @@ h4 {
   font-weight: inherit;
 }
 :root {
-  --background: #fff;
-  --foreground: #202624;
-  --primary: #2354df;
-  --primary-foreground: #fff;
-  --border: #dce1e2;
-  --ring: #2354df;
+  /* Dark theme, matching the products and the mental model graph. */
+  color-scheme: dark;
+  --background: #0b0d10;
+  --foreground: #eef1f4;
+  --primary: #7f9cff;
+  --primary-soft: #161e36;
+  --primary-foreground: #0b0d10;
+  --border: #262d36;
+  --border-strong: #3a4350;
+  --muted: #b3bcc8;
+  --subtle: #8d98a8;
+  --shot-bg: #0e1013;
+  --ring: #7f9cff;
   --radius: 0.25rem;
 }
 * {
@@ -212,8 +219,8 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 ::selection {
-  background: #c8d7ff;
-  color: #172649;
+  background: #2c3f7a;
+  color: #fff;
 }
 .page {
   min-height: 100vh;
@@ -293,7 +300,7 @@ a {
 }
 .hero-aside {
   padding: 0 0 8px;
-  max-width: 370px;
+  max-width: 400px;
 }
 .margin-mark {
   color: var(--primary);
@@ -331,47 +338,16 @@ a {
   font-weight: 500;
   letter-spacing: -0.045em;
 }
-.project-rows {
-  border-top: 1px solid var(--border);
-}
-.project-row {
-  display: grid;
-  grid-template-columns: 40px minmax(0, 1fr) 150px 24px;
-  gap: 22px;
-  align-items: center;
-  padding: 30px 0;
-  border-bottom: 1px solid var(--border);
-  transition: color 180ms;
-}
-.project-row:hover {
-  color: var(--primary);
-}
 .row-index {
   font-family: var(--font-mono-face), monospace;
   font-size: 12px;
-  color: #6c7471;
+  color: var(--subtle);
   align-self: start;
   padding-top: 4px;
 }
-.project-row h3 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-}
-.project-row p {
-  max-width: 550px;
-  font-size: 16px;
-  line-height: 1.65;
-  color: #69716e;
-  margin-top: 7px;
-}
 .project-category {
   font-size: 12px;
-  color: #65716c;
-  text-align: right;
-}
-.project-row > .arrow {
-  font-size: 22px;
+  color: var(--subtle);
   text-align: right;
 }
 .editorial-writing {
@@ -401,7 +377,7 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  color: #68706d;
+  color: var(--subtle);
 }
 .essay h3 {
   font-size: 21px;
@@ -428,7 +404,7 @@ a {
 }
 .site-footer p span {
   margin-left: 18px;
-  color: #6c7471;
+  color: var(--subtle);
 }
 .site-footer nav {
   font-size: 12px;
@@ -440,8 +416,8 @@ a {
   left: 16px;
   transform: translateY(-200%);
   z-index: 100;
-  background: #fff;
-  color: #111;
+  background: var(--foreground);
+  color: var(--background);
   padding: 14px 20px;
 }
 .skip-link:focus {
@@ -467,11 +443,8 @@ a {
   .hero-aside p {
     font-size: 16px;
   }
-  .project-category {
+  .work-item .project-category {
     display: none;
-  }
-  .project-row {
-    grid-template-columns: 30px minmax(0, 1fr) 24px;
   }
 }
 @media (max-width: 640px) {
@@ -493,11 +466,9 @@ a {
     gap: 10px;
   }
   .site-header nav {
-    gap: 18px;
-    font-size: 13px;
-  }
-  .site-header nav a:last-child {
-    display: none;
+    gap: 16px;
+    font-size: 14px;
+    white-space: nowrap;
   }
   .editorial-hero {
     display: block;
@@ -532,17 +503,6 @@ a {
   .text-link {
     font-size: 13px;
     gap: 10px;
-  }
-  .project-row {
-    gap: 12px;
-    padding: 25px 0;
-    grid-template-columns: 24px minmax(0, 1fr) 20px;
-  }
-  .project-row h3 {
-    font-size: 18px;
-  }
-  .project-row p {
-    font-size: 16px;
   }
   .editorial-writing {
     padding: 48px 0;
@@ -583,7 +543,7 @@ a {
   font-size: 18px;
   line-height: 1.65;
   letter-spacing: -0.02em;
-  color: #4d5552;
+  color: var(--muted);
 }
 .page-intro .text-link {
   color: var(--primary);
@@ -598,7 +558,7 @@ a {
   display: block;
   margin-top: 4px;
   font-size: 13px;
-  color: #68706d;
+  color: var(--subtle);
 }
 .pager {
   display: flex;
@@ -625,7 +585,7 @@ a {
   max-width: 620px;
   font-size: 16px;
   line-height: 1.65;
-  color: #69716e;
+  color: var(--muted);
   margin-top: 7px;
 }
 .work-item .project-category {
@@ -636,13 +596,13 @@ a {
   flex-wrap: wrap;
   gap: 4px 24px;
 }
-.work-item .work-links a {
+.work-links a {
   color: var(--primary);
   font-size: 14px;
   font-weight: 500;
   padding: 6px 0;
 }
-.work-item .work-links a:hover {
+.work-links a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -724,7 +684,7 @@ a {
 .latest-post time {
   font-family: var(--font-mono-face), monospace;
   font-size: 12px;
-  color: #68706d;
+  color: var(--subtle);
 }
 .latest-post h4 {
   font-size: 17px;
@@ -751,5 +711,197 @@ a {
   }
   .latest-post time {
     grid-column: 1/-1;
+  }
+}
+
+/* Homepage hero: current projects. */
+.hero-aside p.hero-now {
+  margin-top: 18px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.hero-now a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.hero-now a:hover {
+  color: var(--primary);
+  text-decoration-color: currentColor;
+}
+
+/* Product cards with screenshots, shared by the homepage and the work page. */
+.project-cards {
+  border-top: 1px solid var(--border);
+}
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+.shot {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--shot-bg);
+  box-shadow: 0 16px 40px -16px rgb(0 0 0 / 70%);
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease;
+}
+.shot:hover {
+  transform: translateY(-3px);
+  border-color: #56627a;
+}
+.shot:focus-visible {
+  outline-offset: 4px;
+}
+.shot-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 30px;
+  padding: 0 12px;
+  font-family: var(--font-mono-face), monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: #9aa4b2;
+  background: #161a20;
+  border-bottom: 1px solid var(--border);
+}
+.shot-dots {
+  width: 8px;
+  height: 8px;
+  margin-right: 24px;
+  border-radius: 50%;
+  background: #3d4550;
+  box-shadow:
+    12px 0 0 #3d4550,
+    24px 0 0 #3d4550;
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+}
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+.project-meta .row-index {
+  padding-top: 0;
+}
+.project-status {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: #9bb2ff;
+  background: var(--primary-soft);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+.project-card .project-category {
+  font-size: 13px;
+  color: var(--subtle);
+  text-align: left;
+}
+.project-card h3 {
+  margin-top: 18px;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+.project-card h3 a:hover {
+  color: var(--primary);
+}
+.project-summary {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+.project-description {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.project-highlights {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.project-highlights li {
+  position: relative;
+  padding-left: 20px;
+}
+.project-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.78em;
+  width: 10px;
+  height: 1px;
+  background: var(--primary);
+}
+.project-card .work-links {
+  margin-top: 20px;
+}
+@media (max-width: 900px) {
+  .project-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 36px 0 40px;
+  }
+  .project-body {
+    max-width: 640px;
+  }
+}
+@media (max-width: 640px) {
+  .project-card {
+    gap: 22px;
+    padding: 28px 0 32px;
+  }
+  .shot {
+    border-radius: 8px;
+  }
+  .shot-bar {
+    height: 26px;
+  }
+  .project-card h3 {
+    margin-top: 14px;
+    font-size: 24px;
+  }
+  .project-summary {
+    font-size: 17px;
+  }
+}
+/* The smallest phones (320–375px): keep the name and all three header links on one line. */
+@media (max-width: 374px) {
+  .page-wrap {
+    padding: 0 18px;
+  }
+  .identity {
+    font-size: 15px;
+  }
+  .site-header nav {
+    gap: 12px;
+    font-size: 13px;
   }
 }

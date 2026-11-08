@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0d10">
+<meta name="color-scheme" content="dark">
 <title>Work | Weijian Zhang</title>
-<meta name="description" content="Products and experiments by Weijian Zhang, from local model training to financial infrastructure with AI built in.">
+<meta name="description" content="Products and experiments by Weijian Zhang, from spec-driven fine-tuning for small models to trading workflows and games for AI.">
 <link rel="canonical" href="https://weijian.ai/building/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Work | Weijian Zhang">
-<meta property="og:description" content="Products and experiments by Weijian Zhang, from local model training to financial infrastructure with AI built in.">
+<meta property="og:description" content="Products and experiments by Weijian Zhang, from spec-driven fine-tuning for small models to trading workflows and games for AI.">
 <meta property="og:url" content="https://weijian.ai/building/">
   <meta name="google-site-verification" content="kp4P4tJw65b8X5XCYGJE0i_FTq13wO6HlEv8-CAtQpg">
 <link rel="alternate" type="application/rss+xml" title="Notes from Zero" href="https://notesfromzero.substack.com/feed">
@@ -63,14 +65,38 @@
 
 <section class="page-section" aria-labelledby="products">
   <div class="section-heading"><h2 id="products">Products</h2></div>
-  <div class="work-list">
-    <article class="work-item">
-      <span class="row-index">01</span>
-      <div>
-        <h3>Tuned Tensor</h3>
-        <p>Train and fine tune small local models for focused tasks. One spec file drives training, evaluation and serving on your own GPU.</p>
-        <p class="work-links">
-          <a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Website <svg
+  <div class="project-cards">
+      <article class="project-card">
+  <a class="shot" href="https://tunedtensor.com" target="_blank" rel="noreferrer">
+    <span class="shot-bar" aria-hidden="true"><span class="shot-dots"></span>tunedtensor.com</span>
+    <img
+      src="/assets/editorial/work/tuned-tensor-800.webp"
+      srcset="/assets/editorial/work/tuned-tensor-800.webp 800w, /assets/editorial/work/tuned-tensor-1600.webp 1600w"
+      sizes="(max-width: 900px) calc(100vw - 46px), 700px"
+      width="1600"
+      height="1000"
+      loading="lazy"
+      decoding="async"
+      alt="Tuned Tensor website showing the tt command-line agent with the local GPU, CPU and memory it found."
+    >
+  </a>
+  <div class="project-body">
+    <p class="project-meta">
+      <span class="row-index">01</span><span class="project-status">Open-source CLI</span
+      ><span class="project-category">Local models</span>
+    </p>
+    <h3>
+      <a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Tuned Tensor</a>
+    </h3>
+    <p class="project-summary">Spec-driven fine-tuning for small open models.</p>
+    <p class="project-description">One file describes the model: its base model, rules, examples and how it is scored. The tt agent proposes each change as a diff you approve, then trains, evaluates and serves the model on your own GPU or AWS account.</p>
+    <ul class="project-highlights">
+        <li>Local training, evaluation and serving need no account</li>
+        <li>Base and tuned models are scored on the same test cases</li>
+        <li>Email triage case study: 61.5% → 89.0% pass rate with a 2B model</li>
+    </ul>
+    <p class="work-links"><a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Website
+            <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -86,9 +112,8 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a
-          ><a href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noreferrer"
-            >Email triage case study <svg
+</a><a href="https://github.com/tunedtensor/tuned-tensor-cli" target="_blank" rel="noreferrer">CLI on GitHub
+            <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -104,9 +129,8 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a
-          ><a href="https://huggingface.co/datasets/tunedtensor/email-triage-v1" target="_blank" rel="noreferrer"
-            >Dataset <svg
+</a><a href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noreferrer">Email triage case study
+            <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -122,9 +146,8 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a
-          ><a href="https://huggingface.co/tunedtensor/email-triage-v1-gguf" target="_blank" rel="noreferrer"
-            >Model <svg
+</a><a href="https://huggingface.co/datasets/tunedtensor/email-triage-v1" target="_blank" rel="noreferrer">Dataset
+            <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -140,8 +163,8 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a
-          ><a href="https://pypi.org/project/email-triage/" target="_blank" rel="noreferrer">CLI <svg
+</a><a href="https://huggingface.co/tunedtensor/email-triage-v1-gguf" target="_blank" rel="noreferrer">Model
+            <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -157,21 +180,8 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a>
-        </p>
-      </div>
-      <span class="project-category">Local models</span>
-    </article>
-    <article class="work-item">
-      <span class="row-index">02</span>
-      <div>
-        <h3>Hedge Layer</h3>
-        <p>
-          Financial infrastructure with AI built in. Agent H researches prediction markets and replies with live prices, cited evidence and a
-          probability range you can check.
-        </p>
-        <p class="work-links">
-          <a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Website <svg
+</a><a href="https://pypi.org/project/email-triage/" target="_blank" rel="noreferrer">Email triage CLI
+            <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -187,18 +197,40 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a>
-        </p>
-      </div>
-      <span class="project-category">Financial infrastructure</span>
-    </article>
-    <article class="work-item">
-      <span class="row-index">03</span>
-      <div>
-        <h3>Deeper Level</h3>
-        <p>Play strategy games against AI models. Each game becomes reinforcement learning data for training better local models.</p>
-        <p class="work-links">
-          <a href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">Play a game <svg
+</a></p>
+  </div>
+</article>
+   <article class="project-card">
+  <a class="shot" href="https://hedgelayer.ai" target="_blank" rel="noreferrer">
+    <span class="shot-bar" aria-hidden="true"><span class="shot-dots"></span>hedgelayer.ai</span>
+    <img
+      src="/assets/editorial/work/hedge-layer-desktop-800.webp"
+      srcset="/assets/editorial/work/hedge-layer-desktop-800.webp 800w, /assets/editorial/work/hedge-layer-desktop-1360.webp 1360w"
+      sizes="(max-width: 900px) calc(100vw - 46px), 700px"
+      width="1600"
+      height="1000"
+      loading="lazy"
+      decoding="async"
+      alt="Hedge Layer desktop app charting Bitcoin&#39;s daily closes from Hyperliquid, with a short written summary."
+    >
+  </a>
+  <div class="project-body">
+    <p class="project-meta">
+      <span class="row-index">02</span><span class="project-status">Public beta</span
+      ><span class="project-category">Trading workflows</span>
+    </p>
+    <h3>
+      <a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Hedge Layer</a>
+    </h3>
+    <p class="project-summary">Run your trading routines from WhatsApp.</p>
+    <p class="project-description">Traders describe their own rules in plain words, run them on request or on a schedule with live data, and keep a journal of decisions to review later. It is read-only: it never trades and never tells you what to buy.</p>
+    <ul class="project-highlights">
+        <li>WhatsApp, plus a desktop app for Windows, macOS and Linux</li>
+        <li>Data from Polymarket, Hyperliquid, SEC EDGAR, World Bank and ECB</li>
+        <li>MCP server and HTTP API for your own agents and scripts</li>
+    </ul>
+    <p class="work-links"><a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Website
+            <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -214,11 +246,127 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a>
-        </p>
-      </div>
-      <span class="project-category">Training data</span>
-    </article>
+</a><a href="https://hedgelayer.ai/docs" target="_blank" rel="noreferrer">Docs
+            <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</a><a href="https://hedgelayer.ai/docs/desktop" target="_blank" rel="noreferrer">Desktop app
+            <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</a></p>
+  </div>
+</article>
+   <article class="project-card">
+  <a class="shot" href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">
+    <span class="shot-bar" aria-hidden="true"><span class="shot-dots"></span>deeperlevel.xyz</span>
+    <img
+      src="/assets/editorial/work/deeper-level-800.webp"
+      srcset="/assets/editorial/work/deeper-level-800.webp 800w, /assets/editorial/work/deeper-level-1600.webp 1600w"
+      sizes="(max-width: 900px) calc(100vw - 46px), 700px"
+      width="1600"
+      height="1000"
+      loading="lazy"
+      decoding="async"
+      alt="Deeper Level&#39;s Fortune game, an isometric colony map where you choose three AI models as rival settlers."
+    >
+  </a>
+  <div class="project-body">
+    <p class="project-meta">
+      <span class="row-index">03</span><span class="project-status">Live</span
+      ><span class="project-category">Games for AI</span>
+    </p>
+    <h3>
+      <a href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">Deeper Level</a>
+    </h3>
+    <p class="project-summary">Play strategy games against AI models.</p>
+    <p class="project-description">Play chess, or Fortune, a small economy of land, production and sealed auctions, against ChatGPT, Claude, Gemini or Grok, and read each model&#39;s reasoning as you play. Next, games that players choose to share will become reinforcement learning data for training smaller models.</p>
+    <ul class="project-highlights">
+        <li>Chess: see the move, the alternatives it rejected and what it expects next</li>
+        <li>Fortune: you against three AI settlers over six or eight rounds</li>
+        <li>Sharing games for research is off by default</li>
+    </ul>
+    <p class="work-links"><a href="https://deeperlevel.xyz/fortune" target="_blank" rel="noreferrer">Play Fortune
+            <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</a><a href="https://deeperlevel.xyz/chess" target="_blank" rel="noreferrer">Play chess
+            <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</a><a href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">Website
+            <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</a></p>
+  </div>
+</article>
+ 
   </div>
 </section>
 
