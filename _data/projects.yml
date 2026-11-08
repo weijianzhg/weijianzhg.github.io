@@ -36,7 +36,7 @@
   status: Public beta
   category: Trading workflows
   image: hedge-layer
-  alt: Hedge Layer website with an example WhatsApp chat that runs a morning funding check and saves a journal entry.
+  alt: Hedge Layer website with an example WhatsApp chat that runs a morning funding check and drafts a journal entry.
   work_image: hedge-layer-desktop
   work_image_wide: 1360
   work_alt: Hedge Layer desktop app charting Bitcoin's daily closes from Hyperliquid, with a short written summary.
@@ -67,7 +67,7 @@
   summary: Play strategy games against AI models.
   description: >-
     Play chess, or Fortune, a small economy of land, production and sealed auctions, against ChatGPT, Claude, Gemini or Grok, and read each
-    model's reasoning as you play. Games you choose to share become reinforcement learning data for training smaller models.
+    model's reasoning as you play. Next, games that players choose to share will become reinforcement learning data for training smaller models.
   highlights:
     - "Chess: see the move, the alternatives it rejected and what it expects next"
     - "Fortune: you against three AI settlers over six or eight rounds"

@@ -465,6 +465,7 @@ a {
   .site-header nav {
     gap: 16px;
     font-size: 14px;
+    white-space: nowrap;
   }
   .editorial-hero {
     display: block;
@@ -893,5 +894,18 @@ a {
   }
   .project-highlights {
     font-size: 15px;
+  }
+}
+/* The smallest phones (320–375px): keep the name and all three header links on one line. */
+@media (max-width: 374px) {
+  .page-wrap {
+    padding: 0 18px;
+  }
+  .identity {
+    font-size: 15px;
+  }
+  .site-header nav {
+    gap: 12px;
+    font-size: 13px;
   }
 }
