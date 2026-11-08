@@ -159,15 +159,19 @@ h4 {
   font-weight: inherit;
 }
 :root {
-  --background: #fff;
-  --foreground: #202624;
-  --primary: #2354df;
-  --primary-foreground: #fff;
-  --border: #dce1e2;
-  --muted: #4f5754;
-  --subtle: #5f6764;
+  /* Dark theme, matching the products and the mental model graph. */
+  color-scheme: dark;
+  --background: #0b0d10;
+  --foreground: #eef1f4;
+  --primary: #7f9cff;
+  --primary-soft: #161e36;
+  --primary-foreground: #0b0d10;
+  --border: #262d36;
+  --border-strong: #3a4350;
+  --muted: #b3bcc8;
+  --subtle: #8d98a8;
   --shot-bg: #0e1013;
-  --ring: #2354df;
+  --ring: #7f9cff;
   --radius: 0.25rem;
 }
 * {
@@ -215,8 +219,8 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 ::selection {
-  background: #c8d7ff;
-  color: #172649;
+  background: #2c3f7a;
+  color: #fff;
 }
 .page {
   min-height: 100vh;
@@ -412,8 +416,8 @@ a {
   left: 16px;
   transform: translateY(-200%);
   z-index: 100;
-  background: #fff;
-  color: #111;
+  background: var(--foreground);
+  color: var(--background);
   padding: 14px 20px;
 }
 .skip-link:focus {
@@ -719,7 +723,7 @@ a {
 .hero-now a {
   color: var(--foreground);
   text-decoration: underline;
-  text-decoration-color: var(--border);
+  text-decoration-color: var(--border-strong);
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
@@ -743,21 +747,17 @@ a {
 .shot {
   display: block;
   overflow: hidden;
-  border: 1px solid #c9d0d2;
+  border: 1px solid var(--border-strong);
   border-radius: 10px;
   background: var(--shot-bg);
-  box-shadow:
-    0 1px 2px rgb(16 24 22 / 6%),
-    0 12px 32px -12px rgb(16 24 22 / 22%);
+  box-shadow: 0 16px 40px -16px rgb(0 0 0 / 70%);
   transition:
     transform 200ms ease,
-    box-shadow 200ms ease;
+    border-color 200ms ease;
 }
 .shot:hover {
   transform: translateY(-3px);
-  box-shadow:
-    0 2px 4px rgb(16 24 22 / 8%),
-    0 20px 40px -14px rgb(16 24 22 / 30%);
+  border-color: #56627a;
 }
 .shot:focus-visible {
   outline-offset: 4px;
@@ -771,19 +771,19 @@ a {
   font-family: var(--font-mono-face), monospace;
   font-size: 11px;
   letter-spacing: 0.02em;
-  color: #a3aba8;
-  background: #1a1d21;
-  border-bottom: 1px solid #2a2e33;
+  color: #9aa4b2;
+  background: #161a20;
+  border-bottom: 1px solid var(--border);
 }
 .shot-dots {
   width: 8px;
   height: 8px;
   margin-right: 24px;
   border-radius: 50%;
-  background: #4a4f55;
+  background: #3d4550;
   box-shadow:
-    12px 0 0 #4a4f55,
-    24px 0 0 #4a4f55;
+    12px 0 0 #3d4550,
+    24px 0 0 #3d4550;
 }
 .shot img {
   display: block;
@@ -804,8 +804,8 @@ a {
   font-size: 12px;
   font-weight: 500;
   line-height: 1;
-  color: var(--primary);
-  background: #eef2fd;
+  color: #9bb2ff;
+  background: var(--primary-soft);
   border-radius: 999px;
   padding: 6px 10px;
 }
