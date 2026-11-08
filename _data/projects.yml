@@ -29,6 +29,9 @@
     - label: Model
       url: https://huggingface.co/tunedtensor/email-triage-v1-gguf
       more: true
+    - label: Email triage CLI
+      url: https://pypi.org/project/email-triage/
+      more: true
 
 - name: Hedge Layer
   url: https://hedgelayer.ai

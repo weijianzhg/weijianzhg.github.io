@@ -166,7 +166,6 @@ h4 {
   --border: #dce1e2;
   --muted: #4f5754;
   --subtle: #5f6764;
-  --surface: #f5f7f7;
   --shot-bg: #0e1013;
   --ring: #2354df;
   --radius: 0.25rem;
@@ -891,9 +890,6 @@ a {
   }
   .project-summary {
     font-size: 17px;
-  }
-  .project-highlights {
-    font-size: 15px;
   }
 }
 /* The smallest phones (320–375px): keep the name and all three header links on one line. */
