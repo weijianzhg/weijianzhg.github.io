@@ -6,11 +6,11 @@
 <meta name="theme-color" content="#0b0d10">
 <meta name="color-scheme" content="dark">
 <title>Weijian Zhang | AI builder</title>
-<meta name="description" content="I build reliable AI systems for finance: spec-driven fine-tuning for small models, trading workflows on WhatsApp, and games that test how AI models reason.">
+<meta name="description" content="Weijian Zhang builds AI systems for finance and writes about building them.">
 <link rel="canonical" href="https://weijian.ai/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Weijian Zhang | AI builder">
-<meta property="og:description" content="I build reliable AI systems for finance: spec-driven fine-tuning for small models, trading workflows on WhatsApp, and games that test how AI models reason.">
+<meta property="og:description" content="Weijian Zhang builds AI systems for finance and writes about building them.">
 <meta property="og:url" content="https://weijian.ai/">
   <meta name="google-site-verification" content="kp4P4tJw65b8X5XCYGJE0i_FTq13wO6HlEv8-CAtQpg">
 <link rel="alternate" type="application/rss+xml" title="Notes from Zero" href="https://notesfromzero.substack.com/feed">
@@ -54,13 +54,11 @@
             </div>
             <div class="hero-aside">
               <div class="margin-mark" aria-hidden="true">↳</div>
-              <p>I’m Weijian. I build AI systems for financial work, where mistakes are expensive and every decision has to be checked.</p>
-              <p class="hero-now">
-                Right now: <a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Tuned Tensor</a>,
-                <a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Hedge Layer</a> and
-                <a href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">Deeper Level</a>.
+              <p>I’m Weijian. I build AI systems for finance and write about building them.</p>
+              <p class="hero-links">
+                <a href="#work" class="text-link">Work <span aria-hidden="true">↓</span></a
+                ><a href="#writing" class="text-link">Writing <span aria-hidden="true">↓</span></a>
               </p>
-              <a href="#work" class="text-link">See my work <span aria-hidden="true">↓</span></a>
             </div>
           </section>
           <section class="editorial-work" id="work">
@@ -85,19 +83,13 @@
   </a>
   <div class="project-body">
     <p class="project-meta">
-      <span class="row-index">01</span><span class="project-status">Open-source CLI</span
-      ><span class="project-category">Local models</span>
+      <span class="row-index">01</span><span class="project-status">Open source</span>
     </p>
     <h3>
       <a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Tuned Tensor</a>
     </h3>
-    <p class="project-summary">Spec-driven fine-tuning for small open models.</p>
-    <p class="project-description">One file describes the model: its base model, rules, examples and how it is scored. The tt agent proposes each change as a diff you approve, then trains, evaluates and serves the model on your own GPU or AWS account.</p>
-    <ul class="project-highlights">
-        <li>Local training, evaluation and serving need no account</li>
-        <li>Base and tuned models are scored on the same test cases</li>
-        <li>Email triage case study: 61.5% → 89.0% pass rate with a 2B model</li>
-    </ul>
+    <p class="project-summary">Fine-tune small open models from one spec file.</p>
+    <p class="project-description">Train, evaluate and serve them on your own GPU. A 2B email triage model went from 61.5% to 89.0%.</p>
     <p class="work-links"><a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Website
             <svg
   class="arrow"
@@ -115,7 +107,7 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a><a href="https://github.com/tunedtensor/tuned-tensor-cli" target="_blank" rel="noreferrer">CLI on GitHub
+</a><a href="https://github.com/tunedtensor/tuned-tensor-cli" target="_blank" rel="noreferrer">GitHub
             <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
@@ -151,19 +143,13 @@
   </a>
   <div class="project-body">
     <p class="project-meta">
-      <span class="row-index">02</span><span class="project-status">Public beta</span
-      ><span class="project-category">Trading workflows</span>
+      <span class="row-index">02</span><span class="project-status">Public beta</span>
     </p>
     <h3>
       <a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Hedge Layer</a>
     </h3>
     <p class="project-summary">Run your trading routines from WhatsApp.</p>
-    <p class="project-description">Traders describe their own rules in plain words, run them on request or on a schedule with live data, and keep a journal of decisions to review later. It is read-only: it never trades and never tells you what to buy.</p>
-    <ul class="project-highlights">
-        <li>WhatsApp, plus a desktop app for Windows, macOS and Linux</li>
-        <li>Data from Polymarket, Hyperliquid, SEC EDGAR, World Bank and ECB</li>
-        <li>MCP server and HTTP API for your own agents and scripts</li>
-    </ul>
+    <p class="project-description">Your rules, live market data and a trading journal. Read-only. It never trades or tells you what to buy.</p>
     <p class="work-links"><a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Website
             <svg
   class="arrow"
@@ -217,19 +203,13 @@
   </a>
   <div class="project-body">
     <p class="project-meta">
-      <span class="row-index">03</span><span class="project-status">Live</span
-      ><span class="project-category">Games for AI</span>
+      <span class="row-index">03</span><span class="project-status">Live</span>
     </p>
     <h3>
       <a href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">Deeper Level</a>
     </h3>
     <p class="project-summary">Play strategy games against AI models.</p>
-    <p class="project-description">Play chess, or Fortune, a small economy of land, production and sealed auctions, against ChatGPT, Claude, Gemini or Grok, and read each model&#39;s reasoning as you play. Next, games that players choose to share will become reinforcement learning data for training smaller models.</p>
-    <ul class="project-highlights">
-        <li>Chess: see the move, the alternatives it rejected and what it expects next</li>
-        <li>Fortune: you against three AI settlers over six or eight rounds</li>
-        <li>Sharing games for research is off by default</li>
-    </ul>
+    <p class="project-description">Chess and Fortune against ChatGPT, Claude, Gemini or Grok, with each model&#39;s reasoning shown as you play.</p>
     <p class="work-links"><a href="https://deeperlevel.xyz/fortune" target="_blank" rel="noreferrer">Play Fortune
             <svg
   class="arrow"

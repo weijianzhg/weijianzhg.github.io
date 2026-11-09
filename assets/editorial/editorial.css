@@ -321,8 +321,13 @@ a {
   align-items: center;
   padding: 10px 0;
 }
-.hero-aside .text-link {
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
   margin-top: 25px;
+}
+.hero-aside .text-link {
   border-bottom: 1px solid var(--primary);
   color: var(--primary);
 }
@@ -491,7 +496,7 @@ a {
   .hero-aside p {
     font-size: 17px;
   }
-  .hero-aside .text-link {
+  .hero-links {
     margin-top: 16px;
   }
   .section-heading {
@@ -714,24 +719,6 @@ a {
   }
 }
 
-/* Homepage hero: current projects. */
-.hero-aside p.hero-now {
-  margin-top: 18px;
-  font-size: 15px;
-  color: var(--muted);
-}
-.hero-now a {
-  color: var(--foreground);
-  text-decoration: underline;
-  text-decoration-color: var(--border-strong);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-.hero-now a:hover {
-  color: var(--primary);
-  text-decoration-color: currentColor;
-}
-
 /* Product cards with screenshots, shared by the homepage and the work page. */
 .project-cards {
   border-top: 1px solid var(--border);
@@ -809,11 +796,6 @@ a {
   border-radius: 999px;
   padding: 6px 10px;
 }
-.project-card .project-category {
-  font-size: 13px;
-  color: var(--subtle);
-  text-align: left;
-}
 .project-card h3 {
   margin-top: 18px;
   font-size: 28px;
@@ -836,29 +818,6 @@ a {
   font-size: 16px;
   line-height: 1.7;
   color: var(--muted);
-}
-.project-highlights {
-  list-style: none;
-  margin: 18px 0 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-  font-size: 15px;
-  line-height: 1.55;
-  color: var(--muted);
-}
-.project-highlights li {
-  position: relative;
-  padding-left: 20px;
-}
-.project-highlights li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.78em;
-  width: 10px;
-  height: 1px;
-  background: var(--primary);
 }
 .project-card .work-links {
   margin-top: 20px;

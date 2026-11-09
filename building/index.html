@@ -6,11 +6,11 @@
 <meta name="theme-color" content="#0b0d10">
 <meta name="color-scheme" content="dark">
 <title>Work | Weijian Zhang</title>
-<meta name="description" content="Products and experiments by Weijian Zhang, from spec-driven fine-tuning for small models to trading workflows and games for AI.">
+<meta name="description" content="Products and experiments by Weijian Zhang, who builds AI systems for finance.">
 <link rel="canonical" href="https://weijian.ai/building/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Work | Weijian Zhang">
-<meta property="og:description" content="Products and experiments by Weijian Zhang, from spec-driven fine-tuning for small models to trading workflows and games for AI.">
+<meta property="og:description" content="Products and experiments by Weijian Zhang, who builds AI systems for finance.">
 <meta property="og:url" content="https://weijian.ai/building/">
   <meta name="google-site-verification" content="kp4P4tJw65b8X5XCYGJE0i_FTq13wO6HlEv8-CAtQpg">
 <link rel="alternate" type="application/rss+xml" title="Notes from Zero" href="https://notesfromzero.substack.com/feed">
@@ -60,7 +60,7 @@
           <header class="page-intro">
   <p class="eyebrow"><span class="accent-dot"></span> Work</p>
   <h1>Products and experiments.</h1>
-  <p>Three products I’m building, plus smaller experiments.</p>
+  <p>Three products and some smaller experiments.</p>
 </header>
 
 <section class="page-section" aria-labelledby="products">
@@ -82,19 +82,13 @@
   </a>
   <div class="project-body">
     <p class="project-meta">
-      <span class="row-index">01</span><span class="project-status">Open-source CLI</span
-      ><span class="project-category">Local models</span>
+      <span class="row-index">01</span><span class="project-status">Open source</span>
     </p>
     <h3>
       <a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Tuned Tensor</a>
     </h3>
-    <p class="project-summary">Spec-driven fine-tuning for small open models.</p>
-    <p class="project-description">One file describes the model: its base model, rules, examples and how it is scored. The tt agent proposes each change as a diff you approve, then trains, evaluates and serves the model on your own GPU or AWS account.</p>
-    <ul class="project-highlights">
-        <li>Local training, evaluation and serving need no account</li>
-        <li>Base and tuned models are scored on the same test cases</li>
-        <li>Email triage case study: 61.5% → 89.0% pass rate with a 2B model</li>
-    </ul>
+    <p class="project-summary">Fine-tune small open models from one spec file.</p>
+    <p class="project-description">Train, evaluate and serve them on your own GPU. A 2B email triage model went from 61.5% to 89.0%.</p>
     <p class="work-links"><a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Website
             <svg
   class="arrow"
@@ -112,7 +106,7 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a><a href="https://github.com/tunedtensor/tuned-tensor-cli" target="_blank" rel="noreferrer">CLI on GitHub
+</a><a href="https://github.com/tunedtensor/tuned-tensor-cli" target="_blank" rel="noreferrer">GitHub
             <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +123,7 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a><a href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noreferrer">Email triage case study
+</a><a href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noreferrer">Case study
             <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
@@ -216,19 +210,13 @@
   </a>
   <div class="project-body">
     <p class="project-meta">
-      <span class="row-index">02</span><span class="project-status">Public beta</span
-      ><span class="project-category">Trading workflows</span>
+      <span class="row-index">02</span><span class="project-status">Public beta</span>
     </p>
     <h3>
       <a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Hedge Layer</a>
     </h3>
     <p class="project-summary">Run your trading routines from WhatsApp.</p>
-    <p class="project-description">Traders describe their own rules in plain words, run them on request or on a schedule with live data, and keep a journal of decisions to review later. It is read-only: it never trades and never tells you what to buy.</p>
-    <ul class="project-highlights">
-        <li>WhatsApp, plus a desktop app for Windows, macOS and Linux</li>
-        <li>Data from Polymarket, Hyperliquid, SEC EDGAR, World Bank and ECB</li>
-        <li>MCP server and HTTP API for your own agents and scripts</li>
-    </ul>
+    <p class="project-description">Your rules, live market data and a trading journal. Read-only. It never trades or tells you what to buy.</p>
     <p class="work-links"><a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Website
             <svg
   class="arrow"
@@ -299,19 +287,13 @@
   </a>
   <div class="project-body">
     <p class="project-meta">
-      <span class="row-index">03</span><span class="project-status">Live</span
-      ><span class="project-category">Games for AI</span>
+      <span class="row-index">03</span><span class="project-status">Live</span>
     </p>
     <h3>
       <a href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">Deeper Level</a>
     </h3>
     <p class="project-summary">Play strategy games against AI models.</p>
-    <p class="project-description">Play chess, or Fortune, a small economy of land, production and sealed auctions, against ChatGPT, Claude, Gemini or Grok, and read each model&#39;s reasoning as you play. Next, games that players choose to share will become reinforcement learning data for training smaller models.</p>
-    <ul class="project-highlights">
-        <li>Chess: see the move, the alternatives it rejected and what it expects next</li>
-        <li>Fortune: you against three AI settlers over six or eight rounds</li>
-        <li>Sharing games for research is off by default</li>
-    </ul>
+    <p class="project-description">Chess and Fortune against ChatGPT, Claude, Gemini or Grok, with each model&#39;s reasoning shown as you play.</p>
     <p class="work-links"><a href="https://deeperlevel.xyz/fortune" target="_blank" rel="noreferrer">Play Fortune
             <svg
   class="arrow"
@@ -377,7 +359,7 @@
       <span class="row-index">04</span>
       <div>
         <h3>Autoresearch Classifier</h3>
-        <p>An automated experiment loop that searches for better prompt injection classifiers using scikit-learn.</p>
+        <p>An AI agent iterates on scikit-learn classifiers that detect prompt injection, keeping only the changes that improve them.</p>
         <p class="work-links">
           <a href="https://github.com/weijianzhg/autoresearch-classifier" target="_blank" rel="noreferrer"
             >Code <svg
@@ -424,7 +406,7 @@
       <span class="row-index">05</span>
       <div>
         <h3>Bedrock Agent Blueprint</h3>
-        <p>A repeatable way to deploy AI agents on AWS, with infrastructure defined in code.</p>
+        <p>A template for running Strands agents on Amazon Bedrock AgentCore, provisioned with Terraform.</p>
         <p class="work-links">
           <a href="https://github.com/weijianzhg/bedrock-agent-blueprint" target="_blank" rel="noreferrer"
             >Code <svg
@@ -453,7 +435,7 @@
       <span class="row-index">06</span>
       <div>
         <h3>Mental Model Graph</h3>
-        <p>Explore how mental models from economics, psychology, mathematics and logic connect.</p>
+        <p>An interactive map of how mental models from economics, psychology, mathematics and logic connect.</p>
         <p class="work-links">
           <a href="/lattice-graph.html">Open the graph <span aria-hidden="true">→</span></a>
         </p>
@@ -464,7 +446,7 @@
       <span class="row-index">07</span>
       <div>
         <h3>Still Here</h3>
-        <p>A web app for counting days and writing about the ones that matter.</p>
+        <p>A memento mori app. Count the days you’ve lived, then write about today.</p>
         <p class="work-links">
           <a href="https://still-here-delta.vercel.app/" target="_blank" rel="noreferrer">Try it <svg
   class="arrow"
