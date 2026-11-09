@@ -4,7 +4,6 @@
 - name: Tuned Tensor
   url: https://tunedtensor.com
   domain: tunedtensor.com
-  status: Open source
   image: tuned-tensor
   alt: Tuned Tensor website showing the tt command-line agent with the local GPU, CPU and memory it found.
   summary: Fine-tune small open models from one spec file.
@@ -30,7 +29,6 @@
 - name: Hedge Layer
   url: https://hedgelayer.ai
   domain: hedgelayer.ai
-  status: Public beta
   image: hedge-layer
   alt: Hedge Layer website with an example WhatsApp chat that runs a morning funding check and drafts a journal entry.
   work_image: hedge-layer-desktop
@@ -50,7 +48,6 @@
 - name: Deeper Level
   url: https://deeperlevel.xyz
   domain: deeperlevel.xyz
-  status: Live
   image: deeper-level
   alt: Deeper Level's Fortune game, an isometric colony map where you choose three AI models as rival settlers.
   summary: Play strategy games against AI models.
