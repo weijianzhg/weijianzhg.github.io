@@ -164,7 +164,6 @@ h4 {
   --background: #0b0d10;
   --foreground: #eef1f4;
   --primary: #7f9cff;
-  --primary-soft: #161e36;
   --primary-foreground: #0b0d10;
   --border: #262d36;
   --border-strong: #3a4350;
@@ -778,30 +777,18 @@ a {
   height: auto;
   aspect-ratio: 16 / 10;
 }
-.project-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 14px;
-}
-.project-meta .row-index {
-  padding-top: 0;
-}
-.project-status {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1;
-  color: #9bb2ff;
-  background: var(--primary-soft);
-  border-radius: 999px;
-  padding: 6px 10px;
-}
 .project-card h3 {
-  margin-top: 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
   font-size: 28px;
   font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 1.2;
+}
+.project-card h3 .row-index {
+  align-self: baseline;
+  padding-top: 0;
 }
 .project-card h3 a:hover {
   color: var(--primary);
@@ -844,7 +831,6 @@ a {
     height: 26px;
   }
   .project-card h3 {
-    margin-top: 14px;
     font-size: 24px;
   }
   .project-summary {
