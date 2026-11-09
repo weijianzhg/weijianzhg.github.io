@@ -27,19 +27,13 @@
   </a>
   <div class="project-body">
     <p class="project-meta">
-      <span class="row-index">{{ include.index }}</span><span class="project-status">{{ project.status }}</span
-      ><span class="project-category">{{ project.category }}</span>
+      <span class="row-index">{{ include.index }}</span><span class="project-status">{{ project.status }}</span>
     </p>
     <h3>
       <a href="{{ project.url }}" target="_blank" rel="noreferrer">{{ project.name }}</a>
     </h3>
     <p class="project-summary">{{ project.summary | escape }}</p>
     <p class="project-description">{{ project.description | escape }}</p>
-    <ul class="project-highlights">
-      {%- for item in project.highlights %}
-        <li>{{ item | escape }}</li>
-      {%- endfor %}
-    </ul>
     <p class="work-links">
       {%- for link in project.links -%}
         {%- if include.full or link.more != true -%}
