@@ -5,15 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b0d10">
 <meta name="color-scheme" content="dark">
-<title>Weijian Zhang | AI builder</title>
-<meta name="description" content="Weijian Zhang builds AI systems for finance and writes about building them.">
+<title>Weijian Zhang | Writing about AI, building it for finance</title>
+<meta name="description" content="Weijian Zhang builds AI for finance and writes about what he learns: agents, small models and mental models for making decisions.">
 <link rel="canonical" href="https://weijian.ai/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Weijian Zhang | AI builder">
-<meta property="og:description" content="Weijian Zhang builds AI systems for finance and writes about building them.">
+<meta property="og:title" content="Weijian Zhang | Writing about AI, building it for finance">
+<meta property="og:description" content="Weijian Zhang builds AI for finance and writes about what he learns: agents, small models and mental models for making decisions.">
 <meta property="og:url" content="https://weijian.ai/">
+<meta property="og:site_name" content="Weijian Zhang">
+<meta property="og:image" content="https://weijian.ai/assets/editorial/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Weijian Zhang. I build AI for finance and write about what I learn.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@Weijian">
   <meta name="google-site-verification" content="kp4P4tJw65b8X5XCYGJE0i_FTq13wO6HlEv8-CAtQpg">
 <link rel="alternate" type="application/rss+xml" title="Notes from Zero" href="https://notesfromzero.substack.com/feed">
+<link rel="alternate" type="application/rss+xml" title="Latticework of Models" href="https://latticeworkofmodels.substack.com/feed">
 <link rel="icon" type="image/svg+xml" href="/assets/editorial/favicon.svg">
 <link rel="preload" as="font" type="font/woff2" href="/assets/editorial/fonts/geist-98bbbccb.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/editorial/fonts/libre-caslon-display-98df7e80.woff2" crossorigin>
@@ -26,7 +34,7 @@
       <div class="page-wrap">
         <header class="site-header">
   <a class="identity" href="#top">Weijian Zhang</a>
-  <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#writing">Writing</a><a href="https://www.linkedin.com/in/weijianzhg" target="_blank" rel="noreferrer">Contact <svg
+  <nav aria-label="Main navigation"><a href="#writing">Writing</a><a href="#work">Work</a><a href="https://notesfromzero.substack.com/subscribe" target="_blank" rel="noreferrer">Subscribe <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -47,49 +55,236 @@
 </header>
 
         <main id="main">
-          <section class="editorial-hero">
-            <div>
-              <p class="eyebrow"><span class="accent-dot"></span> AI builder · Finance</p>
-              <h1>I build AI systems<br />finance can<br /><em>rely on.</em></h1>
+          <section class="home-hero">
+            <p class="eyebrow"><span class="accent-dot"></span> Writing · AI in finance</p>
+            <h1>I build AI for finance and write about <em>what I learn.</em></h1>
+            <p class="home-lede">
+              I’m Weijian. My essays cover agents, small models and mental models for making decisions. My main project is
+              <a href="#work">Hedge Layer</a>, a research desk for traders who work alone.
+            </p>
+            <p class="hero-links">
+              <a href="https://notesfromzero.substack.com/subscribe" class="button" target="_blank" rel="noreferrer"
+                >Subscribe on Substack <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</a
+              ><a href="#writing" class="text-link">Read the essays <span aria-hidden="true">↓</span></a>
+            </p>
+          </section>
+          <section class="home-section" id="writing" aria-labelledby="writing-heading">
+            <div class="section-heading">
+              <h2 id="writing-heading">Writing</h2>
+              <a class="text-link" href="/writing/">All writing <span aria-hidden="true">→</span></a>
             </div>
-            <div class="hero-aside">
-              <div class="margin-mark" aria-hidden="true">↳</div>
-              <p>I’m Weijian. I build AI systems for finance and write about building them.</p>
-              <p class="hero-links">
-                <a href="#work" class="text-link">Work <span aria-hidden="true">↓</span></a
-                ><a href="#writing" class="text-link">Writing <span aria-hidden="true">↓</span></a>
-              </p>
+            <h3 class="list-label">Start here</h3>
+            <div class="essay-grid essay-grid-3"><a class="essay" href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noreferrer">
+      <span class="essay-meta">Small models</span>
+      <h4 class="essay-title">Why I built a local 2B email triage <span class="nowrap">model
+      <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</span></h4>
+      <span class="essay-description">Fine-tuning a 2B open model to triage email locally, and how to tell when a small model is enough.</span>
+    </a><a class="essay" href="https://notesfromzero.substack.com/p/building-software-for-agents" target="_blank" rel="noreferrer">
+      <span class="essay-meta">Agent software</span>
+      <h4 class="essay-title">Building Software for <span class="nowrap">Agents
+      <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</span></h4>
+      <span class="essay-description">Why agents need tools built for them, and what that changes about how software is designed.</span>
+    </a><a class="essay" href="https://latticeworkofmodels.substack.com/p/game-theory-figure-out-what-game" target="_blank" rel="noreferrer">
+      <span class="essay-meta">Decision making</span>
+      <h4 class="essay-title">Figure Out What Game You’re <span class="nowrap">Playing
+      <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</span></h4>
+      <span class="essay-description">Other people are thinking too. How game theory helps you read a situation before you choose a move.</span>
+    </a></div>
+
+            <h3 class="list-label">Latest</h3>
+            <div class="latest-posts">
+                       <a class="latest-post" href="https://notesfromzero.substack.com/p/mcp-20" target="_blank" rel="noreferrer">
+  <time datetime="2026-08-29T12:21:29+00:00">29 Aug 2026</time>
+  <span>
+    <h4>MCP 2.0</h4>
+  </span>
+  <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+
+</a>
+                <a class="latest-post" href="https://notesfromzero.substack.com/p/when-agent-loops-stop-moving" target="_blank" rel="noreferrer">
+  <time datetime="2026-06-13T17:05:48+00:00">13 Jun 2026</time>
+  <span>
+    <h4>When Agent Loops Stop Moving</h4>
+  </span>
+  <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+
+</a>
+                <a class="latest-post" href="https://notesfromzero.substack.com/p/auto-research-for-classic-machine" target="_blank" rel="noreferrer">
+  <time datetime="2026-03-20T23:31:08+00:00">20 Mar 2026</time>
+  <span>
+    <h4>Auto Research for Classic Machine Learning</h4>
+  </span>
+  <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+
+</a>
+          <a class="latest-post" href="https://notesfromzero.substack.com/p/bedrock-agent-blueprint-deploying" target="_blank" rel="noreferrer">
+  <time datetime="2026-02-15T21:18:14+00:00">15 Feb 2026</time>
+  <span>
+    <h4>Bedrock Agent Blueprint: Deploying Strands Agents on AWS AgentCore</h4>
+  </span>
+  <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+
+</a>
+          <a class="latest-post" href="https://notesfromzero.substack.com/p/building-knowledge-bases-for-my-openclaw" target="_blank" rel="noreferrer">
+  <time datetime="2026-02-05T22:36:13+00:00"> 5 Feb 2026</time>
+  <span>
+    <h4>Building Knowledge Bases for My OpenClaw Agent</h4>
+  </span>
+  <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+
+</a>
+                             
             </div>
           </section>
-          <section class="editorial-work" id="work">
+          <section class="home-section" id="follow" aria-labelledby="follow-heading">
             <div class="section-heading">
-              <h2>Selected work</h2>
-              <a class="text-link" href="/building/">All work <span aria-hidden="true">→</span></a>
+              <h2 id="follow-heading">Where I write</h2>
             </div>
-            <div class="project-cards">
-                <article class="project-card">
-  <a class="shot" href="https://tunedtensor.com" target="_blank" rel="noreferrer">
-    <span class="shot-bar" aria-hidden="true"><span class="shot-dots"></span>tunedtensor.com</span>
-    <img
-      src="/assets/editorial/work/tuned-tensor-800.webp"
-      srcset="/assets/editorial/work/tuned-tensor-800.webp 800w, /assets/editorial/work/tuned-tensor-1600.webp 1600w"
-      sizes="(max-width: 900px) calc(100vw - 46px), 700px"
-      width="1600"
-      height="1000"
-      loading="lazy"
-      decoding="async"
-      alt="Tuned Tensor website showing the tt command-line agent with the local GPU, CPU and memory it found."
-    >
-  </a>
-  <div class="project-body">
-    <h3>
-      <span class="row-index" aria-hidden="true">01</span
-      ><a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Tuned Tensor</a>
-    </h3>
-    <p class="project-summary">Fine-tune small open models from one spec file.</p>
-    <p class="project-description">Train, evaluate and serve them on your own GPU. A 2B email triage model went from 61.5% to 89.0%.</p>
-    <p class="work-links"><a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Website
-            <svg
+            <div class="channel-grid">
+              
+              <a class="channel" href="https://notesfromzero.substack.com" target="_blank" rel="me noreferrer">
+                <span class="essay-meta">Substack</span>
+                <h3>Notes from <span class="nowrap">Zero
+      <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -105,8 +300,14 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a><a href="https://github.com/tunedtensor/tuned-tensor-cli" target="_blank" rel="noreferrer">GitHub
-            <svg
+</span></h3>
+                <p>Essays and build notes on AI systems. Subscribe to get new posts by email.</p>
+              </a>
+              
+              <a class="channel" href="https://latticeworkofmodels.substack.com" target="_blank" rel="me noreferrer">
+                <span class="essay-meta">Substack</span>
+                <h3>Latticework of <span class="nowrap">Models
+      <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -122,10 +323,64 @@
 >
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
-</a></p>
-  </div>
-</article>
-   <article class="project-card">
+</span></h3>
+                <p>Mental models from economics, psychology and mathematics, one per post.</p>
+              </a>
+              
+              <a class="channel" href="https://x.com/Weijian" target="_blank" rel="me noreferrer">
+                <span class="essay-meta">X</span>
+                <h3><span class="nowrap">@Weijian
+      <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</span></h3>
+                <p>Shorter posts between essays.</p>
+              </a>
+              
+              <a class="channel" href="https://www.linkedin.com/in/weijianzhg" target="_blank" rel="me noreferrer">
+                <span class="essay-meta">LinkedIn</span>
+                <h3>Weijian <span class="nowrap">Zhang
+      <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</span></h3>
+                <p>Posts on AI in finance, and the best place to contact me.</p>
+              </a>
+              
+            </div>
+          </section>
+          <section class="home-section" id="work" aria-labelledby="work-heading">
+            <div class="section-heading">
+              <h2 id="work-heading">What I’m building</h2>
+              <a class="text-link" href="/building/">Other projects <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="project-cards"><article class="project-card">
   <a class="shot" href="https://hedgelayer.ai" target="_blank" rel="noreferrer">
     <span class="shot-bar" aria-hidden="true"><span class="shot-dots"></span>hedgelayer.ai</span>
     <img
@@ -141,11 +396,10 @@
   </a>
   <div class="project-body">
     <h3>
-      <span class="row-index" aria-hidden="true">02</span
-      ><a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Hedge Layer</a>
+      <a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Hedge Layer</a>
     </h3>
-    <p class="project-summary">Run your trading routines from WhatsApp.</p>
-    <p class="project-description">Your rules, live market data and a trading journal. Read-only. It never trades or tells you what to buy.</p>
+    <p class="project-summary">The research desk for traders who work alone.</p>
+    <p class="project-description">An AI research assistant that gathers the data, runs your checks and keeps your trading journal, on WhatsApp or desktop. You make every decision. It never trades or tells you what to buy.</p>
     <p class="work-links"><a href="https://hedgelayer.ai" target="_blank" rel="noreferrer">Website
             <svg
   class="arrow"
@@ -183,194 +437,13 @@
 </a></p>
   </div>
 </article>
-   <article class="project-card">
-  <a class="shot" href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">
-    <span class="shot-bar" aria-hidden="true"><span class="shot-dots"></span>deeperlevel.xyz</span>
-    <img
-      src="/assets/editorial/work/deeper-level-800.webp"
-      srcset="/assets/editorial/work/deeper-level-800.webp 800w, /assets/editorial/work/deeper-level-1600.webp 1600w"
-      sizes="(max-width: 900px) calc(100vw - 46px), 700px"
-      width="1600"
-      height="1000"
-      loading="lazy"
-      decoding="async"
-      alt="Deeper Level&#39;s Fortune game, an isometric colony map where you choose three AI models as rival settlers."
-    >
-  </a>
-  <div class="project-body">
-    <h3>
-      <span class="row-index" aria-hidden="true">03</span
-      ><a href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">Deeper Level</a>
-    </h3>
-    <p class="project-summary">Play strategy games against AI models.</p>
-    <p class="project-description">Chess and Fortune against ChatGPT, Claude, Gemini or Grok, with each model&#39;s reasoning shown as you play.</p>
-    <p class="work-links"><a href="https://deeperlevel.xyz/fortune" target="_blank" rel="noreferrer">Play Fortune
-            <svg
-  class="arrow"
-  xmlns="http://www.w3.org/2000/svg"
-  width="1em"
-  height="1em"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.6"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  aria-hidden="true"
-  focusable="false"
->
-  <path d="M6 18 18 6M6 6h12v12" />
-</svg>
-</a><a href="https://deeperlevel.xyz/chess" target="_blank" rel="noreferrer">Play chess
-            <svg
-  class="arrow"
-  xmlns="http://www.w3.org/2000/svg"
-  width="1em"
-  height="1em"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.6"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  aria-hidden="true"
-  focusable="false"
->
-  <path d="M6 18 18 6M6 6h12v12" />
-</svg>
-</a></p>
-  </div>
-</article>
- 
-            </div>
-          </section>
-          <section class="editorial-writing" id="writing">
-            <div class="section-heading">
-              <div>
-                <span class="eyebrow">Notes from Zero</span>
-                <h2>Writing</h2>
-              </div>
-              <a class="text-link" href="/writing/">All writing <span aria-hidden="true">→</span></a>
-            </div>
-            <div class="essay-grid">
-              <a class="essay" href="https://notesfromzero.substack.com/p/building-software-for-agents" target="_blank" rel="noreferrer"
-                ><span class="essay-meta">Tools &amp; context <span>May 2026</span></span>
-                <h3>Building Software for Agents <svg
-  class="arrow"
-  xmlns="http://www.w3.org/2000/svg"
-  width="1em"
-  height="1em"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.6"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  aria-hidden="true"
-  focusable="false"
->
-  <path d="M6 18 18 6M6 6h12v12" />
-</svg>
-</h3></a
-              ><a class="essay" href="https://notesfromzero.substack.com/p/auto-research-for-classic-machine" target="_blank" rel="noreferrer"
-                ><span class="essay-meta">Experiments <span>March 2026</span></span>
-                <h3>Auto Research for Classic Machine Learning <svg
-  class="arrow"
-  xmlns="http://www.w3.org/2000/svg"
-  width="1em"
-  height="1em"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.6"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  aria-hidden="true"
-  focusable="false"
->
-  <path d="M6 18 18 6M6 6h12v12" />
-</svg>
-</h3></a
-              >
-            </div>
-            <div class="latest-writing">
-              <h3>Latest writing</h3>
-              <div class="latest-posts">
-                       
-                <a class="latest-post" href="https://notesfromzero.substack.com/p/mcp-20" target="_blank" rel="noreferrer">
-                  <time datetime="2026-08-29T12:21:29+00:00">29 Aug 2026</time>
-                  <h4>MCP 2.0</h4>
-                  <svg
-  class="arrow"
-  xmlns="http://www.w3.org/2000/svg"
-  width="1em"
-  height="1em"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.6"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  aria-hidden="true"
-  focusable="false"
->
-  <path d="M6 18 18 6M6 6h12v12" />
-</svg>
-
-                </a>
-                        
-                <a class="latest-post" href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noreferrer">
-                  <time datetime="2026-06-28T21:08:03+00:00">28 Jun 2026</time>
-                  <h4>Why I built a local 2B email triage model</h4>
-                  <svg
-  class="arrow"
-  xmlns="http://www.w3.org/2000/svg"
-  width="1em"
-  height="1em"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.6"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  aria-hidden="true"
-  focusable="false"
->
-  <path d="M6 18 18 6M6 6h12v12" />
-</svg>
-
-                </a>
-                        
-                <a class="latest-post" href="https://notesfromzero.substack.com/p/when-agent-loops-stop-moving" target="_blank" rel="noreferrer">
-                  <time datetime="2026-06-13T17:05:48+00:00">13 Jun 2026</time>
-                  <h4>When Agent Loops Stop Moving</h4>
-                  <svg
-  class="arrow"
-  xmlns="http://www.w3.org/2000/svg"
-  width="1em"
-  height="1em"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.6"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  aria-hidden="true"
-  focusable="false"
->
-  <path d="M6 18 18 6M6 6h12v12" />
-</svg>
-
-                </a>
-                                                            
-              </div>
-            </div>
+</div>
           </section>
         </main>
         <footer class="site-footer">
   <p>Weijian Zhang <span>AI builder</span></p>
-  <nav aria-label="Social profiles">
-    <a href="https://github.com/weijianzhg" target="_blank" rel="noreferrer">GitHub <svg
+  <nav aria-label="Profiles">
+    <a href="https://notesfromzero.substack.com" target="_blank" rel="me noreferrer">Substack <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -387,7 +460,7 @@
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
 </a
-    ><a href="https://www.linkedin.com/in/weijianzhg" target="_blank" rel="noreferrer">LinkedIn <svg
+    ><a href="https://x.com/Weijian" target="_blank" rel="me noreferrer">X <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
@@ -404,7 +477,24 @@
   <path d="M6 18 18 6M6 6h12v12" />
 </svg>
 </a
-    ><a href="https://x.com/Weijian" target="_blank" rel="noreferrer">X <svg
+    ><a href="https://www.linkedin.com/in/weijianzhg" target="_blank" rel="me noreferrer">LinkedIn <svg
+  class="arrow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M6 18 18 6M6 6h12v12" />
+</svg>
+</a
+    ><a href="https://github.com/weijianzhg" target="_blank" rel="me noreferrer">GitHub <svg
   class="arrow"
   xmlns="http://www.w3.org/2000/svg"
   width="1em"
