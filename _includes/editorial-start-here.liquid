@@ -1,0 +1,12 @@
+{%- comment -%} The highlighted essays from _data/start_here.yml, used on the homepage and the writing page. {%- endcomment -%}
+<div class="essay-grid essay-grid-3">
+  {%- for essay in site.data.start_here -%}
+    <a class="essay" href="{{ essay.url }}" target="_blank" rel="noreferrer">
+      <span class="essay-meta">{{ essay.topic | escape }}</span>
+      <{{ include.heading | default: 'h3' }} class="essay-title">
+        {%- include editorial-title-arrow.liquid title=essay.title -%}
+      </{{ include.heading | default: 'h3' }}>
+      <span class="essay-description">{{ essay.description | escape }}</span>
+    </a>
+  {%- endfor -%}
+</div>

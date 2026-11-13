@@ -1,0 +1,13 @@
+# Essays highlighted on the homepage and the writing page. bin/check-editorial-build.py checks these URLs.
+- title: Why I built a local 2B email triage model
+  topic: Small models
+  url: https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk
+  description: Fine-tuning a 2B open model to triage email locally, and how to tell when a small model is enough.
+- title: Building Software for Agents
+  topic: Agent software
+  url: https://notesfromzero.substack.com/p/building-software-for-agents
+  description: Why agents need tools built for them, and what that changes about how software is designed.
+- title: Figure Out What Game You’re Playing
+  topic: Decision making
+  url: https://latticeworkofmodels.substack.com/p/game-theory-figure-out-what-game
+  description: Other people are thinking too. How game theory helps you read a situation before you choose a move.

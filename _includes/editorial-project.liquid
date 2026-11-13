@@ -1,5 +1,5 @@
 {%- comment -%}
-  A product card with a screenshot. Pass project (from _data/projects.yml), index, and full=true on the work page
+  A project card with a screenshot. Pass project (from _data/projects.yml), and full=true on the work page
   to show every link and the alternative work-page screenshot.
 {%- endcomment -%}
 {%- assign project = include.project -%}
@@ -27,8 +27,7 @@
   </a>
   <div class="project-body">
     <h3>
-      <span class="row-index" aria-hidden="true">{{ include.index }}</span
-      ><a href="{{ project.url }}" target="_blank" rel="noreferrer">{{ project.name }}</a>
+      <a href="{{ project.url }}" target="_blank" rel="noreferrer">{{ project.name }}</a>
     </h3>
     <p class="project-summary">{{ project.summary | escape }}</p>
     <p class="project-description">{{ project.description | escape }}</p>

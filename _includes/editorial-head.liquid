@@ -1,5 +1,5 @@
 {%- if page.url == '/' -%}
-  {%- assign page_title = 'Weijian Zhang | AI builder' -%}
+  {%- assign page_title = 'Weijian Zhang | Writing about AI, building it for finance' -%}
 {%- else -%}
   {%- assign page_title = page.title | append: ' | Weijian Zhang' -%}
 {%- endif -%}
@@ -15,10 +15,18 @@
 <meta property="og:title" content="{{ page_title | escape }}">
 <meta property="og:description" content="{{ page_description | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="Weijian Zhang">
+<meta property="og:image" content="{{ '/assets/editorial/og.png' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Weijian Zhang. I build AI for finance and write about what I learn.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@Weijian">
 {%- if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
 {%- endif %}
 <link rel="alternate" type="application/rss+xml" title="Notes from Zero" href="https://notesfromzero.substack.com/feed">
+<link rel="alternate" type="application/rss+xml" title="Latticework of Models" href="https://latticeworkofmodels.substack.com/feed">
 <link rel="icon" type="image/svg+xml" href="/assets/editorial/favicon.svg">
 <link rel="preload" as="font" type="font/woff2" href="/assets/editorial/fonts/geist-98bbbccb.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/editorial/fonts/libre-caslon-display-98df7e80.woff2" crossorigin>
