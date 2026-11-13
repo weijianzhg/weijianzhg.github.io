@@ -1,4 +1,4 @@
-# Essays highlighted on the homepage and the writing page. bin/check-editorial-build.py checks these URLs.
+# The three essays highlighted on the homepage and the writing page. bin/check-editorial-build.py reads these URLs.
 - title: Why I built a local 2B email triage model
   topic: Small models
   url: https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk

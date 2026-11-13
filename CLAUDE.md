@@ -3,6 +3,7 @@
 Personal site at https://weijian.ai. The homepage is standalone HTML and CSS; Jekyll builds the site and writing archive.
 
 - Edit the homepage in `_pages/about.html` and its styles in `assets/editorial/`.
+- The homepage leads with writing and features one project, Hedge Layer. Its essays, follow links and project come from `_data/start_here.yml`, `_data/channels.yml` and `_data/projects.yml`.
 - Keep the existing `/writing/`, `/building/` and `/lattice-graph.html` URLs working.
 - Run `bundle exec jekyll build`, then `python3 bin/check-editorial-build.py` to check the generated site. Run `npx prettier . --check` for formatting.
 - `main` is the source branch. GitHub Actions publishes to `gh-pages` and refreshes feeds hourly.

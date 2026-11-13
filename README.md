@@ -7,7 +7,7 @@ Every page is static HTML and CSS with local fonts and no JavaScript. The homepa
 ## Editing
 
 - `_pages/about.html`: homepage copy and section order.
-- `_data/start_here.yml`: the highlighted essays on the homepage and writing page. Update `FEATURED` in `bin/check-editorial-build.py` to match.
+- `_data/start_here.yml`: the highlighted essays on the homepage and writing page. Keep three entries.
 - `_data/channels.yml`: the Substack, X and LinkedIn cards under “Where I write”.
 - `_data/projects.yml`: the main project (Hedge Layer) shown on the homepage and at the top of the work page.
 - `assets/editorial/work/`: project screenshots as 16:10 WebP, at 800px and 1600px wide (`<name>-800.webp`, `<name>-1600.webp`).

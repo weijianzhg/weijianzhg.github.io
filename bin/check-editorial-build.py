@@ -9,12 +9,9 @@ from email.utils import parsedate_to_datetime
 
 ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / "_site"
-# Keep in step with _data/start_here.yml.
-FEATURED = {
-    "https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk",
-    "https://notesfromzero.substack.com/p/building-software-for-agents",
-    "https://latticeworkofmodels.substack.com/p/game-theory-figure-out-what-game",
-}
+# The highlighted essays, read from the same data file the pages use.
+FEATURED = set(re.findall(r"^\s+url:\s*(\S+)", (ROOT / "_data/start_here.yml").read_text(), re.M))
+assert len(FEATURED) == 3, "Highlight three essays in _data/start_here.yml"
 LATEST_COUNT = 5
 FOLLOW = {
     "https://notesfromzero.substack.com/subscribe",
