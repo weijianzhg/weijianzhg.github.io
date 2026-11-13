@@ -2,7 +2,7 @@
 layout: null
 title: Home
 permalink: /
-description: "Weijian Zhang builds AI systems for finance and writes about building them."
+description: "Weijian Zhang builds AI for finance and writes about what he learns: agents, small models and mental models for making decisions."
 ---
 
 <!doctype html>
@@ -16,64 +16,56 @@ description: "Weijian Zhang builds AI systems for finance and writes about build
       <div class="page-wrap">
         {% include editorial-header.liquid home=true %}
         <main id="main">
-          <section class="editorial-hero">
-            <div>
-              <p class="eyebrow"><span class="accent-dot"></span> AI builder · Finance</p>
-              <h1>I build AI systems<br />finance can<br /><em>rely on.</em></h1>
-            </div>
-            <div class="hero-aside">
-              <div class="margin-mark" aria-hidden="true">↳</div>
-              <p>I’m Weijian. I build AI systems for finance and write about building them.</p>
-              <p class="hero-links">
-                <a href="#work" class="text-link">Work <span aria-hidden="true">↓</span></a
-                ><a href="#writing" class="text-link">Writing <span aria-hidden="true">↓</span></a>
-              </p>
-            </div>
+          <section class="home-hero">
+            <p class="eyebrow"><span class="accent-dot"></span> Writing · AI in finance</p>
+            <h1>I build AI for finance and write about <em>what I learn.</em></h1>
+            <p class="home-lede">
+              I’m Weijian. My essays cover agents, small models and mental models for making decisions. My main project is
+              <a href="#work">Hedge Layer</a>, a research desk for traders who work alone.
+            </p>
+            <p class="hero-links">
+              <a href="https://notesfromzero.substack.com/subscribe" class="button" target="_blank" rel="noreferrer"
+                >Subscribe on Substack {% include editorial-arrow.liquid %}</a
+              ><a href="#writing" class="text-link">Read the essays <span aria-hidden="true">↓</span></a>
+            </p>
           </section>
-          <section class="editorial-work" id="work">
+          <section class="home-section" id="writing" aria-labelledby="writing-heading">
             <div class="section-heading">
-              <h2>Selected work</h2>
-              <a class="text-link" href="/building/">All work <span aria-hidden="true">→</span></a>
-            </div>
-            <div class="project-cards">
-              {% for project in site.data.projects %} {% capture index %}{{ forloop.index | prepend: '0' | slice: -2, 2 }}{% endcapture %} {% include
-              editorial-project.liquid project=project index=index %} {% endfor %}
-            </div>
-          </section>
-          <section class="editorial-writing" id="writing">
-            <div class="section-heading">
-              <div>
-                <span class="eyebrow">Notes from Zero</span>
-                <h2>Writing</h2>
-              </div>
+              <h2 id="writing-heading">Writing</h2>
               <a class="text-link" href="/writing/">All writing <span aria-hidden="true">→</span></a>
             </div>
-            <div class="essay-grid">
-              <a class="essay" href="https://notesfromzero.substack.com/p/building-software-for-agents" target="_blank" rel="noreferrer"
-                ><span class="essay-meta">Tools &amp; context <span>May 2026</span></span>
-                <h3>Building Software for Agents {% include editorial-arrow.liquid %}</h3></a
-              ><a class="essay" href="https://notesfromzero.substack.com/p/auto-research-for-classic-machine" target="_blank" rel="noreferrer"
-                ><span class="essay-meta">Experiments <span>March 2026</span></span>
-                <h3>Auto Research for Classic Machine Learning {% include editorial-arrow.liquid %}</h3></a
-              >
+            <h3 class="list-label">Start here</h3>
+            {% include editorial-start-here.liquid heading="h4" %}
+            <h3 class="list-label">Latest</h3>
+            <div class="latest-posts">
+              {% assign latest_posts = site.posts | where: "external_source", "notesfromzero.substack.com" | sort: "date" | reverse %} {% assign
+              featured_urls = site.data.start_here | map: "url" | join: "|" | prepend: "|" | append: "|" %} {% assign latest_count = 0 %} {% assign
+              seen_urls = "|" %} {% for post in latest_posts %} {% assign url_protocol = post.redirect | slice: 0, 8 %} {% assign url_key =
+              post.redirect | prepend: "|" | append: "|" %} {% if latest_count < 5 and url_protocol == "https://" %} {% unless featured_urls contains
+              url_key or seen_urls contains url_key %} {% include editorial-post-row.liquid post=post %} {% assign latest_count = latest_count | plus:
+              1 %} {% assign seen_urls = seen_urls | append: post.redirect | append: "|" %} {% endunless %} {% endif %} {% endfor %}
             </div>
-            <div class="latest-writing">
-              <h3>Latest writing</h3>
-              <div class="latest-posts">
-                {% assign latest_posts = site.posts | where: "external_source", "notesfromzero.substack.com" | sort: "date" | reverse %} {% assign
-                latest_count = 0 %} {% assign seen_urls = "|" %} {% for post in latest_posts %} {% assign url_protocol = post.redirect | slice: 0, 8
-                %} {% assign url_key = post.redirect | prepend: "|" | append: "|" %} {% if latest_count < 3 and url_protocol == "https://" %} {%
-                unless post.redirect == "https://notesfromzero.substack.com/p/building-software-for-agents" or post.redirect ==
-                "https://notesfromzero.substack.com/p/auto-research-for-classic-machine" or seen_urls contains url_key %}
-                <a class="latest-post" href="{{ post.redirect | escape }}" target="_blank" rel="noreferrer">
-                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%e %b %Y" }}</time>
-                  <h4>{{ post.title | escape }}</h4>
-                  {% include editorial-arrow.liquid %}
-                </a>
-                {% assign latest_count = latest_count | plus: 1 %} {% assign seen_urls = seen_urls | append: post.redirect | append: "|" %} {%
-                endunless %} {% endif %} {% endfor %}
-              </div>
+          </section>
+          <section class="home-section" id="follow" aria-labelledby="follow-heading">
+            <div class="section-heading">
+              <h2 id="follow-heading">Where I write</h2>
             </div>
+            <div class="channel-grid">
+              {% for channel in site.data.channels %}
+              <a class="channel" href="{{ channel.url }}" target="_blank" rel="me noreferrer">
+                <span class="essay-meta">{{ channel.place }}</span>
+                <h3>{% include editorial-title-arrow.liquid title=channel.name %}</h3>
+                <p>{{ channel.description | escape }}</p>
+              </a>
+              {% endfor %}
+            </div>
+          </section>
+          <section class="home-section" id="work" aria-labelledby="work-heading">
+            <div class="section-heading">
+              <h2 id="work-heading">What I’m building</h2>
+              <a class="text-link" href="/building/">Other projects <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="project-cards">{% include editorial-project.liquid project=site.data.projects.first %}</div>
           </section>
         </main>
         {% include editorial-footer.liquid %}

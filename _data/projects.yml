@@ -1,31 +1,6 @@
-# Products shown on the homepage and the work page.
+# The main project, shown on the homepage and at the top of the work page.
 # Screenshots live in assets/editorial/work/ as <image>-800.webp and <image>-1600.webp (16:10).
 # Links marked `more: true` appear only on the work page.
-- name: Tuned Tensor
-  url: https://tunedtensor.com
-  domain: tunedtensor.com
-  image: tuned-tensor
-  alt: Tuned Tensor website showing the tt command-line agent with the local GPU, CPU and memory it found.
-  summary: Fine-tune small open models from one spec file.
-  description: Train, evaluate and serve them on your own GPU. A 2B email triage model went from 61.5% to 89.0%.
-  links:
-    - label: Website
-      url: https://tunedtensor.com
-    - label: GitHub
-      url: https://github.com/tunedtensor/tuned-tensor-cli
-    - label: Case study
-      url: https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk
-      more: true
-    - label: Dataset
-      url: https://huggingface.co/datasets/tunedtensor/email-triage-v1
-      more: true
-    - label: Model
-      url: https://huggingface.co/tunedtensor/email-triage-v1-gguf
-      more: true
-    - label: Email triage CLI
-      url: https://pypi.org/project/email-triage/
-      more: true
-
 - name: Hedge Layer
   url: https://hedgelayer.ai
   domain: hedgelayer.ai
@@ -34,8 +9,8 @@
   work_image: hedge-layer-desktop
   work_image_wide: 1360
   work_alt: Hedge Layer desktop app charting Bitcoin's daily closes from Hyperliquid, with a short written summary.
-  summary: Run your trading routines from WhatsApp.
-  description: Your rules, live market data and a trading journal. Read-only. It never trades or tells you what to buy.
+  summary: The research desk for traders who work alone.
+  description: An AI research assistant that gathers the data, runs your checks and keeps your trading journal, on WhatsApp or desktop. You make every decision. It never trades or tells you what to buy.
   links:
     - label: Website
       url: https://hedgelayer.ai
@@ -43,20 +18,4 @@
       url: https://hedgelayer.ai/docs
     - label: Desktop app
       url: https://hedgelayer.ai/docs/desktop
-      more: true
-
-- name: Deeper Level
-  url: https://deeperlevel.xyz
-  domain: deeperlevel.xyz
-  image: deeper-level
-  alt: Deeper Level's Fortune game, an isometric colony map where you choose three AI models as rival settlers.
-  summary: Play strategy games against AI models.
-  description: Chess and Fortune against ChatGPT, Claude, Gemini or Grok, with each model's reasoning shown as you play.
-  links:
-    - label: Play Fortune
-      url: https://deeperlevel.xyz/fortune
-    - label: Play chess
-      url: https://deeperlevel.xyz/chess
-    - label: Website
-      url: https://deeperlevel.xyz
       more: true

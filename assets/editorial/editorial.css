@@ -261,14 +261,6 @@ a {
 .site-footer a:hover {
   color: var(--primary);
 }
-.eyebrow {
-  font-family: var(--font-mono-face), monospace;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  line-height: 1.8;
-}
 .accent-dot {
   display: inline-block;
   width: 7px;
@@ -278,39 +270,26 @@ a {
   margin-right: 8px;
   vertical-align: 1px;
 }
-.editorial-hero {
-  padding: var(--hero-space, 98px) 0 104px;
-  display: grid;
-  grid-template-columns: 1.65fr 1fr;
-  gap: 8%;
-  align-items: end;
+.eyebrow {
+  font-family: var(--font-mono-face), monospace;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  line-height: 1.8;
 }
 .editorial h1 {
   font-family: var(--font-serif-face), Georgia, serif;
-  font-size: clamp(64px, 7.8vw, 104px);
-  letter-spacing: -0.045em;
+  font-size: clamp(44px, 6.2vw, 84px);
+  letter-spacing: -0.035em;
   font-weight: 400;
-  line-height: 0.99;
-  margin-top: 35px;
+  line-height: 1.04;
+  margin-top: 28px;
+  text-wrap: balance;
 }
 .editorial h1 em {
   color: var(--primary);
   font-weight: 400;
-}
-.hero-aside {
-  padding: 0 0 8px;
-  max-width: 400px;
-}
-.margin-mark {
-  color: var(--primary);
-  font-size: 46px;
-  line-height: 1;
-  margin-bottom: 30px;
-}
-.hero-aside p {
-  font-size: 18px;
-  line-height: 1.65;
-  letter-spacing: -0.02em;
 }
 .text-link {
   font-size: 14px;
@@ -319,16 +298,6 @@ a {
   gap: 20px;
   align-items: center;
   padding: 10px 0;
-}
-.hero-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 32px;
-  margin-top: 25px;
-}
-.hero-aside .text-link {
-  border-bottom: 1px solid var(--primary);
-  color: var(--primary);
 }
 .section-heading {
   display: flex;
@@ -354,18 +323,6 @@ a {
   color: var(--subtle);
   text-align: right;
 }
-.editorial-writing {
-  padding: 76px 0 70px;
-}
-.editorial-writing .section-heading {
-  align-items: end;
-}
-.editorial-writing h2 {
-  font-family: var(--font-serif-face), Georgia, serif;
-  font-size: 44px;
-  margin-top: 10px;
-  font-weight: 400;
-}
 .essay-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -383,7 +340,7 @@ a {
   gap: 20px;
   color: var(--subtle);
 }
-.essay h3 {
+.essay-title {
   font-size: 21px;
   letter-spacing: -0.035em;
   font-weight: 400;
@@ -391,9 +348,9 @@ a {
   max-width: 440px;
   margin-top: 22px;
 }
-.essay h3 .arrow {
+.essay-title .arrow {
   color: var(--primary);
-  margin-left: 10px;
+  margin-left: 6px;
 }
 .site-footer {
   display: flex;
@@ -427,25 +384,9 @@ a {
 .skip-link:focus {
   transform: translateY(10px);
 }
-@media (min-width: 1600px) {
-  .editorial-hero {
-    padding-top: 120px;
-    padding-bottom: 125px;
-  }
-}
 @media (max-width: 900px) {
   .page-wrap {
     padding: 0 30px;
-  }
-  .editorial-hero {
-    gap: 6%;
-    grid-template-columns: 1.5fr 1fr;
-  }
-  .editorial h1 {
-    font-size: 74px;
-  }
-  .hero-aside p {
-    font-size: 16px;
   }
   .work-item .project-category {
     display: none;
@@ -474,30 +415,6 @@ a {
     font-size: 14px;
     white-space: nowrap;
   }
-  .editorial-hero {
-    display: block;
-    padding: 55px 0 58px;
-  }
-  .eyebrow {
-    font-size: 12px;
-  }
-  .editorial h1 {
-    font-size: clamp(54px, 13.5vw, 82px);
-    margin-top: 26px;
-  }
-  .hero-aside {
-    margin-top: 38px;
-    max-width: 100%;
-  }
-  .margin-mark {
-    display: none;
-  }
-  .hero-aside p {
-    font-size: 17px;
-  }
-  .hero-links {
-    margin-top: 16px;
-  }
   .section-heading {
     margin-bottom: 20px;
   }
@@ -508,17 +425,11 @@ a {
     font-size: 13px;
     gap: 10px;
   }
-  .editorial-writing {
-    padding: 48px 0;
-  }
-  .editorial-writing h2 {
-    font-size: 34px;
-  }
   .essay-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  .essay h3 {
+  .essay-title {
     margin-top: 15px;
     font-size: 20px;
   }
@@ -656,23 +567,10 @@ a {
 
 .editorial {
   --page-width: 1276px;
-  --hero-space: 98px;
-}
-.editorial h1 {
-  letter-spacing: -0.035em;
 }
 .site-header nav,
 .site-footer nav {
   font-size: 14px;
-}
-.latest-writing {
-  margin-top: 46px;
-}
-.latest-writing > h3 {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  margin-bottom: 20px;
 }
 .latest-posts {
   border-top: 1px solid var(--border);
@@ -705,9 +603,6 @@ a {
   color: var(--primary);
 }
 @media (max-width: 640px) {
-  .latest-writing {
-    margin-top: 36px;
-  }
   .latest-post {
     grid-template-columns: minmax(0, 1fr) 20px;
     gap: 6px 16px;
@@ -718,7 +613,7 @@ a {
   }
 }
 
-/* Product cards with screenshots, shared by the homepage and the work page. */
+/* Project card with a screenshot, shared by the homepage and the work page. */
 .project-cards {
   border-top: 1px solid var(--border);
 }
@@ -786,10 +681,6 @@ a {
   letter-spacing: -0.04em;
   line-height: 1.2;
 }
-.project-card h3 .row-index {
-  align-self: baseline;
-  padding-top: 0;
-}
 .project-card h3 a:hover {
   color: var(--primary);
 }
@@ -849,4 +740,177 @@ a {
     gap: 12px;
     font-size: 13px;
   }
+}
+
+/* Homepage: introduction, writing, places to follow, main project. */
+.home-hero {
+  padding: 84px 0 88px;
+  max-width: 1000px;
+}
+.home-lede {
+  max-width: 640px;
+  margin-top: 28px;
+  font-size: 19px;
+  line-height: 1.65;
+  letter-spacing: -0.02em;
+  color: var(--muted);
+}
+.home-lede a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 4px;
+}
+.home-lede a:hover {
+  color: var(--primary);
+}
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 28px;
+  margin-top: 32px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 180ms ease;
+}
+.button:hover {
+  background: #9db3ff;
+}
+.home-section {
+  padding: 64px 0 80px;
+  border-top: 1px solid var(--border);
+}
+.home-section .section-heading h2 {
+  font-family: var(--font-serif-face), Georgia, serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.list-label {
+  margin: 44px 0 16px;
+  font-family: var(--font-mono-face), monospace;
+  font-size: 12px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.section-heading + .list-label {
+  margin-top: 8px;
+}
+.essay-description {
+  display: block;
+  max-width: 440px;
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.essay:hover .essay-title {
+  color: var(--primary);
+}
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.channel {
+  display: block;
+  padding: 22px 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 180ms ease;
+}
+.channel:hover {
+  border-color: var(--border-strong);
+}
+.channel:focus-visible {
+  outline-offset: 3px;
+}
+.channel h3 {
+  margin-top: 14px;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+}
+.channel h3 .arrow {
+  margin-left: 2px;
+  color: var(--primary);
+}
+.channel:hover h3 {
+  color: var(--primary);
+}
+.channel p {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.home-section .project-cards {
+  border-top: 0;
+}
+.home-section .project-card {
+  padding: 8px 0 0;
+  border-bottom: 0;
+}
+@media (max-width: 900px) {
+  .channel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .home-hero {
+    padding: 52px 0 56px;
+  }
+  .editorial h1 {
+    margin-top: 22px;
+  }
+  .home-lede {
+    margin-top: 22px;
+    font-size: 17px;
+  }
+  .hero-links {
+    margin-top: 26px;
+  }
+  .home-section {
+    padding: 44px 0 52px;
+  }
+  .home-section .section-heading h2 {
+    font-size: 32px;
+  }
+  .list-label {
+    margin-top: 36px;
+  }
+  .channel-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+/* Let section links and footer links wrap as whole items on narrow screens. */
+.section-heading {
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+.section-heading .text-link,
+.site-footer nav a {
+  white-space: nowrap;
+}
+.site-footer nav {
+  flex-wrap: wrap;
+  row-gap: 8px;
 }

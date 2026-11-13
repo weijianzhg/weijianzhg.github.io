@@ -1,0 +1,13 @@
+{%- comment -%} A title followed by the link arrow, with the arrow kept on the same line as the last word. {%- endcomment -%}
+{%- assign words = include.title | split: ' ' -%}
+{%- for word in words -%}
+  {%- if forloop.last -%}
+    <span class="nowrap">
+      {{- word | escape }}
+      {% include editorial-arrow.liquid -%}
+    </span>
+  {%- else -%}
+    {{- word | escape -}}
+    {{- ' ' }}
+  {%- endif -%}
+{%- endfor -%}

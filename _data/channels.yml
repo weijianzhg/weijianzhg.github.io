@@ -1,0 +1,17 @@
+# Places to read and follow, shown on the homepage. The first two are also linked from the writing page.
+- name: Notes from Zero
+  place: Substack
+  url: https://notesfromzero.substack.com
+  description: Essays and build notes on AI systems. Subscribe to get new posts by email.
+- name: Latticework of Models
+  place: Substack
+  url: https://latticeworkofmodels.substack.com
+  description: Mental models from economics, psychology and mathematics, one per post.
+- name: "@Weijian"
+  place: X
+  url: https://x.com/Weijian
+  description: Shorter posts between essays.
+- name: Weijian Zhang
+  place: LinkedIn
+  url: https://www.linkedin.com/in/weijianzhg
+  description: Posts on AI in finance, and the best place to contact me.

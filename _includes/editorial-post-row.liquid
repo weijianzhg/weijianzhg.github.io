@@ -4,7 +4,7 @@
   <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%e %b %Y' }}</time>
   <span>
     <h4>{{ post.title | escape }}</h4>
-    {%- if source.title -%}
+    {%- if include.source and source.title -%}
       <span class="post-source">{{ source.title }}</span>
     {%- endif %}
   </span>

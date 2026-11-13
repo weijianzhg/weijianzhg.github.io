@@ -2,28 +2,60 @@
 layout: editorial
 permalink: /building/
 title: Work
-description: Products and experiments by Weijian Zhang, who builds AI systems for finance.
+description: Hedge Layer, a research desk for traders who work alone, and other projects by Weijian Zhang.
 ---
 
 <header class="page-intro">
   <p class="eyebrow"><span class="accent-dot"></span> Work</p>
-  <h1>Products and experiments.</h1>
-  <p>Three products and some smaller experiments.</p>
+  <h1>What I’m building.</h1>
+  <p>Hedge Layer is my main project. Below it are smaller products and experiments, most with code or a write-up.</p>
 </header>
 
-<section class="page-section" aria-labelledby="products">
-  <div class="section-heading"><h2 id="products">Products</h2></div>
-  <div class="project-cards">
-    {% for project in site.data.projects %} {% capture index %}{{ forloop.index | prepend: '0' | slice: -2, 2 }}{% endcapture %} {% include
-    editorial-project.liquid project=project index=index full=true %} {% endfor %}
-  </div>
+<section class="page-section" aria-labelledby="main-project">
+  <div class="section-heading"><h2 id="main-project">Main project</h2></div>
+  <div class="project-cards">{% include editorial-project.liquid project=site.data.projects.first full=true %}</div>
 </section>
 
-<section class="page-section" aria-labelledby="experiments">
-  <div class="section-heading"><h2 id="experiments">Experiments</h2></div>
+<section class="page-section" aria-labelledby="other-projects">
+  <div class="section-heading"><h2 id="other-projects">Other projects</h2></div>
   <div class="work-list">
     <article class="work-item">
-      <span class="row-index">04</span>
+      <span class="row-index" aria-hidden="true">01</span>
+      <div>
+        <h3>Tuned Tensor</h3>
+        <p>
+          Fine-tune small open models from one spec file, then train, evaluate and serve them on your own GPU. A 2B email triage model went from 61.5%
+          to 89.0%.
+        </p>
+        <p class="work-links">
+          <a href="https://tunedtensor.com" target="_blank" rel="noreferrer">Website {% include editorial-arrow.liquid %}</a
+          ><a href="https://github.com/tunedtensor/tuned-tensor-cli" target="_blank" rel="noreferrer">GitHub {% include editorial-arrow.liquid %}</a
+          ><a href="https://notesfromzero.substack.com/p/dont-drive-a-ferrari-to-buy-milk" target="_blank" rel="noreferrer"
+            >Case study {% include editorial-arrow.liquid %}</a
+          ><a href="https://huggingface.co/datasets/tunedtensor/email-triage-v1" target="_blank" rel="noreferrer"
+            >Dataset {% include editorial-arrow.liquid %}</a
+          ><a href="https://huggingface.co/tunedtensor/email-triage-v1-gguf" target="_blank" rel="noreferrer"
+            >Model {% include editorial-arrow.liquid %}</a
+          ><a href="https://pypi.org/project/email-triage/" target="_blank" rel="noreferrer">Email triage CLI {% include editorial-arrow.liquid %}</a>
+        </p>
+      </div>
+      <span class="project-category">Fine-tuning</span>
+    </article>
+    <article class="work-item">
+      <span class="row-index" aria-hidden="true">02</span>
+      <div>
+        <h3>Deeper Level</h3>
+        <p>Play chess and Fortune against ChatGPT, Claude, Gemini or Grok, with each model’s reasoning shown as you play.</p>
+        <p class="work-links">
+          <a href="https://deeperlevel.xyz/fortune" target="_blank" rel="noreferrer">Play Fortune {% include editorial-arrow.liquid %}</a
+          ><a href="https://deeperlevel.xyz/chess" target="_blank" rel="noreferrer">Play chess {% include editorial-arrow.liquid %}</a
+          ><a href="https://deeperlevel.xyz" target="_blank" rel="noreferrer">Website {% include editorial-arrow.liquid %}</a>
+        </p>
+      </div>
+      <span class="project-category">Games</span>
+    </article>
+    <article class="work-item">
+      <span class="row-index" aria-hidden="true">03</span>
       <div>
         <h3>Autoresearch Classifier</h3>
         <p>An AI agent iterates on scikit-learn classifiers that detect prompt injection, keeping only the changes that improve them.</p>
@@ -38,31 +70,36 @@ description: Products and experiments by Weijian Zhang, who builds AI systems fo
       <span class="project-category">Evaluation</span>
     </article>
     <article class="work-item">
-      <span class="row-index">05</span>
+      <span class="row-index" aria-hidden="true">04</span>
       <div>
         <h3>Bedrock Agent Blueprint</h3>
         <p>A template for running Strands agents on Amazon Bedrock AgentCore, provisioned with Terraform.</p>
         <p class="work-links">
           <a href="https://github.com/weijianzhg/bedrock-agent-blueprint" target="_blank" rel="noreferrer"
             >Code {% include editorial-arrow.liquid %}</a
+          ><a href="https://notesfromzero.substack.com/p/bedrock-agent-blueprint-deploying" target="_blank" rel="noreferrer"
+            >Build note {% include editorial-arrow.liquid %}</a
           >
         </p>
       </div>
       <span class="project-category">Agent infrastructure</span>
     </article>
     <article class="work-item">
-      <span class="row-index">06</span>
+      <span class="row-index" aria-hidden="true">05</span>
       <div>
         <h3>Mental Model Graph</h3>
         <p>An interactive map of how mental models from economics, psychology, mathematics and logic connect.</p>
         <p class="work-links">
-          <a href="/lattice-graph.html">Open the graph <span aria-hidden="true">→</span></a>
+          <a href="/lattice-graph.html">Open the graph <span aria-hidden="true">→</span></a
+          ><a href="https://notesfromzero.substack.com/p/nine-mental-models-turned-into-a" target="_blank" rel="noreferrer"
+            >Build note {% include editorial-arrow.liquid %}</a
+          >
         </p>
       </div>
       <span class="project-category">Visualisation</span>
     </article>
     <article class="work-item">
-      <span class="row-index">07</span>
+      <span class="row-index" aria-hidden="true">06</span>
       <div>
         <h3>Still Here</h3>
         <p>A memento mori app. Count the days you’ve lived, then write about today.</p>
